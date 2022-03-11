@@ -34,6 +34,7 @@ class CreateAdsTable extends Migration
             $table->integer('house_number');
             $table->integer('house_number_suffix')->nullable(); // Of aan elkaar (?)
             $table->string('city');
+            $table->string('country');
             $table->point('location');
             
             // Image gaat via media library (?)

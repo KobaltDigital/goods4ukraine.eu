@@ -8,7 +8,11 @@ class GetFilteredAds
 {
     public function execute(array $data)
     {
-        $ads = Ad::paginate();
-        dd($ads);
+        $data = [
+            'longitude' => 52.5938,
+            'latitude' => 0
+        ];
+
+        return Ad::paginate();
     }
 }
