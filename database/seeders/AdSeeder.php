@@ -15,7 +15,7 @@ class AdSeeder extends Seeder
             Ad::factory()
                 ->count(30)
                 ->create([
-                    'author_id' => $user->id
+                    'user_id' => $user->id
                 ]);
         });
     }
