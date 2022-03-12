@@ -15,6 +15,10 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+
+        {{-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR API KEY&libraries=places"></script> --}}
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
         
         <meta name="robots" content="noindex">
     </head>

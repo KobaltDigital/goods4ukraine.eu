@@ -11,7 +11,8 @@ class AdController extends Controller
     {
         $data = $request->all();
         $ads = $getFilteredAds->execute($data);
+        $currentLocation = '';
 
-        return view('welcome', compact('ads'));
+        return view('home', compact('ads'));
     }
 }

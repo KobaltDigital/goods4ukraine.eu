@@ -10,7 +10,7 @@ class AdFactory extends Factory
 {
     public function definition()
     {
-        $title = $this->faker->title();
+        $title = $this->faker->word();
 
         return [
             'title' => $title,

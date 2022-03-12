@@ -59,18 +59,18 @@
                 </div>
 
                 <div class="text-gray-400">
-                    <strong class="text-gray-500">8.231.212</strong> resultaten
+                    <strong class="text-gray-500">{{ $ads->count() }}</strong> resultaten
                 </div>
             </div>
-            <x-card />
-            <x-card />
-            <x-card />
-            <x-card />
-            <x-card />
-            <x-card />
-            <x-card />
+
+            @foreach ($ads as $ad)
+                <x-card :ad="$ad"/>
+            @endforeach
         </div>
     </section>
 
+    <script>
+        console.log(google.places)
+    </script>
 
 </x-layout>

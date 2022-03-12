@@ -16,6 +16,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [AdController::class, 'index'])->name('home');
+Route::get('autocomplete','AutocompleteController@locationAutoComplete');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
