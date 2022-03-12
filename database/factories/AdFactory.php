@@ -25,6 +25,7 @@ class AdFactory extends Factory
             'house_number_suffix' => null,
             'postcode' => '1812PS',
             'city' => 'Alkmaar',
+            'country' => 'The Netherlands',
             'location' => new Point(52.61779, 4.7669)
         ];
     }
