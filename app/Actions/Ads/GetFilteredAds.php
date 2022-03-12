@@ -9,7 +9,7 @@ class GetFilteredAds
 {
     public function execute(array $data)
     {
-        $data['max_distance'] = 10000; // in meters so this is 10km
+        $data['max_distance'] = 150000; // in meters so this is 10km
         $data['location'] = [52.59468294180227, 4.653462748789553];
         $locationGeometry = new Point(...$data['location']);
 
@@ -19,8 +19,6 @@ class GetFilteredAds
             $query = $query->distanceSphere('location', $locationGeometry, $data['max_distance']);
         }
 
-        $ads = $query->paginate();
-        dd($ads);
-        return Ad::paginate();
+        return $query->paginate();
     }
 }
