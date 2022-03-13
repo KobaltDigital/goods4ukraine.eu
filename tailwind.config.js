@@ -9,11 +9,6 @@ module.exports = {
     ],
     theme: {
         extend: {
-            colors: {
-                blue: 'rgb(58, 117, 196)',
-                yellow: 'rgb(249, 221, 22)',
-            },
-
             fontFamily: {
                 sans: ['Roboto'],
                 serif: ['Lora'],
