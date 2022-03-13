@@ -19,7 +19,7 @@
 
   Open: "fixed inset-0 z-40 overflow-y-auto", Closed: ""
 -->
-<header class="bg-white shadow-sm lg:static lg:overflow-y-visible">
+<header class="lg:static lg:overflow-y-visible">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
 
@@ -27,7 +27,7 @@
         <div class="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
           <div class="flex-shrink-0 flex items-center">
             <a href="#">
-              <img class="block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600" alt="Workflow">
+              <x-application-logo class="block h-10 w-auto fill-current" />
             </a>
           </div>
         </div>
@@ -37,7 +37,7 @@
           <div class="flex items-center px-6 py-4 md:max-w-3xl md:mx-auto lg:max-w-none lg:mx-0 xl:px-0">
             <div class="w-full">
               <h1 class="text-center">
-                  Goods4Ukraine
+                payoff
               </h1>
             </div>
           </div>
@@ -46,7 +46,7 @@
 
         <div class="flex items-center md:absolute md:right-0 md:inset-y-0">
           <!-- Mobile menu button -->
-          <button type="button" class="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+          <button type="button" class="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-light hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
             <span class="sr-only">Open menu</span>
             <!--
               Icon when menu is closed.
@@ -76,18 +76,18 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <nav class="lg:hidden" aria-label="Global">
       <div class="max-w-3xl mx-auto px-2 pt-2 pb-3 space-y-1 sm:px-4">
-        <!-- Current: "bg-gray-100 text-gray-900", Default: "hover:bg-gray-50" -->
-        <a href="#" aria-current="page" class="bg-gray-100 text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Dashboard</a>
+        <!-- Current: "bg-light text-black", Default: "hover:bg-light" -->
+        <a href="#" aria-current="page" class="bg-light text-black block rounded-md py-2 px-3 text-base font-medium">Dashboard</a>
   
-        <a href="{{ route('login') }}" class="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium">
+        <a href="{{ route('login') }}" class="hover:bg-light block rounded-md py-2 px-3 text-base font-medium">
             {{ __('Login') }}
         </a>
 
-        <a href="{{ route('login') }}" class="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium">
+        <a href="{{ route('login') }}" class="hover:bg-light block rounded-md py-2 px-3 text-base font-medium">
             {{ __('Make an offer') }}
         </a>
 
-        <a href="{{ route('login') }}" class="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium">
+        <a href="{{ route('login') }}" class="hover:bg-light block rounded-md py-2 px-3 text-base font-medium">
             {{ __('Make a request') }}
         </a>
       </div>
