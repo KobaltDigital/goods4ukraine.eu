@@ -9,9 +9,10 @@
             </div>
         </div>
         <div class="flex justify-end">
-            <span
-                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Aangeboden</span>
-            </div>
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                {{ __($ad->type) }}
+            </span>
+        </div>
     </div>
     <div class="px-4 py-5 border-t border-gray-200 sm:px-6">
         <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-4">
@@ -24,16 +25,16 @@
                 </dd>
                 <div class="flex mt-4">
                     <div class="w-1/2">
-                        <dt class="text-sm font-medium text-gray-500">Address</dt>
+                        <dt class="text-sm font-medium text-gray-500">{{ __('Address') }}</dt>
                         <dd class="mt-1 mb-4 text-sm text-gray-900">{{ $ad->street }} {{ $ad->house_number }}{{ $ad->house_number_suffix }} {{ $ad->postcode }}, {{ $ad->city }}, {{ __($ad->country) }}</dd>
                     </div>
                     <div class="w-1/2">
                         @if ($ad->show_email)
-                            <dt class="text-sm font-medium text-gray-500">E-mail</dt>
+                            <dt class="text-sm font-medium text-gray-500">{{ __('E-mail') }}</dt>
                             <dd class="mt-1 mb-4 text-sm text-gray-900">{{ $ad->email }}</dd>
                         @endif
                         @if ($ad->show_telephone)
-                            <dt class="text-sm font-medium text-gray-500">Telefoon</dt>
+                            <dt class="text-sm font-medium text-gray-500">{{ __('Telefoon') }}</dt>
                             <dd class="mt-1 text-sm text-gray-900">{{ $ad->telephone }}</dd>
                         @endif
                     </div>

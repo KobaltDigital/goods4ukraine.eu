@@ -25,6 +25,7 @@
                             id="location"
                             type="text"
                             name="location"
+                            value="{{ $location ?? '' }}"
                             class="block w-full pr-12 border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-3xl"
                             placeholder="your location.."
                         >
