@@ -2,9 +2,13 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-32 h-32 fill-current text-gray-500" />
+                <x-application-logo class="w-32 h-32 fill-current text-black" />
             </a>
         </x-slot>
+        
+        <div class="flex justify-end">
+            <x-langswitch />
+        </div>
 
         <div class="mb-4 text-sm text-black">
             {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}

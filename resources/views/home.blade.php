@@ -34,7 +34,7 @@
                                 {{ __('Distance') }}
                             </label>
                             <select id="distance" name="distance"
-                                class="h-full py-0 pl-2 text-gray-500 bg-transparent border-transparent rounded-md focus:ring-indigo-500 focus:border-indigo-500 pr-7 sm:text-sm">
+                                class="h-full py-0 pl-2 text-black bg-transparent border-transparent rounded-md focus:ring-indigo-500 focus:border-indigo-500 pr-7 sm:text-sm">
                                 <option value="5000">5{{ __('km') }}</option>
                                 <option value="15000">15{{ __('km') }}</option>
                                 <option value="25000">25{{ __('km') }}</option>
@@ -65,7 +65,7 @@
                             {{ __('Type') }}
                         </label>
                         <select id="type" name="type"
-                            class="h-full py-0 pl-2 text-gray-500 bg-transparent border-transparent rounded-md focus:ring-indigo-500 focus:border-indigo-500 pr-7 sm:text-sm">
+                            class="h-full py-0 pl-2 text-black bg-transparent border-transparent rounded-md focus:ring-indigo-500 focus:border-indigo-500 pr-7 sm:text-sm">
                             <option value="everything">{{ __('Everything') }}</option>
                             <option value="offered">{{ __('Offered') }}</option>
                             <option value="wanted">{{ __('Wanted') }}</option>
@@ -80,7 +80,7 @@
                 </div>
 
                 <div class="text-gray-400">
-                    <strong class="text-gray-500">{{ $ads->count() }}</strong> {{ __('results') }}
+                    <strong class="text-black">{{ $ads->count() }}</strong> {{ __('results') }}
                 </div>
             </div>
 

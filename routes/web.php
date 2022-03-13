@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SessionLanguageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [AdController::class, 'index'])->name('home');
+Route::get('session-language/{lang}', [SessionLanguageController::class, 'update'])->name('sessions.languages.update');
 Route::get('autocomplete','AutocompleteController@locationAutoComplete');
 
 Route::get('/dashboard', function () {

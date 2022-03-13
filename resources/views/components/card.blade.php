@@ -2,7 +2,7 @@
     <div class="flex items-center justify-between px-4 py-5 sm:px-6">
         <div class="flex items-center justify-center space-x-4">
             <div class="space-y-1">
-                <h3 class="text-lg font-medium leading-6 text-gray-900">
+                <h3 class="text-lg font-medium leading-6 text-black">
                     {!! $ad->title !!} <small class="text-gray-400">(4km)</small>
                 </h3>
                 <p class="text-[10px] text-blue underline">Tag 1, Tag 2</p>
@@ -20,22 +20,22 @@
                 <img src="https://via.placeholder.com/350" />
             </div>
             <div class="sm:col-span-3">
-                <dd class="mt-1 text-sm prose text-gray-900">
+                <dd class="mt-1 text-sm prose text-black">
                     {!! $ad->description !!}
                 </dd>
                 <div class="flex mt-4">
                     <div class="w-1/2">
-                        <dt class="text-sm font-medium text-gray-500">{{ __('Address') }}</dt>
-                        <dd class="mt-1 mb-4 text-sm text-gray-900">{{ $ad->street }} {{ $ad->house_number }}{{ $ad->house_number_suffix }} {{ $ad->postcode }}, {{ $ad->city }}, {{ __($ad->country) }}</dd>
+                        <dt class="text-sm font-medium text-black">{{ __('Address') }}</dt>
+                        <dd class="mt-1 mb-4 text-sm text-black">{{ $ad->street }} {{ $ad->house_number }}{{ $ad->house_number_suffix }} {{ $ad->postcode }}, {{ $ad->city }}, {{ __($ad->country) }}</dd>
                     </div>
                     <div class="w-1/2">
                         @if ($ad->show_email)
-                            <dt class="text-sm font-medium text-gray-500">{{ __('E-mail') }}</dt>
-                            <dd class="mt-1 mb-4 text-sm text-gray-900">{{ $ad->email }}</dd>
+                            <dt class="text-sm font-medium text-black">{{ __('E-mail') }}</dt>
+                            <dd class="mt-1 mb-4 text-sm text-black">{{ $ad->email }}</dd>
                         @endif
                         @if ($ad->show_telephone)
-                            <dt class="text-sm font-medium text-gray-500">{{ __('Telefoon') }}</dt>
-                            <dd class="mt-1 text-sm text-gray-900">{{ $ad->telephone }}</dd>
+                            <dt class="text-sm font-medium text-black">{{ __('Telefoon') }}</dt>
+                            <dd class="mt-1 text-sm text-black">{{ $ad->telephone }}</dd>
                         @endif
                     </div>
 

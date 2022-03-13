@@ -37,7 +37,7 @@
           <div class="flex items-center px-6 py-4 md:max-w-3xl md:mx-auto lg:max-w-none lg:mx-0 xl:px-0">
             <div class="w-full">
               <h1 class="text-center">
-                payoff
+                {{ __('Bringing people and goods together in times of need') }}
               </h1>
             </div>
           </div>
@@ -45,8 +45,10 @@
 
 
         <div class="flex items-center md:absolute md:right-0 md:inset-y-0">
+          <x-langswitch />
+
           <!-- Mobile menu button -->
-          <button type="button" class="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-light hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+          <button type="button" class="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-light hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
             <span class="sr-only">Open menu</span>
             <!--
               Icon when menu is closed.
