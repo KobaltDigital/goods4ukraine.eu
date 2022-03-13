@@ -20,14 +20,14 @@
   Open: "fixed inset-0 z-40 overflow-y-auto", Closed: ""
 -->
 <header class="lg:static lg:overflow-y-visible">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
       <div class="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
 
         {{-- Hier language switch met flag icons --}}
         <div class="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
           <div class="flex-shrink-0 flex items-center">
-            <a href="#">
-              <x-application-logo class="block h-10 w-auto fill-current" />
+            <a href="/">
+              <x-application-logo class="block h-16 my-3 w-auto fill-current" />
             </a>
           </div>
         </div>
@@ -50,10 +50,7 @@
           </div>
 
           <div class="mr-4">
-            <x-button href="/add/create">Plaats aanbod</x-button>
-          </div>
-          <div class="mr-4">
-            <x-button href="/add/create" class="bg-yellow text-blue">Stel vraag</x-button>
+            <x-button href="/add/create">{{ __("Place offer") }}</x-button>
           </div>
 
           <!-- Mobile menu button -->
@@ -95,7 +92,7 @@
         </a>
 
         <a href="{{ route('login') }}" class="hover:bg-light block rounded-md py-2 px-3 text-base font-medium">
-            {{ __('Make an offer') }}
+            {{ __('Place offer') }}
         </a>
 
         <a href="{{ route('login') }}" class="hover:bg-light block rounded-md py-2 px-3 text-base font-medium">

@@ -29,12 +29,12 @@
                 <div class="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
                   <div class="flex-shrink-0 flex items-center">
                     <a href="#">
-                      <x-application-logo class="block h-10 w-auto fill-current" />
+                      <x-application-logo class="block h-20 w-auto fill-current" />
                     </a>
                   </div>
                 </div>                
                 <div class="flex items-center md:absolute md:right-0 md:inset-y-0">
-                    <x-button href="/add/create">Contact</x-button>
+                    <x-button href="/add/create">{{ __('Contact') }}</x-button>
                   </div>
                 </div>
               </div>
@@ -49,8 +49,9 @@
               </div>
               <div class="flex justify-between">
                 <div class="my-5 md:mr-32">                  
-                    <p class="text-black text-sm">Goods4ukraine is niet aansprakelijk voor (gevolg)schade die voortkomt uit het gebruik van deze site, dan wel uit fouten of ontbrekende functionaliteiten op deze site.
-                        Copyright © {{ date('Y')}} Goods4ukraine B.V. Alle rechten voorbehouden.</p>  
+                    <p class="text-black text-sm">
+                        {{ __('Copyright', ['year' => date('Y')]) }}
+                    </p>  
                   </div>
                   <div class="my-5">                  
                     <img src="/img/poweredbykobalt.svg" class="h-10" />
@@ -64,15 +65,15 @@
             <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
             <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
             <div
-                class="relative inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+                class="relative inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 md:align-middle md:max-w-lg md:w-full sm:p-6">
                 <div class="mx-auto flex items-center justify-center">
                     <h3 class="text-lg leading-6 font-medium text-black" id="modal-title">Choose your language</h3>
                 </div>
-                <div class="mt-5 sm:mt-6 sm:grid sm:grid-cols-{{ languages()->count() }} sm:gap-3">
+                <div class="mt-5 sm:mt-6 sm:grid grid-cols-2 md:grid-cols-3 sm:gap-3">
                     @foreach (languages() as $language)
-                    <div class="text-center">
-                        <div class="mx-auto pb-10 flex justify-center">
-                            <img src="/img/{{ $language->locale }}.svg" class="w-12 my-3 sm:mt-5" />
+                    <div class="text-center p-5">
+                        <div class="mx-auto flex justify-center">
+                            <img src="/img/{{ $language->locale }}.svg" class="w-full my-3 sm:mt-5" />
                         </div>
                         <x-button href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}"
                             class="text-center">{{ $language->title }}</x-button>

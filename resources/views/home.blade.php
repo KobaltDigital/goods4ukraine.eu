@@ -7,14 +7,14 @@
                     <label for="location" class="block text-sm font-medium text-gray-700">
                         {{ __('Location') }}
                     </label>
-                    <div class="relative mt-1 rounded-md shadow-sm">
+                    <div class="relative z-10 mt-1 rounded-md shadow-sm">
                         <input
                             id="location"
                             type="text"
                             name="location"
                             value="{{ $location ?? '' }}"
                             class="block w-full pr-12 border-gray-300 rounded-md focus:ring-accent focus:border-accent sm:text-3xl"
-                            placeholder="your location.."
+                            placeholder="{{ __("Your location..") }}"
                         >
                         <div class="absolute inset-y-0 right-0 flex items-center">
                             <label for="distance" class="sr-only">
@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="text-gray-400">
-                    <strong class="text-black">{{ $ads->count() }}</strong> {{ __('results') }}
+                    <strong class="text-black">{{ $ads->count() }}</strong> {{ __('pagination.results') }}
                 </div>
             </div>
 
