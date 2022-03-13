@@ -21,12 +21,43 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
-<body>
-    <div class=" text-black antialiased bg-light">
-        <x-nav />
-        {{ $slot }}
-    </div>
-
+<body class="text-black antialiased bg-light">
+    <x-nav />
+    {{ $slot }}
+    <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  md:py-10 border-t">
+              <div class="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
+                <div class="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
+                  <div class="flex-shrink-0 flex items-center">
+                    <a href="#">
+                      <x-application-logo class="block h-10 w-auto fill-current" />
+                    </a>
+                  </div>
+                </div>                
+                <div class="flex items-center md:absolute md:right-0 md:inset-y-0">
+                    <x-button href="/add/create">Contact</x-button>
+                  </div>
+                </div>
+              </div>
+              <div class="my-5">                  
+                <ul class="flex text-sm text-blue">
+                    <li class="mr-6 hover:underline"><a href="">Over Goods4ukraine</a></li>
+                    <li class="mr-6 hover:underline"><a href="">Perskamer</a></li>
+                    <li class="mr-6 hover:underline"><a href="">Privacyverklaring</a></li>
+                    <li class="mr-6 hover:underline"><a href="">Cookiebeleid</a></li>
+                    <li class="mr-6 hover:underline"><a href="">Algemene Voorwaarden</a></li>
+                </ul>
+              </div>
+              <div class="flex justify-between">
+                <div class="my-5 md:mr-32">                  
+                    <p class="text-black text-sm">Goods4ukraine is niet aansprakelijk voor (gevolg)schade die voortkomt uit het gebruik van deze site, dan wel uit fouten of ontbrekende functionaliteiten op deze site.
+                        Copyright © {{ date('Y')}} Goods4ukraine B.V. Alle rechten voorbehouden.</p>  
+                  </div>
+                  <div class="my-5">                  
+                    <img src="/img/poweredbykobalt.svg" class="h-10" />
+                </div>    
+              </div>
+            </div>
+    </footer>
     @empty(Session::get('language'))
     <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">

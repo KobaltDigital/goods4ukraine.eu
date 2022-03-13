@@ -43,12 +43,21 @@
           </div>
         </div>
 
-
         <div class="flex items-center md:absolute md:right-0 md:inset-y-0">
-          <x-langswitch />
+          
+          <div class="mx-4">
+            <x-langswitch />
+          </div>
+
+          <div class="mr-4">
+            <x-button href="/add/create">Plaats aanbod</x-button>
+          </div>
+          <div class="mr-4">
+            <x-button href="/add/create" class="bg-yellow text-blue">Stel vraag</x-button>
+          </div>
 
           <!-- Mobile menu button -->
-          <button type="button" class="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-light hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+          <button type="button" class="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-black hover:bg-light hover:text-blue focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent" aria-expanded="false">
             <span class="sr-only">Open menu</span>
             <!--
               Icon when menu is closed.
