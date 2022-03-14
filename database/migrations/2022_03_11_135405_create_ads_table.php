@@ -20,6 +20,7 @@ class CreateAdsTable extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('description')->nullable();
+            $table->string('type'); // offered, wanted
 
             $table->string('telephone')->nullable();
             $table->boolean('show_telephone')->default(false);

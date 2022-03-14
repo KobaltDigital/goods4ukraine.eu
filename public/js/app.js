@@ -5535,10 +5535,13 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
+/* harmony import */ var _components_location__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/location */ "./resources/js/components/location.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
+
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('location', _components_location__WEBPACK_IMPORTED_MODULE_1__["default"]);
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
 /***/ }),
@@ -5571,6 +5574,69 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/location.js":
+/*!*********************************************!*\
+  !*** ./resources/js/components/location.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
+  return {
+    location: '',
+    init: function init() {
+      var _this = this;
+
+      console.log(this);
+
+      if (window.navigator.geolocation) {
+        window.navigator.geolocation.getCurrentPosition(function (data) {
+          var key = 'AIzaSyCRnpA6eY0L-jWIH65qRLmEs4M_u2f7kzY';
+          console.log(_this);
+          var _data$coords = data.coords,
+              latitude = _data$coords.latitude,
+              longitude = _data$coords.longitude;
+          var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".concat(latitude, ",").concat(longitude, "&key=").concat(key);
+          fetch(url).then(function (response) {
+            return response.json();
+          }).then(function (json) {
+            var city = json.results[0].address_components.find(function (component) {
+              return component.types.includes('locality');
+            });
+            _this.location = city;
+          });
+        }, this.error);
+      }
+    },
+    success: function success(data) {
+      var _this2 = this;
+
+      var key = 'AIzaSyCRnpA6eY0L-jWIH65qRLmEs4M_u2f7kzY';
+      var _data$coords2 = data.coords,
+          latitude = _data$coords2.latitude,
+          longitude = _data$coords2.longitude;
+      var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".concat(latitude, ",").concat(longitude, "&key=").concat(key);
+      fetch(url).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        var city = json.results[0].address_components.find(function (component) {
+          return component.types.includes('locality');
+        });
+        _this2.location = city;
+      });
+    },
+    error: function error(data) {
+      console.log(data);
+    }
+  };
+});
 
 /***/ }),
 

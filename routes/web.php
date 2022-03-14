@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SessionLanguageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [AdController::class, 'index']);
+Route::get('/', [AdController::class, 'index'])->name('home');
+Route::get('session-language/{lang}', [SessionLanguageController::class, 'update'])->name('sessions.languages.update');
+Route::get('autocomplete','AutocompleteController@locationAutoComplete');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
