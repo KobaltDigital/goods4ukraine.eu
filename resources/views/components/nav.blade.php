@@ -36,8 +36,8 @@
         <div class="min-w-0 flex-1 md:px-8 lg:px-0 xl:col-span-6">
           <div class="flex items-center px-6 py-4 md:max-w-3xl md:mx-auto lg:max-w-none lg:mx-0 xl:px-0">
             <div class="w-full">
-              <h1 class="text-center">
-                {{ __('Bringing people and goods together in times of need') }}
+              <h1 class="text-center font-semibold text-base">
+                "{{ __('Bringing people and goods together in times of need') }}"
               </h1>
             </div>
           </div>

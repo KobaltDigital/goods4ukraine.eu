@@ -20,6 +20,8 @@ Route::get('/', [AdController::class, 'index'])->name('home');
 Route::get('session-language/{lang}', [SessionLanguageController::class, 'update'])->name('sessions.languages.update');
 Route::get('autocomplete','AutocompleteController@locationAutoComplete');
 
+Route::get('/privacy', function () { return view('privacy'); })->name('privacy');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

@@ -9,6 +9,19 @@ module.exports = {
     ],
     theme: {
         extend: {
+            typography: {
+                DEFAULT: {
+                  css: {
+                    color: '#013772',
+                    a: {
+                      color: '#015ABC',
+                      '&:hover': {
+                        color: 'blue',
+                      },
+                    },
+                  },
+                },            
+            },            
             fontFamily: {
                 sans: ['Roboto'],
                 serif: ['Lora'],
@@ -55,5 +68,9 @@ module.exports = {
             },
         },
     },
-    plugins: [require('@tailwindcss/forms')],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+    ],
+    
 };

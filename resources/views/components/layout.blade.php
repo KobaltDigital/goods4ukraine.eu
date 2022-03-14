@@ -42,7 +42,7 @@
                 <ul class="flex text-sm text-blue">
                     <li class="mr-6 hover:underline"><a href="">Over Goods4ukraine</a></li>
                     <li class="mr-6 hover:underline"><a href="">Perskamer</a></li>
-                    <li class="mr-6 hover:underline"><a href="">Privacyverklaring</a></li>
+                    <li class="mr-6 hover:underline"><a href="{{ route('privacy'); }}">Privacyverklaring</a></li>
                     <li class="mr-6 hover:underline"><a href="">Cookiebeleid</a></li>
                     <li class="mr-6 hover:underline"><a href="">Algemene Voorwaarden</a></li>
                 </ul>
