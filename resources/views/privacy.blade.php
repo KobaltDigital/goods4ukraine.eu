@@ -1,6 +1,9 @@
 <x-layout>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="mb-10">
+                <x-nav-sub />          
+            </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h1>Privacyverklaring</h1>
                 <p>Geplaatst: 14 maart 2022.</p>
@@ -293,7 +296,7 @@
                     We kunnen de privacy of de veiligheid van uw persoonsgegevens niet garanderen als u deze aan derden
                     verstrekt en raden u daarom aan het privacy- en beveiligingsbeleid van uw handelspartner goed te
                     lezen voordat u een transactie uitvoert en uw persoonsgegevens deelt. Dat geldt ook als de derden
-                    aan wie u persoonsgegevens openbaar maakt, bieders, kopers, of verkopers op onze site zijn.
+                    aan wie u persoonsgegevens openbaar maakt, bieders, vraag, of aanbod op onze site zijn.
                 </p>
 
             </div>

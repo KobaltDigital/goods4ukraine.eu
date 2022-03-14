@@ -1,6 +1,9 @@
 <x-layout>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="mb-10">
+                <x-nav-sub />          
+            </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h1>Cookiebeleid</h1>
                 <p>Geplaatst: 14 maart 2022.</p>
