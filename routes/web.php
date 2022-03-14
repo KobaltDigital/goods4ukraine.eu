@@ -21,6 +21,7 @@ Route::get('session-language/{lang}', [SessionLanguageController::class, 'update
 Route::get('autocomplete','AutocompleteController@locationAutoComplete');
 
 Route::get('/privacy', function () { return view('privacy'); })->name('privacy');
+Route::get('/cookies', function () { return view('cookies'); })->name('cookies');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
