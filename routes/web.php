@@ -16,9 +16,9 @@ use App\Http\Controllers\SessionLanguageController;
 |
 */
 
-Route::get('/', [AdController::class, 'index'])->name('home');
+Route::get('/', [AdController::class, 'index'])->name('ads.index');
 Route::get('session-language/{lang}', [SessionLanguageController::class, 'update'])->name('sessions.languages.update');
-Route::get('autocomplete','AutocompleteController@locationAutoComplete');
+Route::get('autocomplete', 'AutocompleteController@locationAutoComplete');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
