@@ -1,43 +1,44 @@
 <x-layout>
-
-    <div class="w-full my-10">
-        <div class="max-w-5xl pb-10 mx-auto space-y-4">
-            <div class="p-4">
-                <form action="{{ route('ads.index') }}" method="GET" class="flex">
-                    <div class="w-2/6">
-                        <label for="search" class="block text-sm font-medium text-gray-700">
-                            {{ __('Search term') }}
-                        </label>
-                        <div class="mt-1">
+<!-- Hero section -->
+<div class="relative">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+        <div class="absolute inset-0">
+          <img class="h-full w-full object-cover" src="/img/max-kukurudziak-qbc3Zmxw0G8-unsplash.jpg" alt="People working on laptops">
+          <div class="absolute inset-0 bg-blue mix-blend-multiply"></div>
+        </div>
+        <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-24 lg:px-8">
+          <h1 class="text-center text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-4xl">
+            <span class="block text-white">
+              {{ __('Bringing people and goods together in times of need') }}
+            </span>
+          </h1>
+          <p class="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">{{ __("Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.") }}</p>
+          <div class="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
+                <form action="{{ route('ads.index') }}" method="GET" class="flex justify-center">
+                    <div class="w-2/5">
                             <input
                                 id="search"
                                 type="text"
                                 name="search"
                                 value="{{ request()->input('search') }}"
-                                placeholder="{{ __('Search term..') }}"
-                                class="block w-full border-gray-300 rounded-md focus:ring-accent focus:border-accent sm:text-3xl"
+                                placeholder="{{ __('Search') }}.."
+                                class="block  text-black w-full border-gray-300 rounded-l-lg focus:ring-accent focus:border-accent sm:text-lg"
                             >
-                        </div>
                     </div>
-                    <div class="w-2/6">
-                        <label for="location" class="block text-sm font-medium text-gray-700">
-                            {{ __('Location') }}
-                        </label>
-                        <div class="relative z-10 mt-1 rounded-md shadow-sm">
+                    <div class="w-2/5">
+                        <div class="relative z-10 rounded-md">
                             <input
                                 id="location"
                                 type="text"
                                 name="location"
                                 value="{{ $location ?? '' }}"
-                                class="block w-full pr-12 border-gray-300 rounded-md focus:ring-accent focus:border-accent sm:text-3xl"
-                                placeholder="{{ __('Location..') }}"
+                                class="block text-black w-full pr-12 border-gray-300 focus:ring-accent focus:border-accent sm:text-lg"
+                                placeholder="{{ __('Location') }}"
                             >
                             <div class="absolute inset-y-0 right-0 flex items-center">
-                                <label for="distance" class="sr-only">
-                                    {{ __('Distance') }}
-                                </label>
                                 <select id="distance" name="distance"
-                                    class="h-full py-0 pl-2 text-black bg-transparent border-transparent rounded-md focus:ring-accent focus:border-accent pr-7 sm:text-sm">
+                                    class="h-full py-0 pl-2 text-black bg-transparent border-transparent focus:ring-accent focus:border-accent pr-7 sm:text-lg">
                                     <option value="5000" {{ request()->input('distance') == 5000 ? 'selected' : '' }}>5{{ __('km') }}</option>
                                     <option value="15000" {{ request()->input('distance') == 15000 ? 'selected' : '' }}>15{{ __('km') }}</option>
                                     <option value="25000" {{ request()->input('distance') == 25000 ? 'selected' : '' }}>25{{ __('km') }}</option>
@@ -49,15 +50,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-2/6">
-                        <button type="submit" class="inline-flex items-center h-full px-3 py-2 text-sm font-medium leading-4 text-white border border-transparent rounded-md shadow-sm bg-blue hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
+                    <div class="w-1/5">
+                        <button type="submit" class="w-full items-center h-full px-3 text-white border border-transparent rounded-r-lg bg-blue hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
                             {{ __('Search') }}
                         </button>
                     </div>
                 </form>
-            </div>
+
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  
 
     <section class="w-full">
         <div class="max-w-5xl pb-10 mx-auto space-y-4">

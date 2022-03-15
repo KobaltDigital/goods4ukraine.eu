@@ -32,17 +32,6 @@
           </div>
         </div>
 
-        {{-- Hier logo/naam --}}
-        <div class="flex-1 min-w-0 md:px-8 lg:px-0 xl:col-span-6">
-          <div class="flex items-center px-6 py-4 md:max-w-3xl md:mx-auto lg:max-w-none lg:mx-0 xl:px-0">
-            <div class="w-full">
-              <h1 class="text-base font-semibold text-center">
-                "{{ __('Bringing people and goods together in times of need') }}"
-              </h1>
-            </div>
-          </div>
-        </div>
-
         <div class="flex items-center md:absolute md:right-0 md:inset-y-0">
 
           <div class="mx-4">
