@@ -18,6 +18,8 @@ use App\Http\Controllers\SessionLanguageController;
 
 Route::get('/', [AdController::class, 'index'])->name('ads.index');
 
+Route::get('session-language/{lang}', [SessionLanguageController::class, 'update'])->name('sessions.languages.update');
+
 Route::get('/privacy', function () { return view('pages.privacy'); })->name('privacy');
 Route::get('/cookies', function () { return view('pages.cookies'); })->name('cookies');
 Route::get('/about', function () { return view('pages.about'); })->name('about');
@@ -26,8 +28,6 @@ Route::get('/contact', function () { return view('pages.contact'); })->name('con
 Route::get('/press', function () { return view('pages.press'); })->name('press');
 Route::get('/terms-of-use', function () { return view('pages.terms-of-use'); })->name('terms-of-use');
 
-
-Route::get('session-language/{lang}', [SessionLanguageController::class, 'update'])->name('sessions.languages.update');
 Route::get('autocomplete', 'AutocompleteController@locationAutoComplete');
 
 
