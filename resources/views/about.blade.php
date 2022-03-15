@@ -6,7 +6,7 @@
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h1>Over Goods4ukraine.eu</h1>
-                <p>Geplaatst: 14 maart 2022.</p>
+                <p>Geplaatst: 14 maart 2022</p>
 
                 <p class="intro">
                     Goods4Ukraine brengt vraag en aanbod bij elkaar met als doel om vluchtelingen te helpen aan missende
@@ -24,24 +24,23 @@
                 </p>
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
-
-                <h2>Opmerkelijk en veelzijdig</h2>
-                <p>Op elk willekeurig moment staan er 18,7 miljoen advertenties live op Marktplaats. Een paar
-                    voorbeelden van opmerkelijke advertenties die op Marktplaats hebben gestaan zijn: een tafeltje uit
-                    het Paleis Soestdijk, het tijdschrift Nieuwe Revu, een draagvleugelboot van Connexxion, de Bassie en
-                    Adriaan-auto met caravan en gratis Robin, een replica van de trouwjurk van Maxima en een
-                    privévliegtuig uit 1980.
-                </p>
                 <h2>
                     Hoe werkt Goods4ukraine.eu?
                 </h2>
                 <p>
-                    Goods4ukraine.eu is een advertentiesite die vraag en aanbod samenbrengt. Ondanks het feit dat de
+                    Goods4ukraine.eu is een website die vraag en aanbod samenbrengt. Ondanks het feit dat de
                     website zich vooral kenmerkt door het laagdrempelige karakter ziet Goods4ukraine.eu het als haar
                     missie om hen zo goed mogelijk te adviseren over prettig, veilig en verantwoord handelen. De website
-                    is
-                    zeer eenvoudig in gebruik. Iedereen kan er een advertentie plaatsen of producten plaatsen. Het enige
-                    dat hiervoor nodig is, is een e-mailadres en een paar minuten tijd. </p>
+                    is zeer eenvoudig in gebruik. Het enige dat hiervoor nodig is, is een e-mailadres, enkele lokatiegegevens en een paar minuten tijd.
+                    
+                    
+                </p>
+                <h3>
+                    Duurzaam en lokaal
+                </h3>
+                <p>
+                    Door de lokatiegegevens kunnen we de vraag- en aanbod optimaal laten samenkomen. Hierdoor proberen we lokaal en duurzame matches te maken. 
+                </p>
             </div>
         </div>
     </div>

@@ -258,8 +258,7 @@
                     <p><strong>2. Algemene regels voor het plaatsen van een aanbieding op de Website</strong></p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     <p>2.1&nbsp; aanbiedings die door een aanbieder op de Website worden geplaatst, dienen aan
-                        onderstaande algemene regels te voldoen. Daarnaast gelden aanvullende regels voor bepaalde
-                        groepen aanbiedings, zoals voor Auto&rsquo;s, Diensten en Vakmensen en Admarkt. Deze
+                        onderstaande algemene regels te voldoen. Deze
                         aanvullende regels kunnen afwijken van de onderstaande algemene regels. <strong>Wij adviseren u
                             om altijd goed op te letten onder welke regels een aanbieding valt.<b><br /> </b></strong>
                     </p>
