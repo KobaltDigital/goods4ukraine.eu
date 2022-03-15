@@ -2,8 +2,8 @@
     <div class="flex items-center justify-between px-4 py-5 sm:px-6">
         <div class="flex items-center justify-center space-x-4">
             <div class="space-y-1">
-                <h3 class="text-lg font-medium font-serif leading-6 text-black">
-                    {!! $ad->title !!} <small class="text-gray-400 font-sans">(4km)</small>
+                <h3 class="font-serif text-lg font-medium leading-6 text-black">
+                    {!! $ad->title !!} <small class="font-sans text-gray-400">(4km)</small>
                 </h3>
                 <p class="text-[10px] text-blue underline">Tag 1, Tag 2</p>
             </div>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="flex justify-end">
-                    <x-button href="button">Neem contact op!</x-button>
+                    <x-button :href="route('ad.show', $ad)">Neem contact op!</x-button>
                 </div>
             </div>
         </dl>

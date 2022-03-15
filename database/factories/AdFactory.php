@@ -16,7 +16,6 @@ class AdFactory extends Factory
 
         return [
             'title' => $title,
-            'slug' => Str::slug($title),
             'description' => $this->faker->paragraph,
             'telephone' => $this->faker->phoneNumber,
             'show_telephone' => rand(0, 1),

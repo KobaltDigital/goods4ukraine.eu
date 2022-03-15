@@ -40,7 +40,7 @@
 
     <section class="w-full">
 
-        <div class="max-w-5xl mx-auto space-y-4 pb-10">
+        <div class="max-w-5xl pb-10 mx-auto space-y-4">
 
             <div class="flex items-center justify-between w-full">
                 <div class="relative mt-1 rounded-md shadow-sm sm:w-1/3">

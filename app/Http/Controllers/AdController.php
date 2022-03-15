@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ad;
 use Illuminate\Http\Request;
 use App\Actions\GetClientLocation;
 use App\Actions\Ads\GetFilteredAds;
@@ -19,5 +20,10 @@ class AdController extends Controller
         $currentLocation = '';
 
         return view('home', compact('ads', 'location'));
+    }
+
+    public function show(Request $request, Ad $ad)
+    {
+        return view('ad.show', compact('ad'));
     }
 }
