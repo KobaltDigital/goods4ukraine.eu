@@ -38,14 +38,8 @@
                   </div>
                 </div>
               </div>
-              <div class="my-5">                  
-                <ul class="flex text-sm text-blue">
-                    <li class="mr-6 hover:underline"><a href="">Over Goods4ukraine</a></li>
-                    <li class="mr-6 hover:underline"><a href="">Perskamer</a></li>
-                    <li class="mr-6 hover:underline"><a href="">Privacyverklaring</a></li>
-                    <li class="mr-6 hover:underline"><a href="">Cookiebeleid</a></li>
-                    <li class="mr-6 hover:underline"><a href="">Algemene Voorwaarden</a></li>
-                </ul>
+              <div class="my-5">
+                <x-nav-sub />          
               </div>
               <div class="flex justify-between">
                 <div class="my-5 md:mr-32">                  
