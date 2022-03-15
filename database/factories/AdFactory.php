@@ -11,20 +11,20 @@ class AdFactory extends Factory
 {
     public function definition()
     {
-        $title = $this->faker->word();
+        $title = $this->faker->jobTitle();
         $types = ['offered', 'wanted'];
 
         return [
             'title' => $title,
-            'description' => $this->faker->paragraph,
+            'description' => $this->faker->realText(),
             'phone' => $this->faker->phoneNumber,
             'email' => $this->faker->email,
             'type' => $types[array_rand($types)],
-            'street' => 'Koelmalaan 350',
-            'postcode' => '1812PS',
-            'city' => 'Alkmaar',
-            'country' => 'The Netherlands',
-            'location' => new Point(52.61779, 4.7669),
+            'street' => $this->faker->streetName(),
+            'postcode' => $this->faker->postcode(),
+            'city' => $this->faker->city(),
+            'country' => $this->faker->country(),
+            'location' => new Point($this->faker->latitude(40, 60) , $this->faker->latitude(3, 6)),
             'show_phone' => rand(0, 1),
             'show_email' => rand(0, 1),
             'show_full_address' => rand(0, 1),
