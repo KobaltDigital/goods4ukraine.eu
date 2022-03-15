@@ -9,7 +9,7 @@ if (!function_exists('languages')) {
         if (Cache::has($cacheKey)) {
             return Cache::get($cacheKey);
         }
-        
+
         $languages = \App\Models\Language::get();
         Cache::put($cacheKey, $languages);
 
