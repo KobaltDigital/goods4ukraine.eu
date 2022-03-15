@@ -12,11 +12,26 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Ad extends Model
 {
     use HasFactory;
+    use HasSlug;
     use SoftDeletes;
     use SpatialTrait;
-    use HasSlug;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'user_id',
+        'title',
+        'description',
+        'type',
+        'phone',
+        'email',
+        'street',
+        'postcode',
+        'city',
+        'country',
+        'show_phone',
+        'show_email',
+        'show_full_address',
+    ];
+
     protected $spatialFields = ['location'];
 
     public function getSlugOptions(): SlugOptions

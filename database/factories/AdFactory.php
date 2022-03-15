@@ -17,18 +17,17 @@ class AdFactory extends Factory
         return [
             'title' => $title,
             'description' => $this->faker->paragraph,
-            'telephone' => $this->faker->phoneNumber,
-            'show_telephone' => rand(0, 1),
+            'phone' => $this->faker->phoneNumber,
             'email' => $this->faker->email,
-            'show_email' => rand(0, 1),
             'type' => $types[array_rand($types)],
-            'street' => 'Koelmalaan',
-            'house_number' => 350,
-            'house_number_suffix' => null,
+            'street' => 'Koelmalaan 350',
             'postcode' => '1812PS',
             'city' => 'Alkmaar',
             'country' => 'The Netherlands',
-            'location' => new Point(52.61779, 4.7669)
+            'location' => new Point(52.61779, 4.7669),
+            'show_phone' => rand(0, 1),
+            'show_email' => rand(0, 1),
+            'show_full_address' => rand(0, 1),
         ];
     }
 }

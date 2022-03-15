@@ -18,6 +18,8 @@ use App\Http\Controllers\SessionLanguageController;
 
 Route::get('/', [AdController::class, 'index'])->name('ads.index');
 
+Route::get('session-language/{lang}', [SessionLanguageController::class, 'update'])->name('sessions.languages.update');
+
 Route::get('/privacy', function () { return view('privacy'); })->name('privacy');
 Route::get('/cookies', function () { return view('cookies'); })->name('cookies');
 Route::get('/about', function () { return view('about'); })->name('about');
