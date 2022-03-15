@@ -22,22 +22,22 @@ class CreateAdsTable extends Migration
             $table->text('description')->nullable();
             $table->string('type'); // offered, wanted
 
-            $table->string('telephone')->nullable();
-            $table->boolean('show_telephone')->default(false);
-
+            $table->string('phone')->nullable();
             $table->string('email')->nullable();
-            $table->boolean('show_email')->default(false);
 
             // Address (Eventueel los trekken)
             $table->string('venue')->nullable();
             $table->string('street');
             $table->string('postcode');
-            $table->integer('house_number');
-            $table->integer('house_number_suffix')->nullable(); // Of aan elkaar (?)
             $table->string('city');
             $table->string('country');
-            $table->point('location');
-            
+            $table->point('location')->nullable();
+
+            $table->boolean('show_phone')->default(false);
+            $table->boolean('show_email')->default(false);
+            $table->boolean('show_address')->default(false);
+
+
             // Image gaat via media library (?)
 
             $table->timestamps();

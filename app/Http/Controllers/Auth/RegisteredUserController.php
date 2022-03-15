@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Auth\Events\Registered;
+use App\Enums\AdTypeEnum;
 use Illuminate\Http\Request;
+use App\Actions\Ads\CreateAd;
+use Illuminate\Validation\Rules;
+use App\Actions\Users\CreateUser;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules;
+use Illuminate\Auth\Events\Registered;
+use App\Providers\RouteServiceProvider;
+use App\Http\Requests\Auth\RegisterUserRequest;
 
 class RegisteredUserController extends Controller
 {
@@ -20,7 +24,8 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        $adTypes = AdTypeEnum::toArray();
+        return view('auth.register', compact('adTypes'));
     }
 
     /**
@@ -31,19 +36,14 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request)
-    {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+    public function store(
+        RegisterUserRequest $request,
+        CreateUser $createUser,
+        CreateAd $createAd
+    ) {
+        $user = $createUser->execute($request->validated());
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+        $createAd->execute($request->validated(), $user);
 
         event(new Registered($user));
 

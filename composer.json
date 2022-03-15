@@ -9,9 +9,12 @@
         "fruitcake/laravel-cors": "^2.0",
         "grimzy/laravel-mysql-spatial": "^5.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "kobalt/make-action": "^1.0",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "spatie/laravel-enum": "^3.0",
+        "spatie/laravel-sluggable": "^3.3",
         "stevebauman/location": "^6.3"
     },
     "require-dev": {
