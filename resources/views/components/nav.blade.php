@@ -39,54 +39,14 @@
           </div>
 
           <div class="mr-4">
-            <x-button href="/add/create">{{ __("Place offer") }}</x-button>
+            <x-button href="{{ route('register') }}">{{ __("Place offer") }}</x-button>
+          </div>
+          <div class="">
+            <x-button href="{{ route('login') }}">{{ __("Login") }}</x-button>
           </div>
 
-          <!-- Mobile menu button -->
-          <button x-on:click="open = !open" type="button" class="inline-flex items-center justify-center p-2 -mx-2 text-black rounded-md hover:bg-light hover:text-blue focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent" aria-expanded="false">
-            <span class="sr-only">Open menu</span>
-            <!--
-              Icon when menu is closed.
-
-              Heroicon name: outline/menu
-
-              Menu open: "hidden", Menu closed: "block"
-            -->
-            <svg x-show="!open" class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <!--
-              Icon when menu is open.
-
-              Heroicon name: outline/x
-
-              Menu open: "block", Menu closed: "hidden"
-            -->
-            <svg x-show="open" class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
         </div>
       </div>
     </div>
 
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <nav x-show="open" class="" aria-label="Global">
-      <div class="max-w-3xl px-2 pt-2 pb-3 mx-auto space-y-1 sm:px-4">
-        <!-- Current: "bg-light text-black", Default: "hover:bg-light" -->
-        <a href="#" aria-current="page" class="block px-3 py-2 text-base font-medium text-black rounded-md bg-light">Dashboard</a>
-
-        <a href="{{ route('login') }}" class="block px-3 py-2 text-base font-medium rounded-md hover:bg-light">
-            {{ __('Login') }}
-        </a>
-
-        <a href="{{ route('login') }}" class="block px-3 py-2 text-base font-medium rounded-md hover:bg-light">
-            {{ __('Place offer') }}
-        </a>
-
-        <a href="{{ route('login') }}" class="block px-3 py-2 text-base font-medium rounded-md hover:bg-light">
-            {{ __('Make a request') }}
-        </a>
-      </div>
-    </nav>
   </header>
