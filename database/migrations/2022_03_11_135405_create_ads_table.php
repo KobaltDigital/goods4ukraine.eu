@@ -35,7 +35,7 @@ class CreateAdsTable extends Migration
 
             $table->boolean('show_phone')->default(false);
             $table->boolean('show_email')->default(false);
-            $table->boolean('show_address')->default(false);
+            $table->boolean('show_full_address')->default(false);
 
 
             // Image gaat via media library (?)

@@ -46,7 +46,7 @@ class RegisterUserRequest extends FormRequest
             'city' => ['string', 'max:255'],
             'show_phone' => ['nullable'],
             'show_email' => ['nullable'],
-            'show_address' => ['nullable'],
+            'show_full_address' => ['nullable'],
         ];
     }
 }

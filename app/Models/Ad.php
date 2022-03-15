@@ -29,7 +29,7 @@ class Ad extends Model
         'country',
         'show_phone',
         'show_email',
-        'show_address',
+        'show_full_address',
     ];
 
     protected $spatialFields = ['location'];

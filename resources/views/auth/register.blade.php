@@ -182,16 +182,16 @@
                                                 <div class="relative flex items-start">
                                                     <div class="flex items-center h-5">
                                                         <input
-                                                            id="show_address"
-                                                            name="show_address"
+                                                            id="show_full_address"
+                                                            name="show_full_address"
                                                             type="checkbox"
                                                             value="1"
                                                             class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-                                                            @if(old('show_address')) checked @endif
+                                                            @if(old('show_full_address')) checked @endif
                                                         >
                                                     </div>
                                                     <div class="ml-3 text-sm">
-                                                        <label for="show_address" class="font-medium text-gray-700">{{ __('Address') }}</label>
+                                                        <label for="show_full_address" class="font-medium text-gray-700">{{ __('Address') }}</label>
                                                         <p class="text-gray-500">{{ __('Show my address on the website')}}</p>
                                                     </div>
                                                 </div>

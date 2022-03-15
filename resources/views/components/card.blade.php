@@ -24,7 +24,7 @@
                     {!! $ad->description !!}
                 </dd>
                 <div class="flex mt-4">
-                    @if ($ad->show_address)
+                    @if ($ad->show_full_address)
                         <div class="w-1/2">
                             <dt class="text-sm font-medium text-black">{{ __('Address') }}</dt>
                             <dd class="mt-1 mb-4 text-sm text-black">{{ $ad->street }} {{ $ad->postcode }}, {{ $ad->city }}, {{ __($ad->country) }}</dd>

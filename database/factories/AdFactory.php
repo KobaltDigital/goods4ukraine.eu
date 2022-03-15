@@ -27,7 +27,7 @@ class AdFactory extends Factory
             'location' => new Point(52.61779, 4.7669),
             'show_phone' => rand(0, 1),
             'show_email' => rand(0, 1),
-            'show_address' => rand(0, 1),
+            'show_full_address' => rand(0, 1),
         ];
     }
 }
