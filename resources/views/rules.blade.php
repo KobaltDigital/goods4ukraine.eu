@@ -170,20 +170,10 @@
 
                 <h2>Help goods4ukraine.eu schoon en veilig te houden! </h2>
                 <p>
-                    Als u verboden, verdachte of inbreukmakende objecten of diensten opmerkt, kunt u ons tippen
-                    via de
-                    knop “In strijd met de regels” die onderaan elke advertentie staat. Onze medewerkers zullen
-                    uw tips
-                    bekijken en waar nodig actie ondernemen.
+                    Als u verboden, verdachte of inbreukmakende objecten of diensten opmerkt, kunt u contact met ons opnemen. Onze medewerkers zullen
+                    uw tips bekijken en waar nodig actie ondernemen.
                 </p>
             </div>
-
-
-
-
-
-
-
         </div>
     </div>
 </x-layout>
