@@ -5594,8 +5594,6 @@ __webpack_require__.r(__webpack_exports__);
     init: function init() {
       var _this = this;
 
-      console.log(this);
-
       if (window.navigator.geolocation) {
         window.navigator.geolocation.getCurrentPosition(function (data) {
           var key = 'AIzaSyCRnpA6eY0L-jWIH65qRLmEs4M_u2f7kzY';

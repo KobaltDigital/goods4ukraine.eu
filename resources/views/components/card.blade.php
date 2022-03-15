@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="flex justify-end">
-                    <x-button href="button">Neem contact op!</x-button>
+                    <x-button :href="route('ad.show', $ad)">Neem contact op!</x-button>
                 </div>
             </div>
         </dl>

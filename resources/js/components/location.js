@@ -1,8 +1,6 @@
-
 export default () => ({
     location: '',
     init() {
-        console.log(this);
         if (window.navigator.geolocation) {
             window.navigator.geolocation.getCurrentPosition((data) => {
                 const key = 'AIzaSyCRnpA6eY0L-jWIH65qRLmEs4M_u2f7kzY';

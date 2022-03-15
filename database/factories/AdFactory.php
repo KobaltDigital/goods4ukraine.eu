@@ -16,7 +16,6 @@ class AdFactory extends Factory
 
         return [
             'title' => $title,
-            'slug' => Str::slug($title),
             'description' => $this->faker->paragraph,
             'phone' => $this->faker->phoneNumber,
             'email' => $this->faker->email,
