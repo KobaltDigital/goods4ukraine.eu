@@ -6,7 +6,6 @@
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h1>Over Goods4ukraine.eu</h1>
-                <p>Geplaatst: 14 maart 2022</p>
 
                 <p class="intro">
                     Goods4Ukraine brengt vraag en aanbod bij elkaar met als doel om vluchtelingen te helpen aan missende
