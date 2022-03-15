@@ -13,8 +13,8 @@ final class AdTypeEnum extends Enum
     protected static function values(): array
     {
         return [
-            'OFFER' => 'offered',
-            'REQUEST' => 'requested',
+            'OFFER' => 'Offered',
+            'REQUEST' => 'Wanted',
         ];
     }
 
@@ -22,7 +22,7 @@ final class AdTypeEnum extends Enum
     {
         return [
             'OFFER' => __('Offered'),
-            'REQUEST' => __('Requested'),
+            'REQUEST' => __('Wanted'),
         ];
     }
 }
