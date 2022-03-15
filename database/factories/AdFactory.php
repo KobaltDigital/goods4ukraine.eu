@@ -12,7 +12,7 @@ class AdFactory extends Factory
     public function definition()
     {
         $title = $this->faker->jobTitle();
-        $types = ['offered', 'wanted'];
+        $types = ['Offered', 'Wanted'];
 
         return [
             'title' => $title,
