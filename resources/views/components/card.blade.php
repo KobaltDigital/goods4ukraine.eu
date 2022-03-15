@@ -1,4 +1,4 @@
-<div class="overflow-hidden bg-white shadow sm:rounded-lg">
+<div onclick="location.href = '{{ route('ad.show', $ad) }}';" class="cursur-pointer overflow-hidden bg-white shadow sm:rounded-lg hover:bg-light hover:shadow-2xl">
     <div class="px-4 py-5 border-t border-gray-200 sm:px-6">
         <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-4">
             <div class="sm:col-span-1">
