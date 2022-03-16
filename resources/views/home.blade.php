@@ -76,6 +76,9 @@
             @foreach ($ads as $ad)
                 <x-card :ad="$ad"/>
             @endforeach
+
+            {{ $ads->links() }}
+
         </div>
     </section>
 </x-layout>

@@ -24,6 +24,6 @@ class GetFilteredAds
             $query = $query->distanceSphere('location', $locationGeometry, (int) $data['distance']);
         }
 
-        return $query->paginate();
+        return $query->paginate(25);
     }
 }
