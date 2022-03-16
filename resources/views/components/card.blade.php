@@ -23,24 +23,10 @@
                     {!! $ad->description !!}
                 </dd>
                 <div class="flex mt-4">
-                    @if ($ad->show_full_address)
-                        <div>
-                            <dt class="text-sm font-medium text-black">{{ __('Address') }}</dt>
-                            <dd class="mt-1 mb-4 text-sm text-black">{{ $ad->street }} {{ $ad->postcode }}, {{ $ad->city }}, {{ __($ad->country) }}</dd>
-                        </div>
-                    @endif
-                    @if ($ad->show_email)
                     <div>
-                        <dt class="text-sm font-medium text-black">{{ __('Email') }}</dt>
-                        <dd class="mt-1 mb-4 text-sm text-black">{{ $ad->email }}</dd>
+                        <dt class="text-sm font-medium text-black">{{ __('City') }}</dt>
+                        <dd class="mt-1 mb-4 text-sm text-black">{{ $ad->city }}, {{ __($ad->country) }}</dd>
                     </div>
-                    @endif
-                    @if ($ad->show_phone)
-                    <div>
-                        <dt class="text-sm font-medium text-black">{{ __('Phone') }}</dt>
-                        <dd class="mt-1 text-sm text-black">{{ $ad->phone }}</dd>
-                    </div>
-                    @endif
                 </div>
             </div>
         </dl>

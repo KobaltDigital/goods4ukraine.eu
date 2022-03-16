@@ -66,12 +66,9 @@
 
     <section class="w-full">
         <div class="max-w-5xl pb-10 mx-auto space-y-4">
-            <div class="mt-10 m-10">
-
             @foreach ($ads as $ad)
                 <x-card :ad="$ad"/>
             @endforeach
-        </div>
 
             {{ $ads->links() }}
 
