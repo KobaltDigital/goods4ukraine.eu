@@ -10,6 +10,7 @@ class SessionLanguageController extends Controller
     public function update(Request $request)
     {
         $request->session()->put('language', $request->lang);
+
         return redirect()->back();
     }
 }

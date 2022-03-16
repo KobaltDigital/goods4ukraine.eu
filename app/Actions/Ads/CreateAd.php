@@ -17,7 +17,7 @@ class CreateAd
             'phone' => $data['phone'],
             'show_phone' => $data['show_phone'],
             'email' => $data['email'],
-            'show_email' => $data['show_email'],
+            'show_email' => $data['show_email'] ? 1 : 0,
             'street' => $data['street'],
             'postcode' => $data['postcode'],
             'city' => $data['city'],

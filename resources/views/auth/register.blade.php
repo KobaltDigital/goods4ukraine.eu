@@ -1,10 +1,5 @@
-<x-guest-layout>
+<x-layout>
     <div class="flex flex-col items-center min-h-screen pt-6 bg-gray-100 sm:justify-center sm:pt-0">
-        <div>
-            <a href="/">
-                <x-application-logo class="w-20 h-20 text-gray-500 fill-current" />
-            </a>
-        </div>
 
         <div class="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-4xl sm:rounded-lg">
             <!-- Validation Errors -->
@@ -14,12 +9,12 @@
                 <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
                     <div>
                         <div>
-                            <h3 class="text-2xl font-medium leading-6 text-gray-900">{{ __('Create an account and place an ad') }}</h3>
+                            <h3 class="text-2xl font-medium leading-6 text-black">{{ __('Create an account and place an ad') }}</h3>
                             <p class="max-w-2xl mt-1 text-sm text-gray-500">{{ __('Fill in the form below to register for an account and place an ad') }}</p>
                         </div>
 
                         <div class="mt-6">
-                            <h3 class="text-lg font-medium leading-6 text-gray-900">{{ __('Ad details') }}</h3>
+                            <h3 class="text-lg font-medium leading-6 text-black">{{ __('Ad details') }}</h3>
                         </div>
 
                         <div class="mt-6 space-y-6 sm:mt-5 sm:space-y-5">
@@ -67,7 +62,7 @@
 
                     <div class="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
                         <div>
-                            <h3 class="text-lg font-medium leading-6 text-gray-900">{{ ('Personal information') }}</h3>
+                            <h3 class="text-lg font-medium leading-6 text-black">{{ ('Personal information') }}</h3>
                         </div>
                         <div class="space-y-6 sm:space-y-5">
                             <x-input.group name="name" :label="__('Name')" required>
@@ -136,7 +131,7 @@
 
                     <div class="pt-8 space-y-6 divide-y divide-gray-200 sm:pt-10 sm:space-y-5">
                         <div>
-                            <h3 class="text-lg font-medium leading-6 text-gray-900">{{ __('Contact settings') }}</h3>
+                            <h3 class="text-lg font-medium leading-6 text-black">{{ __('Contact settings') }}</h3>
                             <p class="max-w-2xl mt-1 text-sm text-gray-500">{{ __('Please tell us how you want people to contact you')}}</p>
                         </div>
                         <div class="space-y-6 divide-y divide-gray-200 sm:space-y-5">
@@ -213,4 +208,4 @@
             </form>
         </div>
     </div>
-</x-guest-layout>
+</x-layout>

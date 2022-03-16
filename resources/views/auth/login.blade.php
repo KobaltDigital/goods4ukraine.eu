@@ -1,15 +1,5 @@
-<x-guest-layout>
+<x-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-32 h-32 fill-current text-black" />
-            </a>
-        </x-slot>
-
-        <div class="flex justify-end">
-            <x-langswitch />
-        </div>
-
         <form method="POST" action="{{ route('login') }}">
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -57,4 +47,4 @@
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-layout>
