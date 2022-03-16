@@ -1,7 +1,7 @@
 <x-layout>
 <!-- Hero section -->
 <div class="relative">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 lg:my-20">
       <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
         <div class="absolute inset-0">
           <img class="h-full w-full object-cover" src="/img/max-kukurudziak-qbc3Zmxw0G8-unsplash.jpg" alt="People working on laptops">
@@ -66,16 +66,12 @@
 
     <section class="w-full">
         <div class="max-w-5xl pb-10 mx-auto space-y-4">
-            <div class="flex justify-between w-full items-right">
-                <div></div>
-                <div class="text-gray-400">
-                    <strong class="text-black">{{ $ads->count() }}</strong> {{ __('pagination.results') }}
-                </div>
-            </div>
+            <div class="mt-10 m-10">
 
             @foreach ($ads as $ad)
                 <x-card :ad="$ad"/>
             @endforeach
+        </div>
 
             {{ $ads->links() }}
 
