@@ -19,6 +19,18 @@
                         benodigheden. Heb je speelgoed, babyspullen, een woonplek of vervoer die je gratis wil aanbieden,
                         dan kun je eenvoudig je aanbod plaatsen op Goods4Ukraine.eu."
                     </p>
+                    <h2>Persbericht</h2>
+                    <p>
+                        <a href="/Persbericht_Goods4Ukraine_21_maart_2022.pdf">Download het persbericht</a>.
+                    </p>
+                    <h2>Campagne foto</h2>
+                    <p>
+                        <a href="/img/photo.jpg">Download de campagnefoto</a> 4096px x 1468px (3,4MB).
+                    </p>
+
+                    <img src="/img/photo_small.jpg" class="w-full" />
+
+                    
                 </div>
                 <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                     <h2>

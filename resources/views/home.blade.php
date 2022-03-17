@@ -4,7 +4,7 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 lg:my-20">
       <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
         <div class="absolute inset-0">
-          <img class="h-full w-full object-cover" src="/img/max-kukurudziak-qbc3Zmxw0G8-unsplash.jpg"
+          <img class="h-full w-full object-cover" src="/img/photo.jpg"
             alt="People working on laptops">
           <div class="absolute inset-0 bg-blue mix-blend-multiply"></div>
         </div>
@@ -14,13 +14,13 @@
               {{ __('Bringing people and goods together in times of need') }}
             </span>
           </h1>
-          <p class="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">{{ __("Goods4Ukraine brings
-            supply and demand together with the aim of helping refugees with missing necessities.") }}</p>
+          <p class="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
+            {{ __("Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.") }}</p>
           <div class="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
             <form action="{{ route('ads.index') }}" method="GET" class="flex justify-center">
               <div class="w-2/5">
                 <input id="search" type="text" name="search" value="{{ request()->input('search') }}"
-                  placeholder="{{ __('Search') }}.."
+                  placeholder="{{ __('Search') }}..."
                   class="block  text-black w-full border-gray-300 rounded-l-lg focus:ring-accent focus:border-accent sm:text-lg">
               </div>
               <div class="w-2/5">
@@ -50,7 +50,7 @@
               </div>
               <div class="w-1/5">
                 <button type="submit"
-                  class="w-full items-center h-full px-3 text-white border border-transparent rounded-r-lg bg-blue hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
+                  class="w-full items-center h-full px-3 text-black border border-transparent rounded-r-lg bg-accent hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
                   {{ __('Search') }}
                 </button>
               </div>
