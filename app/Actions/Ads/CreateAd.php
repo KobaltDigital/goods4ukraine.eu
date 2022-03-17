@@ -7,17 +7,13 @@ use App\Models\User;
 
 class CreateAd
 {
-    public function execute(array $data, User $user)
+    public function execute(array $data)
     {
         return Ad::create([
-            'user_id' => $user->id,
+            'user_id' => auth()->user()->id,
             'title' => $data['title'],
             'description' => $data['description'],
             'type' => $data['type'],
-            'phone' => $data['phone'],
-            'show_phone' => $data['show_phone'],
-            'email' => $data['email'],
-            'show_email' => $data['show_email'] ? 1 : 0,
             'street' => $data['street'],
             'postcode' => $data['postcode'],
             'city' => $data['city'],

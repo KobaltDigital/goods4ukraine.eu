@@ -20,14 +20,14 @@
             @if (count($groupOptions) > 0)
                 <optgroup label="{{$groupLabel}}">
                     @foreach ($groupOptions as $option => $label)
-                        <option value="{{ $option }}" {{ in_array($option, $disabled) ? 'disabled' : '' }} {{ $option == $value ? 'selected' : '' }}>{{ $label }}</option>
+                        <option value="{{ $option }}" {{ in_array($option, $disabled) ? 'disabled' : '' }} {{ $option == $value ? 'selected' : '' }}>{{ __($label) }}</option>
                     @endforeach
                 </optgroup>
             @endif
         @endforeach
     @else
         @foreach ($options as $option => $label)
-            <option value="{{ $option }}" {{ in_array($option, $disabled) ? 'disabled' : '' }} {{ $option == $value ? 'selected' : '' }}>{{ $label }}</option>
+            <option value="{{ $option }}" {{ in_array($option, $disabled) ? 'disabled' : '' }} {{ $option == $value ? 'selected' : '' }}>{{ __($label) }}</option>
         @endforeach
     @endif
   </select>

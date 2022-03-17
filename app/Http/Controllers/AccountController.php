@@ -13,9 +13,21 @@ class AccountController extends Controller
         return view('auth.edit');
     }
 
-    public function update(Request $request, User $user)
+    public function update(Request $request)
     {
+        $data = $this->validate($request, [
+            'name' => 'required|max:255',
+            'email' => 'required|email|unique:users,email,'.auth()->user()->id,
+            'phone' => '',
+            'show_full_address' => '',
+            'show_email' => '',
+            'show_phone' => '',
+            'type' => '',
+        ]);
+        
 
-        return redirect()->route('admin.profile.edit')->withSuccess(__('Edited'));
+        auth()->user()->update($data);
+
+        return redirect()->route('admin.profile.edit')->withSuccess(__('Saved.'));
     }
 }

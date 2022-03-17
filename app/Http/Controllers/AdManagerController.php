@@ -40,7 +40,7 @@ class AdManagerController extends Controller
     {
         $createAd->execute($request->validated(), auth()->user());
 
-        return view('admin.ad.create-or-edit');
+        return redirect()->route('admin.ads.index')->withSuccess(__('Saved.'));
     }
 
     public function edit(Ad $ad)
@@ -61,7 +61,7 @@ class AdManagerController extends Controller
         }
         $ad = $updateAd->execute($ad, $request->validated());
 
-        return redirect()->route('admin.ad.index', compact('ad'))->withSuccess(__('Activated'));
+        return redirect()->route('admin.ads.index')->withSuccess(__('Activated'));
     }
 
     public function activate($id)

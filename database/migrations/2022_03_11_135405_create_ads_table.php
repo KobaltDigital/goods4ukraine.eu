@@ -22,8 +22,6 @@ class CreateAdsTable extends Migration
             $table->text('description')->nullable();
             $table->string('type'); // offered, wanted
 
-            $table->string('phone')->nullable();
-            $table->string('email')->nullable();
 
             // Address (Eventueel los trekken)
             $table->string('venue')->nullable();
@@ -32,11 +30,6 @@ class CreateAdsTable extends Migration
             $table->string('city');
             $table->string('country');
             $table->point('location')->nullable();
-
-            $table->boolean('show_phone')->default(false);
-            $table->boolean('show_email')->default(false);
-            $table->boolean('show_full_address')->default(false);
-
 
             // Image gaat via media library (?)
 

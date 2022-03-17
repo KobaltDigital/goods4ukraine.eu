@@ -29,7 +29,6 @@
                     </p>
 
                     <img src="/img/photo_small.jpg" class="w-full" />
-
                     
                 </div>
                 <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">

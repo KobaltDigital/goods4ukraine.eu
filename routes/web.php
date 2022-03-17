@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/ads/{ad}/edit', [AdManagerController::class, 'edit'])->name('admin.ads.edit');
     Route::put('/admin/ads/{ad}', [AdManagerController::class, 'update'])->name('admin.ads.update');
     Route::get('/admin/ads/create', [AdManagerController::class, 'create'])->name('admin.ads.create');
-    Route::post('/admin/ads', [AdManagerController::class, 'store'])->name('admin.ads.store');
+    Route::post('/admin/ads/', [AdManagerController::class, 'store'])->name('admin.ads.store');
     
     Route::put('/admin/ads/{id}/activate', [AdManagerController::class, 'activate'])->name('admin.ads.activate');
     Route::put('/admin/ads/{ad}/reserve', [AdManagerController::class, 'reserve'])->name('admin.ads.reserve');

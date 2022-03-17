@@ -4,7 +4,9 @@
 
 <x-layout>
     <div class="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0">
+        <h1>{{ __("Ads") }} </h1>
         <div class="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-4xl sm:rounded-lg">
+
 
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
@@ -21,20 +23,18 @@
                     action="{{ route('admin.ads.store') }}"
                     class="space-y-8"
                 >
+                @method('POST')
             @endif
-                @csrf
+            @csrf
 
-                <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
+                <div class="lg:grid lg:grid-cols-2 gap-6">
                     <div>
-                        <div class="mt-6">
-                            <h3 class="text-lg font-medium leading-6 text-black">{{ __('Ad details') }}</h3>
-                        </div>
-
+                        <h3>{{ __('Ad details') }}</h3>
                         <div class="mt-6 space-y-6 sm:mt-5 sm:space-y-5">
                             <x-input.group name="type" :label="__('Type')" required>
                                 <x-input.select
-                                    :options="$adTypes"
-                                    value="{{ old('type', ($editing ? $ad->type : '')) }}"
+                                    :options="$adTypes ?? ''"
+                                    value="{{ old('type', ($editing ? $ad->type ?? '' : '')) }}"
                                 />
                             </x-input.group>
 
@@ -51,7 +51,7 @@
                             </x-input.group>
 
                             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                                <label for="cover-photo" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">{{ __('Image') }}</label>
+                                <label for="cover-photo" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">{{ __('Photo') }}</label>
                                 <div class="mt-1 sm:mt-0 sm:col-span-2">
                                     <div class="flex justify-center max-w-lg px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
                                         <div class="space-y-1 text-center">
@@ -60,7 +60,7 @@
                                             </svg>
                                             <div class="flex text-sm text-gray-600">
                                                 <label for="file-upload" class="relative font-medium text-indigo-600 bg-white rounded-md cursor-pointer hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                                                    <span>{{ __('Upload a file') }}</span>
+                                                    <span>{{ __('Choose File') }}</span>
                                                     <input id="file-upload" name="file-upload" type="file" class="sr-only">
                                                 </label>
                                                 <p class="pl-1">{{ __('or drag and drop') }}</p>
@@ -73,11 +73,9 @@
                         </div>
                     </div>
 
-                    <div class="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
-                        <div>
-                            <h3 class="text-lg font-medium leading-6 text-black">{{ ('Contact information') }}</h3>
-                        </div>
-                        <div class="space-y-6 sm:space-y-5">
+                    <div>
+                        <h3>{{ __('Contact information') }}</h3>
+                        <div class="mt-6 space-y-6 sm:mt-5 sm:space-y-5">
                             <x-input.group :label="__('Street address')" required>
                                 <x-input.text
                                     name="street"
@@ -86,7 +84,7 @@
                                 />
                             </x-input.group>
 
-                            <x-input.group name="postcode" :label="__('ZIP / Postal code')" required>
+                            <x-input.group name="postcode" :label="__('Zip / Postal Code')" required>
                                 <x-input.text
                                     autocomplete="postal-code"
                                     value="{{ old('postcode', ($editing ? $ad->postcode : '')) }}"
@@ -109,74 +107,6 @@
                         </div>
                     </div>
 
-                    <div class="pt-8 space-y-6 divide-y divide-gray-200 sm:pt-10 sm:space-y-5">
-                        <div>
-                            <h3 class="text-lg font-medium leading-6 text-black">{{ __('Contact settings') }}</h3>
-                            <p class="max-w-2xl mt-1 text-sm text-gray-500">{{ __('Please tell us how you want people to contact you')}}</p>
-                        </div>
-                        <div class="space-y-6 divide-y divide-gray-200 sm:space-y-5">
-                            <div class="pt-6 sm:pt-5">
-                                <div role="group" aria-labelledby="label-email">
-                                    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
-                                    <div class="mt-4 sm:mt-0 sm:col-span-2">
-                                        <div class="max-w-lg space-y-4">
-                                            <div class="relative flex items-start">
-                                                <div class="flex items-center h-5">
-                                                    <input
-                                                        id="show_phone"
-                                                        name="show_phone"
-                                                        type="checkbox"
-                                                        value="1"
-                                                        class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-                                                        @if(old('show_phone')) checked @endif
-                                                    >
-                                                </div>
-                                                <div class="ml-3 text-sm">
-                                                    <label for="show_phone" class="font-medium text-gray-700">{{ __('Phone') }}</label>
-                                                    <p class="text-gray-500">{{ __('Show my phone number on the website')}}</p>
-                                                </div>
-                                            </div>
-
-                                                <div class="relative flex items-start">
-                                                    <div class="flex items-center h-5">
-                                                        <input
-                                                            id="show_email"
-                                                            name="show_email"
-                                                            type="checkbox"
-                                                            value="1"
-                                                            class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-                                                            @if(old('show_email')) checked @endif
-                                                        >
-                                                    </div>
-                                                    <div class="ml-3 text-sm">
-                                                        <label for="show_email" class="font-medium text-gray-700">{{ __('Email') }}</label>
-                                                        <p class="text-gray-500">{{ __('Show my email address on the website')}}</p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="relative flex items-start">
-                                                    <div class="flex items-center h-5">
-                                                        <input
-                                                            id="show_full_address"
-                                                            name="show_full_address"
-                                                            type="checkbox"
-                                                            value="1"
-                                                            class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-                                                            @if(old('show_full_address')) checked @endif
-                                                        >
-                                                    </div>
-                                                    <div class="ml-3 text-sm">
-                                                        <label for="show_full_address" class="font-medium text-gray-700">{{ __('Address') }}</label>
-                                                        <p class="text-gray-500">{{ __('Show my address on the website')}}</p>
-                                                    </div>
-                                                </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="pt-5">

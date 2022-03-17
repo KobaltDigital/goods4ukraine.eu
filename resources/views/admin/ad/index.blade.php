@@ -1,21 +1,30 @@
 <x-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold font-serif text-xl text-black leading-tight">
-            {{ __('Ads') }}
-        </h2>
-    </x-slot>
+
 
     <div class="relative mx-auto max-w-7xl">
         <div class="py-12">
-            <div class="w-full flex justify-end mb-6">
-                <x-button href="{{ route('admin.ads.create') }}">{{ __('Create') }}</x-button>
-            </div>
             
         @if(count($ads)<1)
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+        <div class="w-full text-center mb-6">
+            <h1 class="mb-4">{{ __('You do not have any ads yet') }}</h1>
+            <x-button href="{{ route('admin.ads.create') }}">{{ __('Create') }}</x-button>
+        </div>
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <img src="/img/noadds.svg" />
             </div>
         @else
+
+        <div class="w-full flex justify-between mb-6">
+
+            <h1>    
+                {{ __('Ads') }}
+            </h1>
+        
+            <div class="w-full flex justify-end mb-6">
+                <x-button href="{{ route('admin.ads.create') }}">{{ __('Create') }}</x-button>
+            </div>
+        </div>
 
         <table class="w-full divide-y divide-gray-300 shadow-lg bg-white rounded-lg">
             <thead>
@@ -57,7 +66,7 @@
                                     @csrf
                                     <x-button-secondary class="mr-2">{{ __("Reserve") }}</x-button>
                                 </form>
-                                <form action="{{ route('admin.ads.destroy', ['ad'=> $ad]) }}" method="POST" onsubmit="return confirm('{{__('Are u sure?')}}');">
+                                <form action="{{ route('admin.ads.destroy', ['ad'=> $ad]) }}" method="POST" onsubmit="return confirm('{{__('Are you sure you want to delete this resource?')}}');">
                                     @method('delete')
                                     @csrf
                                     <x-button-secondary class="mr-2">

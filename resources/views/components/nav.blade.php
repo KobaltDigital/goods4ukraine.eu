@@ -77,10 +77,10 @@
         </div>
         @else
         <div class="mr-4">
-          <x-button href="{{ route('register') }}">{{ __("Place offer") }}</x-button>
+          <x-button href="{{ route('register') }}">{{ __("Register") }}</x-button>
         </div>
         <div class="">
-          <x-button href="{{ route('login') }}">{{ __("Login") }}</x-button>
+          <x-button-secondary href="{{ route('login') }}">{{ __("Login") }}</x-button>
         </div>
         @endif
 

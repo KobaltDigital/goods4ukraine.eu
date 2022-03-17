@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
-use App\Enums\AdTypeEnum;
 use Illuminate\Http\Request;
 use App\Actions\Ads\CreateAd;
 use Illuminate\Validation\Rules;
@@ -24,8 +23,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        $adTypes = AdTypeEnum::toArray();
-        return view('auth.register', compact('adTypes'));
+        return view('auth.register');
     }
 
     /**
@@ -42,8 +40,6 @@ class RegisteredUserController extends Controller
         CreateAd $createAd
     ) {
         $user = $createUser->execute($request->validated());
-
-        $createAd->execute($request->validated(), $user);
 
         event(new Registered($user));
 

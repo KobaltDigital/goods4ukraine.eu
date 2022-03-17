@@ -21,15 +21,10 @@ class Ad extends Model
         'title',
         'description',
         'type',
-        'phone',
-        'email',
         'street',
         'postcode',
         'city',
         'country',
-        'show_phone',
-        'show_email',
-        'show_full_address',
     ];
 
     protected $spatialFields = ['location'];
