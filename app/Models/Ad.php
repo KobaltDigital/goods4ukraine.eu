@@ -8,13 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Grimzy\LaravelMysqlSpatial\Eloquent\SpatialTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class Ad extends Model
+class Ad extends Model implements Auditable
 {
     use HasFactory;
     use HasSlug;
     use SoftDeletes;
     use SpatialTrait;
+    use \OwenIt\Auditing\Auditable;
 
     protected $fillable = [
         'user_id',
