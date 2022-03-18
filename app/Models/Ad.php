@@ -47,11 +47,11 @@ class Ad extends Model implements Auditable, HasMedia
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')
-              ->crop('crop-center', 150, 150);
+              ->crop('crop-center', 150, 150)              
+              ->sharpen(10);
 
         $this->addMediaConversion('medium')
-              ->width(300)
-              ->height(300)
+              ->crop('crop-center', 150, 150)
               ->sharpen(10);
 
               $this->addMediaConversion('single')
@@ -61,8 +61,7 @@ class Ad extends Model implements Auditable, HasMedia
 
               $this->addMediaConversion('large')
               ->width(2000)
-              ->height(1500)
-              ->sharpen(10);
+              ->height(1500);
     }
 
     public function getRouteKeyName()

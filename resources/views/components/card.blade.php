@@ -17,7 +17,6 @@
                                 {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
                                 <span class="font-sans text-gray-400">(4km)</span>    
                             </div>
-
                         </div>
                     </div>
                 </div>
