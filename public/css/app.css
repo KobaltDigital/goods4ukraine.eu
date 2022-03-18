@@ -1009,6 +1009,10 @@ select {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -1089,6 +1093,9 @@ select {
 }
 .inline-block {
   display: inline-block;
+}
+.inline {
+  display: inline;
 }
 .flex {
   display: flex;
@@ -2338,6 +2345,11 @@ p {
     right: 0;
   }
 
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .md\:mr-10 {
     margin-right: 2.5rem;
   }
@@ -2419,6 +2431,11 @@ p {
   .lg\:my-3 {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
+  }
+
+  .lg\:mx-0 {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .lg\:mb-2 {

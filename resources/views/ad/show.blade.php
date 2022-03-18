@@ -1,6 +1,6 @@
 <x-layout>
     <div class="py-10 mx-auto max-w-7xl">
-            <div class="relative mx-auto max-w-7xl ">
+            <div class="lg:grid lg:grid-cols-3">
 
                 <div class="lg:pr-10 sm:px-6 lg:col-span-2">
                     <div class="bg-white shadow rounded p-6">

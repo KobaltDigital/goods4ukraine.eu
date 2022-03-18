@@ -63,7 +63,7 @@
 
 
   <section class="w-full">
-    <div class="max-w-5xl py-10 mx-auto space-y-4">
+    <div class="mx-4 max-w-5xl py-10 md:mx-auto space-y-4">
       @foreach ($ads as $ad)
         <x-card :ad="$ad" />
       @endforeach
