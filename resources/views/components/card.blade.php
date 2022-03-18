@@ -9,13 +9,13 @@
                     <div class="flex items-center justify-center space-x-4">
                         <div class="space-y-1">
                             <h3 class="font-serif text-lg font-medium leading-6 text-black">
-                                {{ __($ad->type) }}: 
+                                {{ __($ad->type) }}:
 
-                                {!! $ad->title !!} 
+                                {!! $ad->title_translated !!}
                             </h3>
-                            <div class="font-bold text-sm">
+                            <div class="text-sm font-bold">
                                 {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
-                                <span class="font-sans text-gray-400">(4km)</span>    
+                                <span class="font-sans text-gray-400">(4km)</span>
                             </div>
                         </div>
                     </div>

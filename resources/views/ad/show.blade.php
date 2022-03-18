@@ -7,12 +7,12 @@
             <div class="relative mx-auto max-w-7xl lg:grid lg:grid-cols-3">
                 <div class="lg:pr-10  sm:px-6 lg:col-span-2">
                     <div class="bg-white shadow rounded p-6">
-                        <h2 class="text-2xl font-extrabold tracking-tight text-black sm:text-3xl mb-6">{{ $ad->title }}</h2>
+                        <h2 class="text-2xl font-extrabold tracking-tight text-black sm:text-3xl mb-6">{{ $ad->translated_title }}</h2>
                         <a data-fancybox href="{{ $ad->getFirstMediaUrl('images', 'large') }}">
                         <img class="w-full mb-3 border" src="{{ $ad->getFirstMediaUrl('images', 'single') }}" /></a>
 
-                        <p class="mt-6 text-base leading-6 text-black">
-                            {!! $ad->description !!}
+                        <p class="mt-3 text-lg leading-6 text-gray-500">
+                            {{ $ad->translated_description }}
                         </p>
                         <dl class="mt-8 text-base text-gray-500">
                             <div>
