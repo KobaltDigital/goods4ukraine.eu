@@ -64,36 +64,7 @@
                 </div>
                 <div class="px-4 py-16 bg-white rounded sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
                     <div class="max-w-lg mx-auto lg:max-w-none">
-                        <form action="#" method="POST" class="grid grid-cols-1 gap-y-6">
-                            <div>
-                                <label for="full-name" class="sr-only">{{ __('Full name') }}</label>
-                                <input type="text" name="full-name" id="full-name" autocomplete="name"
-                                    class="block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                                    placeholder="{{ __('Full name') }}">
-                            </div>
-                            <div>
-                                <label for="email" class="sr-only">{{ __('Email') }}</label>
-                                <input id="email" name="email" type="email" autocomplete="email"
-                                    class="block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                                    placeholder="{{ __('Email') }}">
-                            </div>
-                            <div>
-                                <label for="phone" class="sr-only">{{ __('Phone') }}</label>
-                                <input type="text" name="phone" id="phone" autocomplete="tel"
-                                    class="block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                                    placeholder="{{ __('Phone') }}">
-                            </div>
-                            <div>
-                                <label for="message" class="sr-only">{{ __('Message') }}</label>
-                                <textarea id="message" name="message" rows="4"
-                                    class="block w-full px-4 py-3 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                                    placeholder="{{ __('Message') }}"></textarea>
-                            </div>
-                            <div>
-                                <button type="submit"
-                                    class="inline-flex justify-center px-6 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">{{ __('Submit') }}</button>
-                            </div>
-                        </form>
+                        <x-ad.contact :ad="$ad" />
                     </div>
                 </div>
             </div>
