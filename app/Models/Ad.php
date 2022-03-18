@@ -5,10 +5,11 @@ namespace App\Models;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
+use Spatie\Translatable\HasTranslations;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Grimzy\LaravelMysqlSpatial\Eloquent\SpatialTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use OwenIt\Auditing\Contracts\Auditable;
 
 class Ad extends Model implements Auditable
 {
@@ -17,6 +18,7 @@ class Ad extends Model implements Auditable
     use SoftDeletes;
     use SpatialTrait;
     use \OwenIt\Auditing\Auditable;
+    use HasTranslations;
 
     protected $fillable = [
         'user_id',
@@ -27,7 +29,11 @@ class Ad extends Model implements Auditable
         'postcode',
         'city',
         'country',
+        'translated_title',
+        'translated_description',
     ];
+
+    public $translatable = ['translated_title', 'translated_description'];
 
     protected $spatialFields = ['location'];
 
