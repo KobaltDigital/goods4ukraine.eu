@@ -15,7 +15,7 @@
             autocomplete="name"
             class="block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             placeholder="{{ __('Full name') }}"
-            value="{{ old('name') ?: 'kylian' }}"
+            value="{{ old('name') }}"
         >
     </div>
     <div>
@@ -27,7 +27,7 @@
             autocomplete="email"
             class="block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             placeholder="{{ __('Email') }}"
-            value="{{ old('email') ?: 'kylian@kobaltdigital.nl' }}"
+            value="{{ old('email') }}"
         >
     </div>
     <div>
@@ -39,7 +39,7 @@
             autocomplete="tel"
             class="block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             placeholder="{{ __('Phone') }}"
-            value="{{ old('phone') ?: '0629362877' }}"
+            value="{{ old('phone') }}"
         >
     </div>
     <div>
@@ -50,7 +50,7 @@
             rows="4"
             class="block w-full px-4 py-3 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             placeholder="{{ __('Message') }}"
-        >{{ old('message') ?: 'Ik wil!' }}</textarea>
+        >{{ old('message') }}</textarea>
     </div>
     <div>
         <button
