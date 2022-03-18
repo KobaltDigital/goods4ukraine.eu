@@ -7,14 +7,18 @@
     "require": {
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
+        "google/cloud-translate": "^1.12",
         "grimzy/laravel-mysql-spatial": "^5.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "kobalt/make-action": "^1.0",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "owen-it/laravel-auditing": "^13.0",
         "spatie/laravel-enum": "^3.0",
+        "spatie/laravel-medialibrary": "^9.0.0",
         "spatie/laravel-sluggable": "^3.3",
+        "spatie/laravel-translatable": "^5.0.0",
         "stevebauman/location": "^6.3"
     },
     "require-dev": {

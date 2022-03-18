@@ -19,4 +19,8 @@ return [
         'zl'=> 'Switzerland',
         'ua'=> 'Ukraine'
     ],
+    'google' => [
+        'service_account' => env('GOOGLE_SERVICE_ACCOUNT'),
+        'project' => env('GOOGLE_PROJECT'),
+    ]
 ];
