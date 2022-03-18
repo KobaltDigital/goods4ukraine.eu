@@ -70,7 +70,7 @@ class Ad extends Model implements Auditable, HasMedia
         return 'slug';
     }
 
-    public function author()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }

@@ -26,24 +26,23 @@
   <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
-<body class="text-black antialiased bg-light">
+<body class="antialiased text-black bg-light">
   <x-nav />
 
-
-
   {{ $slot }}
-  <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  md:py-10 border-t">
+
+  <footer class="px-4 mx-auto border-t max-w-7xl sm:px-6 lg:px-8 md:py-10">
     <div class="my-5">
       <x-nav-sub />
     </div>
     <div class="flex items-center">
       <div class="mr-10">
         <a href="/">
-          <x-application-logo class="block h-10 lg:h-20 w-auto fill-current" />
+          <x-application-logo class="block w-auto h-10 fill-current lg:h-20" />
         </a>
       </div>
       <div class="mr-10">
-        <p class="text-black text-sm">
+        <p class="text-sm text-black">
           {{ __('Copyright', ['year' => date('Y')]) }}
         </p>
       </div>
@@ -76,7 +75,7 @@
               <path d="M132.184 2.73996H132.824V0.579956H131.724C129.124 0.579956 127.844 2.19996 127.844 4.87996V5.65996H126.064V7.49996H127.844V15H130.164V7.49996H132.244V5.65996H130.164V4.75996C130.144 3.61996 130.604 2.73996 132.184 2.73996Z" fill="#051432"/>
               </g>
               </svg>
-          </a>  
+          </a>
         </div>
         <a href="https://github.com/KobaltDigital/goods4ukraine.eu" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px" fill="none" class="">
@@ -97,19 +96,19 @@
     </div>
   </footer>
   @empty(Session::get('language'))
-  <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-      <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+  <div class="fixed inset-0 z-10 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+      <div class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" aria-hidden="true"></div>
       <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
       <div
-        class="relative inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 md:align-middle md:max-w-lg md:w-full sm:p-6">
-        <div class="mx-auto flex items-center justify-center">
-          <h3 class="text-lg leading-6 font-medium text-black" id="modal-title">Choose your language</h3>
+        class="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 md:align-middle md:max-w-lg md:w-full sm:p-6">
+        <div class="flex items-center justify-center mx-auto">
+          <h3 class="text-lg font-medium leading-6 text-black" id="modal-title">Choose your language</h3>
         </div>
-        <div class="mt-5 sm:mt-6 sm:grid grid-cols-2 md:grid-cols-3 sm:gap-3">
+        <div class="grid-cols-2 mt-5 sm:mt-6 sm:grid md:grid-cols-3 sm:gap-3">
           @foreach (languages() as $language)
-          <div class="text-center p-5">
-            <div class="mx-auto flex justify-center">
+          <div class="p-5 text-center">
+            <div class="flex justify-center mx-auto">
               <img src="/img/{{ $language->locale }}.svg" class="w-full my-3 sm:mt-5" />
             </div>
             <x-button href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}"
@@ -132,7 +131,7 @@
           notyf.success('{{ session('success') }}')
   </script>
   @endif
-  
+
   @if (session()->has('error'))
   <script>
       const notyf = new Notyf({duration: 10000, dismissible: true})
