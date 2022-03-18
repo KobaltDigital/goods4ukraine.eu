@@ -5,19 +5,26 @@
                 <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" />
             </div>
             <div class="sm:col-span-3">
-                <div class="flex items-center justify-between py-5">
-                    <div class="flex items-center justify-center space-x-4">
-                        <div class="space-y-1">
-                            <h3 class="font-serif text-lg font-medium leading-6 text-black">
-                                {{ __($ad->type) }}:
-
-                                {!! $ad->title_translated !!}
-                            </h3>
-                            <div class="text-sm font-bold">
-                                {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
-                                <span class="font-sans text-gray-400">(4km)</span>
-                            </div>
+                <div class="relative flex justify-between">
+                    <div>
+                        <h3 class="font-serif text-lg font-medium leading-6 text-black">
+                            {!! $ad->title_translated !!}
+                        </h3>
+                        <div class="text-sm font-bold">
+                            {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
+                            <span class="font-sans text-gray-400">(4km)</span>
                         </div>
+                    </div>
+                    <div>
+                        @if($ad->type == 'Wanted')
+                            <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-purple-600 bg-purple-200 uppercase last:mr-0 mr-1">
+                                {{ __($ad->type) }}
+                            </span>
+                        @else 
+                            <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-orange-600 bg-orange-200 uppercase last:mr-0 mr-1">
+                            {{ __($ad->type) }}
+                            </span>
+                        @endif
                     </div>
                 </div>
                 <div class="mt-1 text-sm  text-black">
