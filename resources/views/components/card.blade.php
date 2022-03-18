@@ -2,7 +2,7 @@
     <div class="px-4 py-5 border-t border-gray-200 sm:px-6">
         <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-4">
             <div class="sm:col-span-1">
-                <img src="https://via.placeholder.com/250" />
+                <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" />
             </div>
             <div class="sm:col-span-3">
                 <div class="flex items-center justify-between py-5">

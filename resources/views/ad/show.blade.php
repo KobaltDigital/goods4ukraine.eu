@@ -7,7 +7,10 @@
             <div class="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
                 <div class="px-4 py-16 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
                     <div class="max-w-lg mx-auto">
-                        <img class="w-full mb-3" src="https://via.placeholder.com/200" />
+                        <a data-fancybox href="{{ $ad->getFirstMediaUrl('images', 'large') }}">
+                        <img class="w-full mb-3" src="{{ $ad->getFirstMediaUrl('images', 'single') }}" /></a>
+
+
                         <h2 class="text-2xl font-extrabold tracking-tight text-black sm:text-3xl">{{ $ad->title }}</h2>
                         <p class="mt-3 text-lg leading-6 text-gray-500">
                             {!! $ad->description !!}

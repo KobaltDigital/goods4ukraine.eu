@@ -15,6 +15,7 @@
         "laravel/tinker": "^2.5",
         "owen-it/laravel-auditing": "^13.0",
         "spatie/laravel-enum": "^3.0",
+        "spatie/laravel-medialibrary": "^9.0.0",
         "spatie/laravel-sluggable": "^3.3",
         "stevebauman/location": "^6.3"
     },

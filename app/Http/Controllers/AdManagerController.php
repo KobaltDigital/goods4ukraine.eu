@@ -38,6 +38,7 @@ class AdManagerController extends Controller
 
     public function store(StoreAdRequest $request, CreateAd $createAd)
     {
+
         $createAd->execute($request->validated(), auth()->user());
 
         return redirect()->route('admin.ads.index')->withSuccess(__('Saved.'));
@@ -56,10 +57,19 @@ class AdManagerController extends Controller
 
     public function update(StoreAdRequest $request, UpdateAd $updateAd, Ad $ad)
     {
+
         if ($ad->user_id !== auth()->user()->id) {
             return abort(403);
         }
-        $ad = $updateAd->execute($ad, $request->validated());
+        $updateAd->execute($ad, $request->validated());
+
+
+        if(count($request->files) > 0) {
+
+            $ad->addMedia($request['file-upload']->path())
+               ->toMediaCollection('images');
+
+        }
 
         return redirect()->route('admin.ads.index')->withSuccess(__('Activated'));
     }

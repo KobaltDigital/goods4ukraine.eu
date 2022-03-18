@@ -42,8 +42,9 @@
                 @foreach($ads as $ad)
                 <tr class="@if(isset($ad->deleted_at)) bg-gray-100  @endif">
                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
-                        <img class="h-10 w-10 rounded-full @if(isset($ad->deleted_at)) opacity-50  @endif"
-                            src="{{ $ad->image }}"
+
+                        <img class="h-20 w-20 rounded @if(isset($ad->deleted_at)) opacity-50  @endif"
+                            src="{{ $ad->getFirstMediaUrl('images', 'thumb') }}"
                             alt="">
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 @if(isset($ad->deleted_at)) text-gray-400 @else text-black @endif">
