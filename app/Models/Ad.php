@@ -78,4 +78,14 @@ class Ad extends Model implements Auditable, HasMedia
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getTitleTranslatedAttribute()
+    {
+        return $this->translated_title ?: $this->title;
+    }
+
+    public function getDescriptionTranslatedAttribute()
+    {
+        return $this->translated_description ?: $this->description;
+    }
 }

@@ -11,9 +11,9 @@
                         <img class="w-full mb-3" src="{{ $ad->getFirstMediaUrl('images', 'single') }}" /></a>
 
 
-                        <h2 class="text-2xl font-extrabold tracking-tight text-black sm:text-3xl">{{ $ad->title }}</h2>
+                        <h2 class="text-2xl font-extrabold tracking-tight text-black sm:text-3xl">{{ $ad->translated_title }}</h2>
                         <p class="mt-3 text-lg leading-6 text-gray-500">
-                            {!! $ad->description !!}
+                            {!! $ad->translated_description !!}
                         </p>
                         <dl class="mt-8 text-base text-gray-500">
                             <div>
