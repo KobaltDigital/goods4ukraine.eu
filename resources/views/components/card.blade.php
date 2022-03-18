@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="mt-1 text-sm  text-black">
-                    {!! $ad->description !!}
+                    {{ \Illuminate\Support\Str::limit($ad->description, 150) }}
                 </div>
             </div>
         </div>

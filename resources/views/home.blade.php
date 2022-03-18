@@ -55,7 +55,6 @@
                 </button>
               </div>
             </form>
-
           </div>
         </div>
       </div>
@@ -64,9 +63,9 @@
 
 
   <section class="w-full">
-    <div class="max-w-5xl pb-10 mx-auto space-y-4">
+    <div class="mx-4 max-w-5xl py-10 sm:mx-auto space-y-4">
       @foreach ($ads as $ad)
-      <x-card :ad="$ad" />
+        <x-card :ad="$ad" />
       @endforeach
       {{ $ads->links() }}
     </div>

@@ -4,6 +4,9 @@
 
 <x-auth-validation-errors class="mb-4" />
 
+<h3>{{ __('Reageer op deze advertentie') }}</h3>
+<p class="text-sm text-gray-500 my-4">{{ __('Wilt je reageren op deze advertentie? Dan kan de aanbieder hem reserveren en kunnen jullie in contact treden om alles verder af te handelen.') }}</p>
+
 <form id="contact" action="{{ route('ads.contact', $ad) }}" method="POST" class="grid grid-cols-1 gap-y-6">
     @csrf
     <div>
@@ -56,7 +59,7 @@
         <button
             class="inline-flex justify-center px-6 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
-            {{ __('Submit') }}
+            {{ __('Reageren') }}
         </button>
     </div>
 </form>

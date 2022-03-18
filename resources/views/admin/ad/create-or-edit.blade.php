@@ -3,7 +3,7 @@
 @endphp
 
 <x-layout>
-    <div class="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0">
+    <div class="flex flex-col items-center sm:justify-center sm:pt-0">
         <h1>{{ __("Ads") }} </h1>
         <div class="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-4xl sm:rounded-lg">
 
@@ -75,7 +75,6 @@
 
                     <div>
                         <h3>{{ __('Contact information') }}</h3>
-                        Deze informatie wordt gebruikt om een goede match te maken met de zoekende en wordt niet online getoond tenzij je dat wilt.
                         <div class="mt-6 space-y-6 sm:mt-5 sm:space-y-5">
                             <x-input.group :label="__('Street address')" required>
                                 <x-input.text
@@ -105,6 +104,9 @@
                                     value="{{ old('country', ($editing ? $ad->country : '')) }}"
                                 />
                             </x-input.group>
+                        </div>
+                        <div class="text-sm text-gray-600 mt-4">
+                            {{ __('This information is used to make a good match with the searcher and is not shown online unless you want it to.') }}
                         </div>
                     </div>
 
