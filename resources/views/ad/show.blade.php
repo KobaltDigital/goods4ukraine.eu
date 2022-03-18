@@ -22,12 +22,12 @@
                                     <dd>
                                         <p>{{ $ad->street }} {{ $ad->house_number }}{{ $ad->house_number_suffix }}</p>
                                         <p>{{ $ad->postcode }}, {{ $ad->city }}</p>
-                                        <p>{{ __($ad->country) }}</p>
+                                        <p>{{ __(config('goods4ukraine.countries')[$ad->country]) }}</p>
                                     </dd>
                                 @else
                                     <dd>
                                         <p>{{ $ad->city }}</p>
-                                        <p>{{ __($ad->country) }}</p>
+                                        <p>{{ __(config('goods4ukraine.countries')[$ad->country]) }}</p>
                                     </dd>
                                 @endif
                             </div>
