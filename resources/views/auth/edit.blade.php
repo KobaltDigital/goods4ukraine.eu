@@ -1,10 +1,10 @@
 <x-layout>
 
-    
-    
-    <div class="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0">
+
+
+    <div class="flex flex-col items-center pt-6 mt-10 sm:justify-between sm:pt-0">
         <h1>{{ __('Profile') }}</h1>
-        <div class="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-4xl sm:rounded-lg">
+        <div class="w-full px-6 py-4 mt-6 mb-10 overflow-hidden bg-white shadow-md sm:max-w-4xl sm:rounded-lg">
 
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
@@ -47,10 +47,10 @@
                 </div>
                 <div>
                     <div>
-    
+
                         <h2>{{ __('Settings') }}</h2>
                         <p class="my-3 text-sm text-gray-500">{{ __('Please tell us how you want people to contact you')}}</p>
-    
+
                         <div class="pt-6 sm:pt-5">
                             <div role="group" aria-labelledby="label-email">
                                 <div class="mt-4 sm:mt-0 sm:col-span-2">
@@ -58,7 +58,7 @@
                                         <div class="relative flex items-start">
                                             <div class="flex items-center h-5">
                                                 <input id="show_phone" name="show_phone" type="checkbox" value="1"
-                                                    class="w-4 h-4 text-blue border-gray-300 rounded focus:ring-blue"
+                                                    class="w-4 h-4 border-gray-300 rounded text-blue focus:ring-blue"
                                                     @if(old('show_phone') || auth()->user()->show_phone) checked @endif>
                                             </div>
                                             <div class="ml-3 text-sm">
@@ -67,11 +67,11 @@
                                                 <p class="text-gray-500">{{ __('Show my phone number on the website')}}</p>
                                             </div>
                                         </div>
-    
+
                                         <div class="relative flex items-start">
                                             <div class="flex items-center h-5">
                                                 <input id="show_email" name="show_email" type="checkbox" value="1"
-                                                    class="w-4 h-4 text-blue border-gray-300 rounded focus:ring-blue"
+                                                    class="w-4 h-4 border-gray-300 rounded text-blue focus:ring-blue"
                                                     @if(old('show_email') || auth()->user()->show_email) checked @endif>
                                             </div>
                                             <div class="ml-3 text-sm">
@@ -80,12 +80,12 @@
                                                 <p class="text-gray-500">{{ __('Show my email address on the website')}}</p>
                                             </div>
                                         </div>
-    
+
                                         <div class="relative flex items-start">
                                             <div class="flex items-center h-5">
                                                 <input id="show_full_address" name="show_full_address" type="checkbox"
                                                     value="1"
-                                                    class="w-4 h-4 text-blue border-gray-300 rounded focus:ring-blue"
+                                                    class="w-4 h-4 border-gray-300 rounded text-blue focus:ring-blue"
                                                     @if(old('show_full_address') || auth()->user()->show_full_address) checked @endif>
                                             </div>
                                             <div class="ml-3 text-sm">
@@ -94,7 +94,7 @@
                                                 <p class="text-gray-500">{{ __('Show my address on the website')}}</p>
                                             </div>
                                         </div>
-    
+
                                     </div>
                                 </div>
                             </div>

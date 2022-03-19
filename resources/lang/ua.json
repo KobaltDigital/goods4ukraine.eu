@@ -734,5 +734,18 @@
     "Everything": "все",
     "Login": "Увійти",
     "km": "KM",
-    "Any distance": "Будь-яка відстань"
+    "Any distance": "Будь-яка відстань",
+    "Reaction on ad: :ad": "Реакція на оголошення: :ad",
+    "Dear": "Шановний",
+    "You have a response to your ad:": "У вас є відповідь на своє оголошення:",
+    "From:": "Від:",
+    "Email address:": "дреса електронної пошти:",
+    "Phone:": "Телефон",
+    "Message:": "Повідомлення:",
+    "You have to respond to :name yourself, by contacting him/her now.": "Ви повинні відповісти :name самостійно, зв'язавшись з нами зараз.",
+    "Do you want to put the ad on reserved?": "Бажаєте розмістити оголошення в зарезервованих?",
+    "Do you want to remove the ad?": "Ви хочете видалити оголошення?",
+    "Thank you for using Goods4Ukraine.eu.": "Дякуємо за користування Goods4Ukraine.eu.",
+    "Greeting": "Вітаю",
+    "Click here": "Натисніть тут"
 }
