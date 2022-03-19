@@ -15,7 +15,7 @@
                             <span class="font-sans text-gray-400">(4km)</span>
                         </div>
                     </div>
-                    <div>
+                    <div>                        
                         @if($ad->type == 'Wanted')
                             <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-purple-600 bg-purple-200 uppercase last:mr-0 mr-1">
                                 {{ __($ad->type) }}
