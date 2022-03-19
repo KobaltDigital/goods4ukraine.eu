@@ -27,21 +27,21 @@
                     <!-- Name -->
                     <div class="mb-6">
                         <x-label for="name" required="required" :value="__('Name')" />
-                        <x-input id="name" required="required" type="text" name="name"
+                        <x-input.text id="name" required="required" type="text" name="name"
                             :value="old('name', auth()->user()->name)" required autofocus />
                     </div>
 
                     <!-- Email Address -->
                     <div class="mb-6">
                         <x-label for="email" required="required" :value="__('Email')" />
-                        <x-input id="email" required="required" type="email" name="email"
+                        <x-input.text id="email" required="required" type="email" name="email"
                             :value="old('email', auth()->user()->email)" required autofocus />
                     </div>
 
                     <!-- Name -->
                     <div class="mb-6">
                         <x-label for="phone" :value="__('Phone')" />
-                        <x-input id="phone" type="text" name="phone"
+                        <x-input.text id="phone" type="text" name="phone"
                             :value="old('phone', auth()->user()->phone)" autofocus />
                     </div>
                 </div>

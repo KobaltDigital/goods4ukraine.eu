@@ -1,24 +1,45 @@
 <x-layout>
     <div class="py-10 mx-auto max-w-7xl">
-        <div class="relative">
-            <div class="absolute inset-0">
-                <div class="absolute inset-y-0 left-0 w-1/2"></div>
-            </div>
-            <div class="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
-                <div class="px-4 py-16 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
-                    <div class="max-w-lg mx-auto">
+            <div class="lg:grid lg:grid-cols-3">
+
+                <div class="lg:pr-10 sm:px-6 lg:col-span-2">
+                    <div class="bg-white shadow rounded p-6">
+
+                        <div class="relative flex justify-between mb-4">
+                            <div>
+                                <h1 class="font-serif text-3xl font-medium leading-6 text-black">
+                                    {!! $ad->title_translated !!}
+                                </h1>
+                                <div class="text-sm font-bold">
+                                    {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
+                                    <span class="font-sans text-gray-400">(4km)</span>
+                                </div>
+                            </div>
+                            <div>                        
+                                @if($ad->type == 'Wanted')
+                                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-purple-600 bg-purple-200 uppercase last:mr-0 mr-1">
+                                        {{ __($ad->type) }}
+                                    </span>
+                                @else 
+                                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-orange-600 bg-orange-200 uppercase last:mr-0 mr-1">
+                                    {{ __($ad->type) }}
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                            
                         <a data-fancybox href="{{ $ad->getFirstMediaUrl('images', 'large') }}">
-                        <img class="w-full mb-3" src="{{ $ad->getFirstMediaUrl('images', 'single') }}" /></a>
+                            <img class="w-full mb-3 border" src="{{ $ad->getFirstMediaUrl('images', 'single') }}" />
+                        </a>
 
-
-                        <h2 class="text-2xl font-extrabold tracking-tight text-black sm:text-3xl">{{ $ad->translated_title }}</h2>
                         <p class="mt-3 text-lg leading-6 text-gray-500">
-                            {!! $ad->translated_description !!}
+                            {{ $ad->translated_description }}
                         </p>
+
                         <dl class="mt-8 text-base text-gray-500">
                             <div>
                                 <dt class="sr-only">Postal address</dt>
-                                @if ($ad->show_full_address)
+                                @if ($ad->user->show_full_address)
                                     <dd>
                                         <p>{{ $ad->street }} {{ $ad->house_number }}{{ $ad->house_number_suffix }}</p>
                                         <p>{{ $ad->postcode }}, {{ $ad->city }}</p>
@@ -31,7 +52,7 @@
                                     </dd>
                                 @endif
                             </div>
-                            @if ($ad->show_telephone)
+                            @if ($ad->user->show_telephone)
                             <div class="mt-6">
                                 <dt class="sr-only">{{ __('Phone number') }}</dt>
                                 <dd class="flex">
@@ -45,7 +66,7 @@
                                 </dd>
                             </div>
                             @endif
-                            @if ($ad->show_email)
+                            @if ($ad->user->show_email)
                             <div class="mt-3">
                                 <dt class="sr-only">{{ __('Email') }}</dt>
                                 <dd class="flex">
@@ -62,12 +83,11 @@
                         </dl>
                     </div>
                 </div>
-                <div class="px-4 py-16 bg-white rounded sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
-                    <div class="max-w-lg mx-auto lg:max-w-none">
+                <div class="lg:col-span-1">
+                    <div class="max-w-lg mx-auto lg:max-w-none bg-white shadow rounded p-6">
                         <x-ad.contact :ad="$ad" />
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </x-layout>

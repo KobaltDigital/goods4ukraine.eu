@@ -15,7 +15,7 @@ done
 echo "git pull on live?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) ssh -A kobalt@goods4ukraine.eu 'cd /var/www/goods4ukraine.eu/ && git pull && php artisan down && composer dump-autoload -o && php artisan migrate && php artisan up'; break;;
+        Yes ) ssh -A kobalt@goods4ukraine.eu 'cd /var/www/goods4ukraine.eu/ && git pull && php artisan down && composer install && composer dump-autoload -o && php artisan migrate && php artisan up'; break;;
         No ) break;;
     esac
 done

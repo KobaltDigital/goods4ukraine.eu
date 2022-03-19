@@ -34,19 +34,19 @@
     <div class="my-5">
       <x-nav-sub />
     </div>
-    <div class="flex items-center">
-      <div class="mr-10">
+    <div class="md:flex items-center">
+      <div class="mb-10 lg:mb-2 mr-10">
         <a href="/">
           <x-application-logo class="block w-auto h-10 fill-current lg:h-20" />
         </a>
       </div>
-      <div class="mr-10">
+      <div class="mb-10 lg:mb-2 md:mr-10">
         <p class="text-sm text-black">
           {{ __('Copyright', ['year' => date('Y')]) }}
         </p>
       </div>
       <div class="flex">
-        <div class="mr-10">
+        <div class="mb-10 lg:mb-2 mr-10">
           <a href="https://kobaltdigital.nl">
             <svg width="70" height="26" viewBox="0 0 135 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M43.3029 44.914V49.8243H38.898V27H43.3029V38.9785L49.6306 32.2673H54.9793L48.0573 39.7468L54.9793 49.8243H49.9802L45.1558 42.9069L43.3029 44.914Z" fill="#051432"/>

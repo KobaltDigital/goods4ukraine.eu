@@ -16,14 +16,14 @@
             <div>
                 <x-label for="email"  required="required" :value="__('Email')" />
 
-                <x-input id="email" class="block w-full mt-1" type="email" name="email" :value="old('email')" required autofocus />
+                <x-input.text id="email" class="block w-full mt-1" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" required="required" :value="__('Password')" />
 
-                <x-input id="password" required="required" class="block w-full mt-1"
+                <x-input.text id="password" required="required" class="block w-full mt-1"
                                 type="password"
                                 name="password"
                                 autocomplete="current-password" />
