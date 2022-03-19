@@ -16,5 +16,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/push.sh
 public/.DS_Store
 public/img/.DS_Store
