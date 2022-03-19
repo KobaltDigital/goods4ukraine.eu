@@ -68,8 +68,8 @@ class AdManagerController extends Controller
         }
         $updateAd->execute($ad, $request->validated());
 
-
         if(count($request->files) > 0) {
+            $ad->media()->delete();
             $ad->addMedia($request['file-upload']->path())
                ->toMediaCollection('images');
         }
