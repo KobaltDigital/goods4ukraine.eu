@@ -7,7 +7,7 @@
 
                         <div class="relative flex justify-between mb-4">
                             <div>
-                                <h1 class="font-serif text-3xl font-medium leading-6 text-black">
+                                <h1 class="font-serif text-3xl font-medium leading-6 text-black mb-2">
                                     {!! $ad->title_translated !!}
                                 </h1>
                                 <div class="text-sm font-bold">

@@ -41,12 +41,10 @@
                 <tr class="@if(isset($ad->deleted_at)) bg-gray-100  @endif">
                     <td class="whitespace-nowrap px-3 py-4 @if(isset($ad->deleted_at)) text-gray-400 @else text-black @endif">
                         <div class="flex">
-                            <div>
-                                <img class="h-20 w-20 rounded @if(isset($ad->deleted_at)) opacity-50  @endif"
+                                <img class="h-10 w-10 md:h-20 md:w-20 rounded @if(isset($ad->deleted_at)) opacity-50  @endif"
                                 src="{{ $ad->getFirstMediaUrl('images', 'thumb') }}"
                                 alt="">
 
-                            </div>
                             <div class="pl-2">
                                 {{ $ad->title }}<br>
                                 <div class="text-sm text-gray-500">
