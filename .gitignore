@@ -19,3 +19,4 @@ yarn-error.log
 /push.sh
 public/.DS_Store
 public/img/.DS_Store
+.DS_Store
