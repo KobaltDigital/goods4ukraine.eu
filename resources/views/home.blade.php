@@ -7,52 +7,51 @@
           <img class="object-cover w-full h-full" src="/img/photo.jpg" alt="People working on laptops">
           <div class="absolute inset-0 bg-blue mix-blend-multiply"></div>
         </div>
-        <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-24 lg:px-8">
-          <h1 class="text-2xl font-extrabold tracking-tight text-center sm:text-3xl lg:text-4xl">
-            <span class="block text-white">
+        <div class="relative py-10 px-4 md:py-16 lg:py-24 sm:px-6 sm:py-24 lg:px-8">
+          <h1 class="text-2xl text-white font-extrabold tracking-tight text-center sm:text-3xl lg:text-4xl">
               {{ __('Bringing people and goods together in times of need') }}
-            </span>
           </h1>
-          <p class="max-w-lg mx-auto mt-6 text-xl text-center text-white sm:max-w-3xl">
-            {{ __("Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.") }}</p>
-          <div class="max-w-lg mx-auto mt-6 text-xl text-white sm:max-w-3xl">
-            <form action="{{ route('ads.index') }}" method="GET" class="flex justify-center">
+          <p class="max-w-lg mx-auto my-6 text-base md:text-xl text-center text-white sm:max-w-3xl lg:py-6">
+            {{ __("Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.") }}
+          </p>
+          <div class="max-w-4xl mx-auto mt-6 text-xl text-white ">
+            <form action="{{ route('ads.index') }}" method="GET" class="md:flex md:justify-center">
               <input x-model="latitude" id="latitude" type="hidden" value="{{ request()->input('latitude') }}"
               name="latitude">
             <input x-model="longitude" id="longitude" type="hidden" value="{{ request()->input('longitude') }}"
               name="longitude">
 
-              <div class="w-1/5">
+              <div class="w-full md:w-1/5">
                 <x-label class="text-white">{{ __('Search') }}</x-label>
                 <x-input id="search" type="text" name="search" value="{{ request()->input('search') }}"
-                  placeholder="{{ __('Titel') }}..."
-                  class="block  h-16 w-full rounded-none rounded-l-lg text-black border-0 border-r" />
+                  placeholder=""
+                  class="block md:h-16 w-full rounded-none rounded-l-lg rounded-r-lg lg:rounded-lg text-black border-0 border-r" />
               </div>
-              <div class="w-1/5">
-                <x-label class="text-white">{{ __('Wanted or offered') }}</x-label>
+              <div class="w-full md:w-1/5">
+                <x-label class="text-white truncate pr-4">{{ __('Waanted or offered') }}</x-label>
                 <select id="type" name="type"
-                class="text-black w-full  h-16 border-0 border-r border-gray-300 focus:ring focus:ring-blue focus:ring-opacity-50">
+                class="text-black bg-light w-full md:h-16 border-0 border-r border-gray-300 focus:ring focus:ring-blue focus:ring-opacity-50">
                 <option value="" {{ request()->input('type') == "" ? 'selected' : '' }}>{{ __('Both') }}</option>
                 <option value="Wanted" {{ request()->input('type') == "Wanted" ? 'selected' : '' }}>{{ __('Wanted') }}</option>
                 <option value="Offered" {{ request()->input('type') == "Offered" ? 'selected' : '' }}>{{ __('Offered') }}</option>
               </select>
           
               </div>
-              <div class="w-1/5">
+              <div class="w-full md:w-1/5">
                 <x-label class="text-white">{{ __('Location') }}</x-label>
                 <div x-data="location" class="relative z-10  h-full">
                   <x-input x-model="location" x-on:change="autocompleteLocation($event)" id="location" type="text"
                     name="location"
-                    class="w-full h-16 rounded-none text-black  border-0 border-r"
+                    class="w-full md:h-16 rounded-none text-black  border-0 border-r"
                     placeholder="{{ __('Location') }}"
                     value="{{ request('location') }}"
                     />
                   </div>
                 </div>
-                <div class="w-1/5">
+                <div class="w-full md:w-1/5">
                   <x-label class="text-white">{{ __('Distance') }}</x-label>
                     <select id="distance" name="distance"
-                      class="text-black w-full  h-16 border-0 border-gray-300 focus:ring focus:ring-blue focus:ring-opacity-50">
+                      class="text-black w-full bg-light md:h-16 border-0 border-gray-300 focus:ring focus:ring-blue focus:ring-opacity-50">
                       <option value="5000" {{ request()->input('distance') == 5000 ? 'selected' : '' }}>5{{ __('km') }}
                       </option>
                       <option value="15000" {{ request()->input('distance') == 15000 ? 'selected' : '' }}>15{{ __('km')
@@ -71,12 +70,12 @@
                         ? 'selected' : '' }}>{{ __('Any distance') }}</option>
                     </select>
                 </div>
-                <div class="text-right">
+                <div class="w-full lg:w-auto text-right">
                     <x-label>&nbsp;</x-label>
-                    <button type="submit"
-                    class="text-base px-5  h-16 w-full rounded-r-lg text-black bg-accent hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
+                    <x-button type="submit"
+                    class="text-base px-5 h-16 w-full rounded-r-lg lg:rounded-lg bg-accent">
                     {{ __('Search') }}
-                  </button>
+                  </x-button>
                 </div>
             </form>
           </div>

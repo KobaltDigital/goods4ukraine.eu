@@ -111,9 +111,9 @@
         </div>
         <div class="grid-cols-2 mt-5 sm:mt-6 sm:grid md:grid-cols-3 sm:gap-3">
           @foreach (languages() as $language)
-          <div class="p-5 text-center">
+          <div class="py-5 text-center border bottom-1">
             <div class="flex justify-center mx-auto">
-              <img src="/img/{{ $language->locale }}.svg" class="w-full my-3 sm:mt-5" />
+              <img src="/img/{{ $language->locale }}.svg" class="w-1/2 my-3 sm:mt-5" />
             </div>
             <x-button href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}"
               class="text-center">{{ $language->title }}</x-button>
