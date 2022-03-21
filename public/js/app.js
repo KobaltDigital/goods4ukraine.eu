@@ -5608,9 +5608,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
   return {
-    location: '',
-    latitude: '',
-    longitude: '',
+    location: location.value,
+    latitude: latitude.value,
+    longitude: longitude.value,
     autocompleteLocation: function autocompleteLocation(input) {
       // TODO: deze api url is nog niet de goeie denk ik, hier kunnen we die iig aanroepen
       // De geo cooords in de response moeten we denk ik in de hiddens fields: longitude / latitude laden
@@ -5674,7 +5674,11 @@ function showPosition(position) {
     var city = json.results[0].address_components.find(function (component) {
       return component.types.includes('locality');
     });
-    location.value = city.long_name;
+    console.log('Checking if  location.value: (' + location.value + ') is empty');
+
+    if (location.value == "") {
+      location.value = city.long_name;
+    }
   });
 }
 

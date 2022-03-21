@@ -1,7 +1,7 @@
 export default () => ({
-    location: '',
-    latitude: '',
-    longitude: '',
+    location: location.value,
+    latitude: latitude.value,
+    longitude: longitude.value,
     autocompleteLocation (input) {
 
         // TODO: deze api url is nog niet de goeie denk ik, hier kunnen we die iig aanroepen
@@ -56,7 +56,10 @@ function showPosition(position) {
 
         console.log('Getting response', json.results[0].address_components);
         const city = json.results[0].address_components.find(component => component.types.includes('locality'));
-        location.value = city.long_name;
+        console.log('Checking if  location.value: (' +  location.value + ') is empty');
+        if(location.value == "") {
+            location.value = city.long_name;
+        }
     });
 
 }
