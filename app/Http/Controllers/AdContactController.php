@@ -14,6 +14,6 @@ class AdContactController extends Controller
     {
         Mail::to($ad->user)->send(new OwnerContacted($request->all(), $ad));
 
-        return redirect()->route('ads.show', $ad);
+        return redirect()->route('ads.show', $ad)->withSuccess(__('Message send'));
     }
 }

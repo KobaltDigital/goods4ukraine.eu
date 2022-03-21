@@ -43,8 +43,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/ads/', [AdManagerController::class, 'store'])->name('admin.ads.store');
 
     Route::put('/admin/ads/{id}/activate', [AdManagerController::class, 'activate'])->name('admin.ads.activate');
-    Route::put('/admin/ads/{ad}/reserve', [AdManagerController::class, 'reserve'])->name('admin.ads.reserve');
-    Route::delete('/admin/ads/{ad}', [AdManagerController::class, 'destroy'])->name('admin.ads.destroy');
+
+    // moved 2 get because otherwise e-mail links doenst work //
+    Route::get('/admin/ads/{ad}/reserve', [AdManagerController::class, 'reserve'])->name('admin.ads.reserve');
+    Route::get('/admin/ads/{ad}', [AdManagerController::class, 'destroy'])->name('admin.ads.destroy');
+
 });
 
 require __DIR__ . '/auth.php';

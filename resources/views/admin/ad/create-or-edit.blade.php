@@ -73,7 +73,7 @@
                         </div>
                     </div>
 
-                    <div class="mt-6">
+                    <div class="mt-6 md:mt-0">
                         <h3>{{ __('Contact information') }}</h3>
                         <div class="mt-6 space-y-6 sm:mt-5 sm:space-y-5">
                             <x-input.group :label="__('Street address')" required>
@@ -101,7 +101,7 @@
                                 <x-input.select
                                     autocomplete="country-name"
                                     :options="config('goods4ukraine.countries')"
-                                    value="{{ old('country', ($editing ? $ad->country : '')) }}"
+                                    value="{{ old('country', ($editing ? $ad->country : 'nl')) }}"
                                 />
                             </x-input.group>
                         </div>
