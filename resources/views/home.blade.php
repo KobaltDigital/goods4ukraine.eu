@@ -1,33 +1,41 @@
 <x-layout>
   <!-- Hero section -->
   <div class="relative">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 lg:my-20">
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8 lg:my-20">
       <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
         <div class="absolute inset-0">
-          <img class="h-full w-full object-cover" src="/img/photo.jpg"
+          <img class="object-cover w-full h-full" src="/img/photo.jpg"
             alt="People working on laptops">
           <div class="absolute inset-0 bg-blue mix-blend-multiply"></div>
         </div>
         <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-24 lg:px-8">
-          <h1 class="text-center text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-4xl">
+          <h1 class="text-2xl font-extrabold tracking-tight text-center sm:text-3xl lg:text-4xl">
             <span class="block text-white">
               {{ __('Bringing people and goods together in times of need') }}
             </span>
           </h1>
-          <p class="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
+          <p class="max-w-lg mx-auto mt-6 text-xl text-center text-white sm:max-w-3xl">
             {{ __("Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.") }}</p>
-          <div class="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
+          <div class="max-w-lg mx-auto mt-6 text-xl text-center text-white sm:max-w-3xl">
             <form action="{{ route('ads.index') }}" method="GET" class="flex justify-center">
               <div class="w-2/5">
                 <input id="search" type="text" name="search" value="{{ request()->input('search') }}"
                   placeholder="{{ __('Search') }}..."
-                  class="block  text-black w-full border-gray-300 rounded-l-lg focus:ring-accent focus:border-accent sm:text-lg">
+                  class="block w-full text-black border-gray-300 rounded-l-lg focus:ring-accent focus:border-accent sm:text-lg">
               </div>
               <div class="w-2/5">
-                <div class="relative z-10 rounded-md">
-                  <input id="location" type="text" name="location" value="{{ $location ?? '' }}"
-                    class="block text-black w-full pr-12 border-gray-300 focus:ring-accent focus:border-accent sm:text-lg"
-                    placeholder="{{ __('Location') }}">
+                <div x-data="location" class="relative z-10 rounded-md">
+                  <input
+                    x-model="location"
+                    x-on:change="autocompleteLocation($event)"
+                    id="location"
+                    type="text"
+                    name="location"
+                    class="block w-full pr-12 text-black border-gray-300 focus:ring-accent focus:border-accent sm:text-lg"
+                    placeholder="{{ __('Location') }}"
+                  >
+                  <input x-model="latitude" id="latitude" type="hidden" name="latitude">
+                  <input x-model="longitude" id="longitude" type="hidden" name="longitude">
                   <div class="absolute inset-y-0 right-0 flex items-center">
                     <select id="distance" name="distance"
                       class="h-full py-0 pl-2 text-black bg-transparent border-transparent focus:ring-accent focus:border-accent pr-7 sm:text-lg">
@@ -50,7 +58,7 @@
               </div>
               <div class="w-1/5">
                 <button type="submit"
-                  class="w-full items-center h-full px-3 text-black border border-transparent rounded-r-lg bg-accent hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
+                  class="items-center w-full h-full px-3 text-black border border-transparent rounded-r-lg bg-accent hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
                   {{ __('Search') }}
                 </button>
               </div>
