@@ -9,7 +9,11 @@ class GetFilteredAds
 {
     public function execute(array $data)
     {
-        $data['location'] = [52.59468294180227, 4.653462748789553];
+        if (isset($data['longitude']) && isset($data['latitude'])) {
+            $data['location'] = [$data['latitude'], $data['longitude']];
+        } else {
+            $data['location'] = [52.59468294180227, 4.653462748789553];
+        }
         $locationGeometry = new Point(...$data['location']);
 
         $query = Ad::orderByDistanceSphere('location', $locationGeometry, 'asc');
@@ -20,7 +24,7 @@ class GetFilteredAds
                 ->orWhere('description', 'like', '%' . $data['search'] . '%');
         }
 
-        if (isset($data['distance'])) {
+        if (isset($data['distance']) && $data['distance'] > 10) {
             $query = $query->distanceSphere('location', $locationGeometry, (int) $data['distance']);
         }
 

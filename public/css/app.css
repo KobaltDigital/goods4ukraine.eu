@@ -1031,6 +1031,9 @@ select {
 .mb-4 {
   margin-bottom: 1rem;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .mr-1 {
   margin-right: 0.25rem;
 }
@@ -1081,9 +1084,6 @@ select {
 }
 .mr-2 {
   margin-right: 0.5rem;
-}
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 .-mr-1 {
   margin-right: -0.25rem;
@@ -1665,17 +1665,11 @@ select {
 .leading-6 {
   line-height: 1.5rem;
 }
-.leading-4 {
-  line-height: 1rem;
-}
 .leading-7 {
   line-height: 1.75rem;
 }
 .leading-tight {
   line-height: 1.25;
-}
-.leading-8 {
-  line-height: 2rem;
 }
 .tracking-tight {
   letter-spacing: -0.025em;
@@ -2457,10 +2451,6 @@ p {
 
   .lg\:mr-6 {
     margin-right: 1.5rem;
-  }
-
-  .lg\:mb-0 {
-    margin-bottom: 0;
   }
 
   .lg\:flex {
