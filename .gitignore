@@ -1,5 +1,6 @@
 /node_modules
 /public/hot
+/public/media
 /public/storage
 /public/css/*
 /public/js/*
@@ -15,5 +16,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/push.sh
 public/.DS_Store
 public/img/.DS_Store
+.DS_Store

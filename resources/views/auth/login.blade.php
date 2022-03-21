@@ -16,14 +16,14 @@
             <div>
                 <x-label for="email"  required="required" :value="__('Email')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-input.text id="email" class="block w-full mt-1" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" required="required" :value="__('Password')" />
 
-                <x-input id="password" required="required" class="block mt-1 w-full"
+                <x-input.text id="password" required="required" class="block w-full mt-1"
                                 type="password"
                                 name="password"
                                 autocomplete="current-password" />
@@ -32,14 +32,14 @@
             <!-- Remember Me -->
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-blue shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
+                    <input id="remember_me" type="checkbox" class="border-gray-300 rounded shadow-sm text-blue focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
                     <span class="ml-2 text-sm text-black">{{ __('Remember me') }}</span>
                 </label>
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
-                    <a class="hover:underline text-sm text-blue hover:text-blue" href="{{ route('password.request') }}">
+                    <a class="text-sm hover:underline text-blue hover:text-blue" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif

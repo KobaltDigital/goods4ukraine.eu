@@ -2,15 +2,19 @@
 
 namespace App\Models;
 
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
+use OwenIt\Auditing\Contracts\Auditable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
-use OwenIt\Auditing\Contracts\Auditable;
+use Illuminate\Contracts\Translation\HasLocalePreference;
 
-class User extends Authenticatable implements Auditable
+class User extends Authenticatable implements Auditable, HasLocalePreference
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens;
+    use HasFactory;
+    use Notifiable;
+
     use \OwenIt\Auditing\Auditable;
     /**
      * The attributes that are mass assignable.
@@ -46,4 +50,14 @@ class User extends Authenticatable implements Auditable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the user's preferred locale.
+     *
+     * @return string
+     */
+    public function preferredLocale()
+    {
+        return $this->lang;
+    }
 }

@@ -13,38 +13,45 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 
-  <!-- Styles -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
-<body class="text-black antialiased bg-light">
+<body class="antialiased text-black bg-light">
   <x-nav />
 
-
-
   {{ $slot }}
-  <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  md:py-10 border-t">
+
+  <footer class="px-4 mx-auto border-t max-w-7xl sm:px-6 lg:px-8 md:py-10">
     <div class="my-5">
       <x-nav-sub />
     </div>
-    <div class="flex items-center">
-      <div class="mr-10">
+    <div class="md:flex items-center">
+      <div class="mb-10 lg:mb-2 mr-10">
         <a href="/">
-          <x-application-logo class="block h-10 lg:h-20 w-auto fill-current" />
+          <x-application-logo class="block w-auto h-10 fill-current lg:h-20" />
         </a>
       </div>
-      <div class="mr-10">
-        <p class="text-black text-sm">
+      <div class="mb-10 lg:mb-2 md:mr-10">
+        <p class="text-sm text-black">
           {{ __('Copyright', ['year' => date('Y')]) }}
         </p>
       </div>
       <div class="flex">
-        <div class="mr-10">
+        <div class="mb-10 lg:mb-2 mr-10">
           <a href="https://kobaltdigital.nl">
             <svg width="70" height="26" viewBox="0 0 135 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M43.3029 44.914V49.8243H38.898V27H43.3029V38.9785L49.6306 32.2673H54.9793L48.0573 39.7468L54.9793 49.8243H49.9802L45.1558 42.9069L43.3029 44.914Z" fill="#051432"/>
@@ -72,7 +79,7 @@
               <path d="M132.184 2.73996H132.824V0.579956H131.724C129.124 0.579956 127.844 2.19996 127.844 4.87996V5.65996H126.064V7.49996H127.844V15H130.164V7.49996H132.244V5.65996H130.164V4.75996C130.144 3.61996 130.604 2.73996 132.184 2.73996Z" fill="#051432"/>
               </g>
               </svg>
-          </a>  
+          </a>
         </div>
         <a href="https://github.com/KobaltDigital/goods4ukraine.eu" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px" fill="none" class="">
@@ -93,19 +100,19 @@
     </div>
   </footer>
   @empty(Session::get('language'))
-  <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-      <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+  <div class="fixed inset-0 z-10 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+      <div class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" aria-hidden="true"></div>
       <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
       <div
-        class="relative inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 md:align-middle md:max-w-lg md:w-full sm:p-6">
-        <div class="mx-auto flex items-center justify-center">
-          <h3 class="text-lg leading-6 font-medium text-black" id="modal-title">Choose your language</h3>
+        class="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 md:align-middle md:max-w-lg md:w-full sm:p-6">
+        <div class="flex items-center justify-center mx-auto">
+          <h3 class="text-lg font-medium leading-6 text-black" id="modal-title">Choose your language</h3>
         </div>
-        <div class="mt-5 sm:mt-6 sm:grid grid-cols-2 md:grid-cols-3 sm:gap-3">
+        <div class="grid-cols-2 mt-5 sm:mt-6 sm:grid md:grid-cols-3 sm:gap-3">
           @foreach (languages() as $language)
-          <div class="text-center p-5">
-            <div class="mx-auto flex justify-center">
+          <div class="p-5 text-center">
+            <div class="flex justify-center mx-auto">
               <img src="/img/{{ $language->locale }}.svg" class="w-full my-3 sm:mt-5" />
             </div>
             <x-button href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}"
@@ -128,7 +135,7 @@
           notyf.success('{{ session('success') }}')
   </script>
   @endif
-  
+
   @if (session()->has('error'))
   <script>
       const notyf = new Notyf({duration: 10000, dismissible: true})

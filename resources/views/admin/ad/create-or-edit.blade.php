@@ -3,7 +3,7 @@
 @endphp
 
 <x-layout>
-    <div class="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0">
+    <div class="flex flex-col items-center sm:justify-center sm:pt-0">
         <h1>{{ __("Ads") }} </h1>
         <div class="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-4xl sm:rounded-lg">
 
@@ -15,13 +15,13 @@
                 <form 
                     method="POST"
                     action="{{ route('admin.ads.update', ['ad' => $ad]) }}" 
-                    class="space-y-8">
+                    class="space-y-8" enctype="multipart/form-data">
                     @method('PUT')
             @else
                 <form
                     method="POST"
                     action="{{ route('admin.ads.store') }}"
-                    class="space-y-8"
+                    class="space-y-8" enctype="multipart/form-data"
                 >
                 @method('POST')
             @endif
@@ -61,7 +61,7 @@
                                             <div class="flex text-sm text-gray-600">
                                                 <label for="file-upload" class="relative font-medium text-indigo-600 bg-white rounded-md cursor-pointer hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                                     <span>{{ __('Choose File') }}</span>
-                                                    <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                                    <input id="file-upload" name="file-upload" type="file" accept="image/*" class="sr-only">
                                                 </label>
                                                 <p class="pl-1">{{ __('or drag and drop') }}</p>
                                             </div>
@@ -73,7 +73,7 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="mt-6 md:mt-0">
                         <h3>{{ __('Contact information') }}</h3>
                         <div class="mt-6 space-y-6 sm:mt-5 sm:space-y-5">
                             <x-input.group :label="__('Street address')" required>
@@ -101,9 +101,12 @@
                                 <x-input.select
                                     autocomplete="country-name"
                                     :options="config('goods4ukraine.countries')"
-                                    value="{{ old('country', ($editing ? $ad->country : '')) }}"
+                                    value="{{ old('country', ($editing ? $ad->country : 'nl')) }}"
                                 />
                             </x-input.group>
+                        </div>
+                        <div class="text-sm text-gray-600 mt-4">
+                            {{ __('This information is used to make a good match with the searcher and is not shown online unless you want it to.') }}
                         </div>
                     </div>
 

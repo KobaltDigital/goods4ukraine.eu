@@ -5543,6 +5543,24 @@ window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('location', _components_location__WEBPACK_IMPORTED_MODULE_1__["default"]);
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
+$(document).ready(function () {
+  /* This is basic - uses default settings */
+  $("a#single_image").fancybox();
+  /* Using custom settings */
+
+  $("a#inline").fancybox({
+    'hideOnContentClick': true
+  });
+  /* Apply fancybox to multiple items */
+
+  $("a.group").fancybox({
+    'transitionIn': 'elastic',
+    'transitionOut': 'elastic',
+    'speedIn': 600,
+    'speedOut': 200,
+    'overlayShow': false
+  });
+});
 
 /***/ }),
 

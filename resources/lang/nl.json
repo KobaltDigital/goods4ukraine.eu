@@ -328,10 +328,10 @@
     "Liechtenstein": "Liechtenstein",
     "Lithuania": "Litouwen",
     "Load :perPage More": "Laad :perPage Meer",
-    "Log in": "Inloggen",
+    "Log in": "Login",
     "Log Out": "Uitloggen",
     "Log Out Other Browser Sessions": "Uitloggen bij alle sessies",
-    "Login": "Inloggen",
+    "Login": "Login",
     "Logout": "Uitloggen",
     "Luxembourg": "Luxemburg",
     "Macao": "Macau",
@@ -747,7 +747,7 @@
     "Offered": "Aangeboden",
     "Wanted": "Gevraagd",
     "Everything": "Alles",
-    "Login": "Inloggen",
+    "Login": "Login",
     "km": "km",
     "Any distance": "Elke afstand",
     "Reserve": "Reserveren",
@@ -770,9 +770,22 @@
     "PNG, JPG, GIF up to 10MB": "PNG, JPG, GIF tot 10MB groot",
     "Title": "Titel",
     "Description": "Omschrijving",
-    "Street address": "Straat en huisnr"
+    "Street address": "Straat en huisnr",
+    "Reaction on ad: :ad": "Reactie op advertentie: :ad",
+    "Dear": "Beste",
+    "You have a response to your ad:": "Je hebt een reactie op je advertentie:",
+    "From:": "Van:",
+    "Email address:": "E-mailadres:",
+    "Phone:": "Telefoon:",
+    "Message:": "Bericht:",
+    "Message send": "Bericht verzonden",
+    "You have to respond to :name yourself, by contacting him/her now.": "Je moet zelf reageren op :name, door nu zelf contact op te nemen.",
+    "Do you want to put the ad on reserved?": "Wil je de advertentie op gereserveerd zetten?",
+    "Do you want to remove the ad?": "Wil je de advertentie verwijderen?",
+    "Thank you for using Goods4Ukraine.eu.": "Bedankt voor het gebruiken van Goods4Ukraine.eu.",
+    "Greeting": "Groet",
+    "Click here": "Klik hier",
+    "This information is used to make a good match with the searcher and is not shown online unless you want it to.": "Deze informatie wordt gebruikt om een goede match te maken met de zoekende en wordt niet online getoond tenzij je dat wilt.",
+    "interested send message": "Ben je geinteresseerd in deze advertentie van :name of heb je een vraag? Met het invullen van onderstaande gegevens kom je direct in contact.",
+    "Get in touch": "Kom in contact"
 }
-
-
-
-

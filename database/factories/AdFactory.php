@@ -21,8 +21,8 @@ class AdFactory extends Factory
             'street' => $this->faker->streetName(),
             'postcode' => $this->faker->postcode(),
             'city' => $this->faker->city(),
-            'country' => $this->faker->country(),
-            'location' => new Point($this->faker->latitude(40, 60) , $this->faker->latitude(3, 6)),
+            'country' => "nl",
+            'location' => new Point($this->faker->latitude(40, 60), $this->faker->latitude(3, 6)),
         ];
     }
 }
