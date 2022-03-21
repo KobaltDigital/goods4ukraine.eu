@@ -34,6 +34,7 @@ class Ad extends Model implements Auditable, HasMedia
         'postcode',
         'city',
         'country',
+        'location',
         'translated_title',
         'translated_description',
     ];

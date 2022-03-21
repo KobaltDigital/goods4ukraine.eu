@@ -34,8 +34,8 @@
                     class="block w-full pr-12 text-black border-gray-300 focus:ring-accent focus:border-accent sm:text-lg"
                     placeholder="{{ __('Location') }}"
                   >
-                  <input x-model="latitude" id="latitude" type="hidden" name="latitude">
-                  <input x-model="longitude" id="longitude" type="hidden" name="longitude">
+                  <input x-model="latitude" id="latitude" type="hidden" value="{{ request()->input('latitude') }}" name="latitude">
+                  <input x-model="longitude" id="longitude" type="hidden" value="{{ request()->input('longitude') }}" name="longitude">
                   <div class="absolute inset-y-0 right-0 flex items-center">
                     <select id="distance" name="distance"
                       class="h-full py-0 pl-2 text-black bg-transparent border-transparent focus:ring-accent focus:border-accent pr-7 sm:text-lg">
@@ -51,7 +51,9 @@
                         __('km') }}</option>
                       <option value="500000" {{ request()->input('distance') == 500000 ? 'selected' : '' }}>500{{
                         __('km') }}</option>
-                      <option value="null">{{ __('Any distance') }}</option>
+                      <option value="1000000" {{ request()->input('distance') == 1000000 ? 'selected' : '' }}>1000{{
+                        __('km') }}</option>
+                      <option value="-1" {{ (request()->input('distance') == "-1" || request()->input('distance') == "")  ? 'selected' : '' }}>{{ __('Any distance') }}</option>
                     </select>
                   </div>
                 </div>

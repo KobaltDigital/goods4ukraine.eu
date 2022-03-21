@@ -66,6 +66,9 @@ class AdManagerController extends Controller
         if ($ad->user_id !== auth()->user()->id) {
             return abort(403);
         }
+
+
+
         $updateAd->execute($ad, $request->validated());
 
         if(count($request->files) > 0) {
