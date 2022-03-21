@@ -28,6 +28,10 @@ class GetFilteredAds
             $query = $query->distanceSphere('location', $locationGeometry, (int) $data['distance']);
         }
 
+        if (isset($data['type'])) {
+            $query = $query->where('type', $data['type']);
+        }
+
         return $query->paginate(25);
     }
 }

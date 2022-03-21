@@ -745,8 +745,8 @@
     "Copyright": "Goods4ukraine is niet aansprakelijk voor (gevolg)schade die voortkomt uit het gebruik van deze site, dan wel uit fouten of ontbrekende functionaliteiten op deze site. Copyright © :year Goods4ukraine.eu, alle rechten voorbehouden.",
     "Place offer": "Plaats aanbod",
     "Offered": "Aangeboden",
-    "Wanted": "Gevraagd",
-    "Everything": "Alles",
+    "Wanted": "Gezocht",
+    "Both": "Beide",
     "Login": "Login",
     "km": "km",
     "Any distance": "Elke afstand",
@@ -787,5 +787,10 @@
     "Click here": "Klik hier",
     "This information is used to make a good match with the searcher and is not shown online unless you want it to.": "Deze informatie wordt gebruikt om een goede match te maken met de zoekende en wordt niet online getoond tenzij je dat wilt.",
     "interested send message": "Ben je geinteresseerd in deze advertentie van :name of heb je een vraag? Met het invullen van onderstaande gegevens kom je direct in contact.",
-    "Get in touch": "Kom in contact"
+    "Get in touch": "Kom in contact",
+    "Distance": "Afstand",
+    "No search results": "Helaas heeft je zoekopdracht op dit moment geen resultaten opgeleverd.",
+    "Searchtip": "Zoektip: gebruik zo min mogelijk woorden of probeer een andere zoekterm.",
+    "Location": "Locatie",
+    "Wanted or offered": "Gezocht/aangeboden"
 }

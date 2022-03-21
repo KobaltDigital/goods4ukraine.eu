@@ -961,10 +961,6 @@ select {
   bottom: 0;
   left: 0;
 }
-.inset-y-0 {
-  top: 0;
-  bottom: 0;
-}
 .top-0 {
   top: 0;
 }
@@ -1139,6 +1135,9 @@ select {
 .h-auto {
   height: auto;
 }
+.h-20 {
+  height: 5rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1159,9 +1158,6 @@ select {
 }
 .w-8 {
   width: 2rem;
-}
-.w-2\/5 {
-  width: 40%;
 }
 .w-1\/5 {
   width: 20%;
@@ -1344,6 +1340,9 @@ select {
 .rounded {
   border-radius: 0.25rem;
 }
+.rounded-none {
+  border-radius: 0px;
+}
 .rounded-full {
   border-radius: 9999px;
 }
@@ -1369,6 +1368,13 @@ select {
 .border-2 {
   border-width: 2px;
 }
+.border-0 {
+  border-width: 0px;
+}
+.border-x {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
 .border-t {
   border-top-width: 1px;
 }
@@ -1384,6 +1390,9 @@ select {
 .border-l-4 {
   border-left-width: 4px;
 }
+.border-l {
+  border-left-width: 1px;
+}
 .border-dashed {
   border-style: dashed;
 }
@@ -1394,9 +1403,6 @@ select {
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
-}
-.border-transparent {
-  border-color: transparent;
 }
 .border-gray-100 {
   --tw-border-opacity: 1;
@@ -1413,6 +1419,9 @@ select {
 .border-indigo-400 {
   --tw-border-opacity: 1;
   border-color: rgb(129 140 248 / var(--tw-border-opacity));
+}
+.border-transparent {
+  border-color: transparent;
 }
 .border-gray-400 {
   --tw-border-opacity: 1;
@@ -1445,9 +1454,6 @@ select {
 .bg-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(1 90 188 / var(--tw-bg-opacity));
-}
-.bg-transparent {
-  background-color: transparent;
 }
 .bg-accent {
   --tw-bg-opacity: 1;
@@ -1520,13 +1526,9 @@ select {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-.py-0 {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .py-6 {
   padding-top: 1.5rem;
@@ -1539,6 +1541,10 @@ select {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 .py-3\.5 {
   padding-top: 0.875rem;
@@ -1566,15 +1572,6 @@ select {
 .pt-8 {
   padding-top: 2rem;
 }
-.pr-12 {
-  padding-right: 3rem;
-}
-.pl-2 {
-  padding-left: 0.5rem;
-}
-.pr-7 {
-  padding-right: 1.75rem;
-}
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -1598,6 +1595,9 @@ select {
 }
 .pr-4 {
   padding-right: 1rem;
+}
+.pl-2 {
+  padding-left: 0.5rem;
 }
 .text-left {
   text-align: left;
@@ -2309,10 +2309,6 @@ p {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
-
-  .sm\:text-lg {
-    font-size: 1.25rem;
-  }
 }
 @media (min-width: 768px) {
 
@@ -2435,6 +2431,11 @@ p {
   .lg\:my-3 {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
+  }
+
+  .lg\:my-10 {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .lg\:mb-2 {
