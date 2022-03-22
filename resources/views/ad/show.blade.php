@@ -1,13 +1,20 @@
+@push('ogtags')
+    <meta property="og:site_name" content="Goods4Ukraine.eu">
+    <meta property="og:title" content="{{ $ad->title_translated }} - Goods4Ukraine" />
+    <meta property="og:description" content="{{  substr($page->description, 0, 200)  }}" />
+    <meta property="og:image" itemprop="image" content="{{ $ad->getFirstMediaUrl('images', 'single') }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1440432930" />
+@endpush
+
 <x-layout>
     <div class="py-10 mx-auto max-w-7xl">
             <div class="lg:grid lg:grid-cols-3">
-
                 <div class="lg:pr-10 sm:px-6 lg:col-span-2">
-                    <div class="bg-white shadow rounded p-6">
-
+                    <div class="p-6 bg-white rounded shadow">
                         <div class="relative flex justify-between mb-4">
                             <div>
-                                <h1 class="font-serif text-3xl font-medium leading-6 text-black mb-2">
+                                <h1 class="mb-2 font-serif text-3xl font-medium leading-6 text-black">
                                     {!! $ad->title_translated !!}
                                 </h1>
                                 <div class="text-sm font-bold">
@@ -17,25 +24,22 @@
                             </div>
                             <div>                        
                                 @if($ad->type == 'Wanted')
-                                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-purple-600 bg-purple-200 uppercase last:mr-0 mr-1">
+                                    <span class="inline-block px-2 py-1 mr-1 text-xs font-semibold text-purple-600 uppercase bg-purple-200 rounded last:mr-0">
                                         {{ __($ad->type) }}
                                     </span>
                                 @else 
-                                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-orange-600 bg-orange-200 uppercase last:mr-0 mr-1">
+                                    <span class="inline-block px-2 py-1 mr-1 text-xs font-semibold text-orange-600 uppercase bg-orange-200 rounded last:mr-0">
                                     {{ __($ad->type) }}
                                     </span>
                                 @endif
                             </div>
                         </div>
-                            
                         <a data-fancybox href="{{ $ad->getFirstMediaUrl('images', 'large') }}">
                             <img class="w-full mb-3 border" src="{{ $ad->getFirstMediaUrl('images', 'single') }}" />
                         </a>
-
                         <p class="mt-3 text-lg leading-6 text-gray-500">
                             {{ $ad->translated_description }}
                         </p>
-
                         <dl class="mt-8 text-base text-gray-500">
                             <div>
                                 <dt class="sr-only">Postal address</dt>
@@ -84,7 +88,7 @@
                     </div>
                 </div>
                 <div class="lg:col-span-1">
-                    <div class="max-w-lg mx-auto lg:max-w-none bg-white shadow rounded p-6">
+                    <div class="max-w-lg p-6 mx-auto bg-white rounded shadow lg:max-w-none">
                         <x-ad.contact :ad="$ad" />
                     </div>
                 </div>
