@@ -6,6 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
+  @if (request()->routeIs('ads.show'))
+    @stack('ogtags')
+  @else
+    <meta property="og:site_name" content="Goods4Ukraine.eu">
+    <meta property="og:title" content="Goods4Ukraine - {{ __('Bringing people and goods together in times of need') }}" />
+    <meta property="og:description" content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1440432930" />
+  @endif
+
   <title>{{ config('app.name', 'Laravel') }}</title>
 
   <!-- Fonts -->
@@ -50,8 +60,8 @@
     <div class="my-5">
       <x-nav-sub />
     </div>
-    <div class="md:flex items-center">
-      <div class="mb-10 lg:mb-2 mr-10">
+    <div class="items-center md:flex">
+      <div class="mb-10 mr-10 lg:mb-2">
         <a href="/">
           <x-application-logo class="block w-auto h-10 fill-current lg:h-20" />
         </a>
@@ -62,7 +72,7 @@
         </p>
       </div>
       <div class="flex">
-        <div class="mb-10 lg:mb-2 mr-10">
+        <div class="mb-10 mr-10 lg:mb-2">
           <a href="https://kobaltdigital.nl">
             <svg width="70" height="26" viewBox="0 0 135 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M43.3029 44.914V49.8243H38.898V27H43.3029V38.9785L49.6306 32.2673H54.9793L48.0573 39.7468L54.9793 49.8243H49.9802L45.1558 42.9069L43.3029 44.914Z" fill="#051432"/>

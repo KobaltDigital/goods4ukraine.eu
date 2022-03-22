@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "bugsnag/bugsnag-laravel": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "google/cloud-translate": "^1.12",
         "grimzy/laravel-mysql-spatial": "^5.0",

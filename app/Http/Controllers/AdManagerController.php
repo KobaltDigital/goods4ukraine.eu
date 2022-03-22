@@ -23,7 +23,7 @@ class AdManagerController extends Controller
     }
 
     public function reserved(Request $request)
-    {   
+    {
         $ads = Ad::onlyTrashed()->paginate();
 
         return view('admin.ad.archive', compact('ads'));
@@ -41,7 +41,7 @@ class AdManagerController extends Controller
 
         $ad = $createAd->execute($request->validated(), auth()->user());
 
-        if(count($request->files) > 0) {
+        if (count($request->files) > 0) {
             $ad->addMedia($request['file-upload']->path())
                ->toMediaCollection('images');
         }
@@ -57,7 +57,7 @@ class AdManagerController extends Controller
 
         $adTypes = AdTypeEnum::toArray();
 
-        return view('admin.ad.create-or-edit', compact('ad','adTypes'));
+        return view('admin.ad.create-or-edit', compact('ad', 'adTypes'));
     }
 
     public function update(StoreAdRequest $request, UpdateAd $updateAd, Ad $ad)
@@ -71,7 +71,7 @@ class AdManagerController extends Controller
 
         $updateAd->execute($ad, $request->validated());
 
-        if(count($request->files) > 0) {
+        if (count($request->files) > 0) {
             $ad->media()->delete();
             $ad->addMedia($request['file-upload']->path())
                ->toMediaCollection('images');
