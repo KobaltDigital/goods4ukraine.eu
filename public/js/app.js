@@ -5647,7 +5647,41 @@ __webpack_require__.r(__webpack_exports__);
       console.log(data);
     }
   };
-}); // for first time when lat and long is still empty
+}); // Prepare location info object.
+
+var locationInfo = {
+  geo: null,
+  country: null,
+  state: null,
+  city: null,
+  postalCode: null,
+  street: null,
+  streetNumber: null,
+  reset: function reset() {
+    this.geo = null;
+    this.country = null;
+    this.state = null;
+    this.city = null;
+    this.postalCode = null;
+    this.street = null;
+    this.streetNumber = null;
+  }
+};
+window.googleAutocomplete = {
+  autocompleteField: function autocompleteField(fieldId) {
+    var autocomplete = new google.maps.places.Autocomplete(document.getElementById(fieldId));
+    google.maps.event.addListener(autocomplete, "place_changed", function () {
+      // Segment results into usable parts.
+      var place = autocomplete.getPlace();
+      document.getElementById("latitude").value = place.geometry.location.lat();
+      document.getElementById("longitude").value = place.geometry.location.lng(); // Reset location object.
+
+      locationInfo.reset();
+    });
+  }
+}; // Attach listener to address input field.
+
+window.googleAutocomplete.autocompleteField("location"); // for first time when lat and long is still empty
 
 var latitude = document.getElementById("latitude");
 var longitude = document.getElementById("longitude");

@@ -2,7 +2,7 @@ export default () => ({
     location: location.value,
     latitude: latitude.value,
     longitude: longitude.value,
-    autocompleteLocation (input) {
+    autocompleteLocation(input) {
 
         // TODO: deze api url is nog niet de goeie denk ik, hier kunnen we die iig aanroepen
         // De geo cooords in de response moeten we denk ik in de hiddens fields: longitude / latitude laden
@@ -18,7 +18,10 @@ export default () => ({
     success(data) {
         console.log('fetching');
         const key = 'AIzaSyBR-4XYGeEEnH5A0L3qVMt1yjcY8Exd82k';
-        const { latitude, longitude } = data.coords;
+        const {
+            latitude,
+            longitude
+        } = data.coords;
         const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${key}`;
         fetch(url).then(response => response.json()).then(json => {
             console.log(json.results[0]);
@@ -31,16 +34,58 @@ export default () => ({
     }
 })
 
+// Prepare location info object.
+var locationInfo = {
+    geo: null,
+    country: null,
+    state: null,
+    city: null,
+    postalCode: null,
+    street: null,
+    streetNumber: null,
+    reset: function () {
+        this.geo = null;
+        this.country = null;
+        this.state = null;
+        this.city = null;
+        this.postalCode = null;
+        this.street = null;
+        this.streetNumber = null;
+    }
+};
+
+window.googleAutocomplete = {
+    autocompleteField: function (fieldId) {
+        var autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById(fieldId)
+        );
+        
+        google.maps.event.addListener(autocomplete, "place_changed", function () {
+            // Segment results into usable parts.
+            var place = autocomplete.getPlace();
+
+            document.getElementById("latitude").value = place.geometry.location.lat();
+            document.getElementById("longitude").value = place.geometry.location.lng();
+
+            // Reset location object.
+            locationInfo.reset();
+        });
+    }
+};
+
+// Attach listener to address input field.
+window.googleAutocomplete.autocompleteField("location");
+
 // for first time when lat and long is still empty
 var latitude = document.getElementById("latitude");
 var longitude = document.getElementById("longitude");
 var location = document.getElementById("location");
 
-if(latitude && latitude.value == '' && longitude.value == '') {
+if (latitude && latitude.value == '' && longitude.value == '') {
     console.log('latitude is empty, asking for geolocation');
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
+    } else {
         console.log('Geolocation is not supported by this browser.');
     }
 }
@@ -52,14 +97,14 @@ function showPosition(position) {
     longitude.value = position.coords.longitude;
 
     // using other key because this is an open key, not restricted.
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=`+position.coords.latitude+`,`+position.coords.longitude+`&key=AIzaSyCxzPwEB7A9i6Fwvi41SrVbApygce3Sq9c`;
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=` + position.coords.latitude + `,` + position.coords.longitude + `&key=AIzaSyCxzPwEB7A9i6Fwvi41SrVbApygce3Sq9c`;
     console.log('Checking ' + url);
 
     fetch(url).then(response => response.json()).then(json => {
         console.log('Getting response', json.results[0].address_components);
         const city = json.results[0].address_components.find(component => component.types.includes('locality'));
-        console.log('Checking if  location.value: (' +  location.value + ') is empty');
-        if(location.value == "") {
+        console.log('Checking if  location.value: (' + location.value + ') is empty');
+        if (location.value == "") {
             location.value = city.long_name;
         }
     });
