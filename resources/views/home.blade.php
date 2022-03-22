@@ -25,16 +25,16 @@
                 <x-label class="text-white">{{ __('Search') }}</x-label>
                 <x-input id="search" type="text" name="search" value="{{ request()->input('search') }}"
                   placeholder=""
-                  class="block md:h-16 w-full rounded-none rounded-l-lg rounded-lg lg:rounded-none lg:rounded-l-lg  text-black border-0 border-r" />
+                  class="block md:h-16 w-full rounded-none lg:rounded-none lg:rounded-l-lg  text-black border-0 border-r" />
               </div>
               <div class="w-full md:w-1/5">
                 <x-label class="text-white truncate pr-4">{{ __('Wanted or offered') }}</x-label>
-                <select id="type" name="type"
-                class="text-black bg-light w-full md:h-16 border-0 border-r border-gray-300 focus:ring focus:ring-blue focus:ring-opacity-50">
-                <option value="" {{ request()->input('type') == "" ? 'selected' : '' }}>{{ __('Both') }}</option>
-                <option value="Wanted" {{ request()->input('type') == "Wanted" ? 'selected' : '' }}>{{ __('Wanted') }}</option>
-                <option value="Offered" {{ request()->input('type') == "Offered" ? 'selected' : '' }}>{{ __('Offered') }}</option>
-              </select>
+                  <select id="type" name="type"
+                  class="text-black bg-light w-full md:h-16 border-0 border-r border-gray-300 focus:ring focus:ring-blue focus:ring-opacity-50">
+                  <option value="" {{ request()->input('type') == "" ? 'selected' : '' }}>{{ __('Both') }}</option>
+                  <option value="Wanted" {{ request()->input('type') == "Wanted" ? 'selected' : '' }}>{{ __('Wanted') }}</option>
+                  <option value="Offered" {{ request()->input('type') == "Offered" ? 'selected' : '' }}>{{ __('Offered') }}</option>
+                </select>
           
               </div>
               <div class="w-full md:w-1/5">
@@ -43,7 +43,6 @@
                   <x-input x-model="location" x-on:change="autocompleteLocation($event)" id="location" type="text"
                     name="location"
                     class="w-full md:h-16 rounded-none text-black  border-0 border-r"
-                    placeholder="{{ __('Location') }}"
                     value="{{ request('location') }}"
                     />
                   </div>
@@ -70,10 +69,10 @@
                         ? 'selected' : '' }}>{{ __('Any distance') }}</option>
                     </select>
                 </div>
-                <div class="w-full lg:w-auto text-right">
+                <div class="w-full lg:w-auto md:text-right">
                     <x-label>&nbsp;</x-label>
-                    <x-button type="submit"
-                    class="text-base px-5 h-16 w-full rounded-lg shadow-3xl lg:rounded-none lg:rounded-r-lg bg-accent text-black">
+                    <x-button-secondary
+                    class="text-base px-5 h-16 md:w-full rounded-lg shadow-3xl lg:rounded-none lg:rounded-r-lg bg-yellow text-blue hover:text-black">
                     {{ __('Search') }}
                   </x-button>
                 </div>

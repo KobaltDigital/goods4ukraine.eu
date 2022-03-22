@@ -5627,6 +5627,7 @@ __webpack_require__.r(__webpack_exports__);
     success: function success(data) {
       var _this = this;
 
+      console.log('fetching');
       var key = 'AIzaSyBR-4XYGeEEnH5A0L3qVMt1yjcY8Exd82k';
       var _data$coords = data.coords,
           latitude = _data$coords.latitude,
@@ -5635,6 +5636,7 @@ __webpack_require__.r(__webpack_exports__);
       fetch(url).then(function (response) {
         return response.json();
       }).then(function (json) {
+        console.log(json.results[0]);
         var city = json.results[0].address_components.find(function (component) {
           return component.types.includes('locality');
         });
@@ -5664,8 +5666,9 @@ if (latitude && latitude.value == '' && longitude.value == '') {
 function showPosition(position) {
   console.log('new lat and long will be set.');
   latitude.value = position.coords.latitude;
-  longitude.value = position.coords.longitude;
-  var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyBR-4XYGeEEnH5A0L3qVMt1yjcY8Exd82k";
+  longitude.value = position.coords.longitude; // using other key because this is an open key, not restricted.
+
+  var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyCxzPwEB7A9i6Fwvi41SrVbApygce3Sq9c";
   console.log('Checking ' + url);
   fetch(url).then(function (response) {
     return response.json();
