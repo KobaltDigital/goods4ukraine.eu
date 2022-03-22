@@ -44,7 +44,7 @@
     </url>       
     @foreach ($ads as $ad)
         <url>
-            <loc>{{url('ads.show', $ad)}}</loc>
+            <loc>{{route('ads.show', $ad)}}</loc>
             <lastmod>{{ gmdate('Y-m-d\TH:i:s\Z',strtotime($ad->updated_at)) }}</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.6</priority>
