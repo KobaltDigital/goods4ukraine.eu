@@ -1,7 +1,7 @@
 @push('ogtags')
     <meta property="og:site_name" content="Goods4Ukraine.eu">
     <meta property="og:title" content="{{ $ad->title_translated }} - Goods4Ukraine" />
-    <meta property="og:description" content="{{  substr($page->description, 0, 200)  }}" />
+    <meta property="og:description" content="{{  substr($ad->description, 0, 200)  }}" />
     <meta property="og:image" itemprop="image" content="{{ $ad->getFirstMediaUrl('images', 'single') }}">
     <meta property="og:type" content="website" />
     <meta property="og:updated_time" content="1440432930" />
