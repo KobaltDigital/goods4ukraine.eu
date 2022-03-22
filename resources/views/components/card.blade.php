@@ -1,6 +1,6 @@
-<div class="overflow-hidden bg-white shadow-lg sm:rounded-lg">
-    <div class="px-4 py-5 border-t border-gray-200 sm:px-6">
-        <div class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-4">
+<div class="overflow-hidden bg-white shadow-lg rounded-md sm:rounded-lg">
+    <div class="px-4 py-5 sm:px-6">
+        <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-4">
             <div class="sm:col-span-1">
                 <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" />
             </div>
@@ -12,7 +12,13 @@
                         </h3>
                         <div class="text-sm font-bold">
                             {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
-                            <span class="font-sans text-gray-400">(4km)</span>
+                            <span class="font-sans text-gray-400">(
+                            @if($ad->calcDistance < 1000)
+                                {{ round($ad->calcDistance) . __('mtr') }}
+                            @else 
+                                {{ round($ad->calcDistance / 1000) . __('km') }}
+                            @endif
+                            )</span>
                         </div>
                     </div>
                     <div>                        
@@ -32,7 +38,10 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-end">
+        <div class="flex justify-between">
+            <div class="text-sm text-gray-500 mt-4">
+                {{ $ad->created_at->diffForHumans()}} {{ strtolower(__('Added.')) }}
+            </div>
             <x-button :href="route('ads.show', $ad)">{{ __('View') }}</x-button>
         </div>
     </div>

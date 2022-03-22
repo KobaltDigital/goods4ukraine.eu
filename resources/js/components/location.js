@@ -1,74 +1,14 @@
-export default () => ({
-    location: location.value,
-    latitude: latitude.value,
-    longitude: longitude.value,
-    autocompleteLocation(input) {
-
-        // TODO: deze api url is nog niet de goeie denk ik, hier kunnen we die iig aanroepen
-        // De geo cooords in de response moeten we denk ik in de hiddens fields: longitude / latitude laden
-        // Deze vind je in home.blade.php, hier kunnen we vervolgens de afstand t.o.v. advertenties mee bepalen
-        // De code voor het bepalen van de afstand staat in GetFilteredAds.php
-
-        let url = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=geometry&input=${this.location}&inputtype=textquery&key=AIzaSyBR-4XYGeEEnH5A0L3qVMt1yjcY8Exd82k`;
-        fetch(url).then(response => response.json()).then(json => {
-            const result = json.results[0];
-            console.log(result)
-        });
-    },
-    success(data) {
-        console.log('fetching');
-        const key = 'AIzaSyBR-4XYGeEEnH5A0L3qVMt1yjcY8Exd82k';
-        const {
-            latitude,
-            longitude
-        } = data.coords;
-        const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${key}`;
-        fetch(url).then(response => response.json()).then(json => {
-            console.log(json.results[0]);
-            const city = json.results[0].address_components.find(component => component.types.includes('locality'));
-            this.location = city;
-        });
-    },
-    error(data) {
-        console.log(data);
-    }
-})
-
-// Prepare location info object.
-var locationInfo = {
-    geo: null,
-    country: null,
-    state: null,
-    city: null,
-    postalCode: null,
-    street: null,
-    streetNumber: null,
-    reset: function () {
-        this.geo = null;
-        this.country = null;
-        this.state = null;
-        this.city = null;
-        this.postalCode = null;
-        this.street = null;
-        this.streetNumber = null;
-    }
-};
-
 window.googleAutocomplete = {
     autocompleteField: function (fieldId) {
         var autocomplete = new google.maps.places.Autocomplete(
             document.getElementById(fieldId)
-        );
-        
+        );        
         google.maps.event.addListener(autocomplete, "place_changed", function () {
             // Segment results into usable parts.
             var place = autocomplete.getPlace();
 
             document.getElementById("latitude").value = place.geometry.location.lat();
             document.getElementById("longitude").value = place.geometry.location.lng();
-
-            // Reset location object.
-            locationInfo.reset();
         });
     }
 };
