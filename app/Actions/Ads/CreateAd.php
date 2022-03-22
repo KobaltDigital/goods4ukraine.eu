@@ -3,7 +3,6 @@
 namespace App\Actions\Ads;
 
 use App\Models\Ad;
-use App\Models\User;
 use App\Actions\Ads\Translate;
 use Illuminate\Support\Facades\DB;
 

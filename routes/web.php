@@ -30,7 +30,7 @@ Route::view('/contact', 'pages.contact')->name('contact');
 Route::view('/press', 'pages.press')->name('press');
 Route::view('/terms-of-use', 'pages.terms-of-use')->name('terms-of-use');
 
-Route::get('sitemap.xml',[SitemapController::class, 'index']);
+Route::get('sitemap.xml', [SitemapController::class, 'index']);
 
 Route::middleware('auth')->group(function () {
 
@@ -49,7 +49,6 @@ Route::middleware('auth')->group(function () {
     // moved 2 get because otherwise e-mail links doenst work //
     Route::get('/admin/ads/{ad}/reserve', [AdManagerController::class, 'reserve'])->name('admin.ads.reserve');
     Route::get('/admin/ads/{ad}', [AdManagerController::class, 'destroy'])->name('admin.ads.destroy');
-
 });
 
 require __DIR__ . '/auth.php';

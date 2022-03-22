@@ -27,6 +27,5 @@ class StoreAdRequest extends FormRequest
             'city' => ['required', 'max:50'],
             'country' => ['required','max:50'],
         ];
-        
     }
 }

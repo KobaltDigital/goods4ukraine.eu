@@ -13,7 +13,7 @@ class GetClientLocation
         }
 
         $ipLocation = Location::get(request()->ip());
-            
+
         return optional($ipLocation)->cityName;
     }
 }

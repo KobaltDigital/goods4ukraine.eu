@@ -6,8 +6,6 @@
         <h1>{{ __('Profile') }}</h1>
         <div class="w-full px-6 py-4 mt-6 mb-10 overflow-hidden bg-white shadow-md sm:max-w-4xl sm:rounded-lg">
 
-            <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
             <form method="POST" action="{{ route('admin.profile.update') }}">
             @method('PUT')
 
