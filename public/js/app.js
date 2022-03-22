@@ -5608,51 +5608,82 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
   return {
-    location: '',
-    init: function init() {
-      var _this = this;
-
-      if (window.navigator.geolocation) {
-        window.navigator.geolocation.getCurrentPosition(function (data) {
-          var key = 'AIzaSyCRnpA6eY0L-jWIH65qRLmEs4M_u2f7kzY';
-          console.log(_this);
-          var _data$coords = data.coords,
-              latitude = _data$coords.latitude,
-              longitude = _data$coords.longitude;
-          var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".concat(latitude, ",").concat(longitude, "&key=").concat(key);
-          fetch(url).then(function (response) {
-            return response.json();
-          }).then(function (json) {
-            var city = json.results[0].address_components.find(function (component) {
-              return component.types.includes('locality');
-            });
-            _this.location = city;
-          });
-        }, this.error);
-      }
+    location: location.value,
+    latitude: latitude.value,
+    longitude: longitude.value,
+    autocompleteLocation: function autocompleteLocation(input) {
+      // TODO: deze api url is nog niet de goeie denk ik, hier kunnen we die iig aanroepen
+      // De geo cooords in de response moeten we denk ik in de hiddens fields: longitude / latitude laden
+      // Deze vind je in home.blade.php, hier kunnen we vervolgens de afstand t.o.v. advertenties mee bepalen
+      // De code voor het bepalen van de afstand staat in GetFilteredAds.php
+      var url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=geometry&input=".concat(this.location, "&inputtype=textquery&key=AIzaSyBR-4XYGeEEnH5A0L3qVMt1yjcY8Exd82k");
+      fetch(url).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        var result = json.results[0];
+        console.log(result);
+      });
     },
     success: function success(data) {
-      var _this2 = this;
+      var _this = this;
 
-      var key = 'AIzaSyCRnpA6eY0L-jWIH65qRLmEs4M_u2f7kzY';
-      var _data$coords2 = data.coords,
-          latitude = _data$coords2.latitude,
-          longitude = _data$coords2.longitude;
+      console.log('fetching');
+      var key = 'AIzaSyBR-4XYGeEEnH5A0L3qVMt1yjcY8Exd82k';
+      var _data$coords = data.coords,
+          latitude = _data$coords.latitude,
+          longitude = _data$coords.longitude;
       var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".concat(latitude, ",").concat(longitude, "&key=").concat(key);
       fetch(url).then(function (response) {
         return response.json();
       }).then(function (json) {
+        console.log(json.results[0]);
         var city = json.results[0].address_components.find(function (component) {
           return component.types.includes('locality');
         });
-        _this2.location = city;
+        _this.location = city;
       });
     },
     error: function error(data) {
       console.log(data);
     }
   };
-});
+}); // for first time when lat and long is still empty
+
+var latitude = document.getElementById("latitude");
+var longitude = document.getElementById("longitude");
+var location = document.getElementById("location");
+
+if (latitude && latitude.value == '' && longitude.value == '') {
+  console.log('latitude is empty, asking for geolocation');
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    console.log('Geolocation is not supported by this browser.');
+  }
+}
+
+function showPosition(position) {
+  console.log('new lat and long will be set.');
+  latitude.value = position.coords.latitude;
+  longitude.value = position.coords.longitude; // using other key because this is an open key, not restricted.
+
+  var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyCxzPwEB7A9i6Fwvi41SrVbApygce3Sq9c";
+  console.log('Checking ' + url);
+  fetch(url).then(function (response) {
+    return response.json();
+  }).then(function (json) {
+    console.log('Getting response', json.results[0].address_components);
+    var city = json.results[0].address_components.find(function (component) {
+      return component.types.includes('locality');
+    });
+    console.log('Checking if  location.value: (' + location.value + ') is empty');
+
+    if (location.value == "") {
+      location.value = city.long_name;
+    }
+  });
+}
 
 /***/ }),
 

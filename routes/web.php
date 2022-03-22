@@ -5,6 +5,7 @@ use App\Http\Controllers\AdController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AdContactController;
 use App\Http\Controllers\AdManagerController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SessionLanguageController;
 
 /*
@@ -29,6 +30,7 @@ Route::view('/contact', 'pages.contact')->name('contact');
 Route::view('/press', 'pages.press')->name('press');
 Route::view('/terms-of-use', 'pages.terms-of-use')->name('terms-of-use');
 
+Route::get('sitemap.xml',[SitemapController::class, 'index']);
 
 Route::middleware('auth')->group(function () {
 

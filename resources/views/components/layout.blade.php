@@ -23,7 +23,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  
+  <link rel="canonical" href="{{ env('APP_URL') }}/" />
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
   <meta property="og:site_name" content="Goods4Ukraine.eu">
@@ -34,6 +34,17 @@
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPYENL9SH4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KPYENL9SH4');
+  </script>
+
 </head>
 
 <body class="antialiased text-black bg-light">
@@ -117,9 +128,9 @@
         </div>
         <div class="grid-cols-2 mt-5 sm:mt-6 sm:grid md:grid-cols-3 sm:gap-3">
           @foreach (languages() as $language)
-          <div class="p-5 text-center">
+          <div class="py-5 text-center border bottom-1">
             <div class="flex justify-center mx-auto">
-              <img src="/img/{{ $language->locale }}.svg" class="w-full my-3 sm:mt-5" />
+              <img src="/img/{{ $language->locale }}.svg" class="w-1/2 my-3 sm:mt-5" />
             </div>
             <x-button href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}"
               class="text-center">{{ $language->title }}</x-button>
