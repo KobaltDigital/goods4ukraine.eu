@@ -6,12 +6,17 @@ use Google\Cloud\Translate\V3\TranslationServiceClient;
 
 class Translate
 {
+    private $translationClient;
+
+    public function __construct()
+    {
+        $this->translationClient = new TranslationServiceClient([
+            'credentials' => json_decode(config('goods4ukraine.google.service_account'), true),
+        ]);
+    }
+
     public function execute(string $string)
     {
-        $translationClient = new TranslationServiceClient([
-            'credentials' => json_decode(config('goods4ukraine.google.service_account'), true)
-        ]);
-
         $languages = [
             'en' => 'en',
             'nl' => 'nl',
@@ -20,7 +25,7 @@ class Translate
 
         $translations = [];
         foreach ($languages as $key => $language) {
-            $response = $translationClient->translateText(
+            $response = $this->translationClient->translateText(
                 [$string],
                 $language,
                 TranslationServiceClient::locationName(config('goods4ukraine.google.project'), 'global')
