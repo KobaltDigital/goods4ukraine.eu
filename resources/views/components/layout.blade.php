@@ -6,6 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
+  @if (request()->routeIs('ads.show'))
+    @stack('ogtags')
+  @else
+    <meta property="og:site_name" content="Goods4Ukraine.eu">
+    <meta property="og:title" content="Goods4Ukraine - {{ __('Bringing people and goods together in times of need') }}" />
+    <meta property="og:description" content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1440432930" />
+  @endif
+
   <title>{{ config('app.name', 'Laravel') }}</title>
 
   <!-- Fonts -->
@@ -25,12 +35,6 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="canonical" href="{{ env('APP_URL') }}/" />
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-  <meta property="og:site_name" content="Goods4Ukraine.eu">
-  <meta property="og:title" content="Goods4Ukraine - {{ __('Bringing people and goods together in times of need') }}" />
-  <meta property="og:description" content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:updated_time" content="1440432930" />
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
