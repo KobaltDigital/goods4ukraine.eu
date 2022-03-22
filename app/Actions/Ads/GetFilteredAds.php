@@ -3,20 +3,24 @@
 namespace App\Actions\Ads;
 
 use App\Models\Ad;
+use Illuminate\Support\Facades\DB;
 use Grimzy\LaravelMysqlSpatial\Types\Point;
 
 class GetFilteredAds
 {
     public function execute(array $data)
     {
-        if (isset($data['longitude']) && isset($data['latitude'])) {
-            $data['location'] = [$data['latitude'], $data['longitude']];
-        } else {
-            $data['location'] = [52.59468294180227, 4.653462748789553];
-        }
-        $locationGeometry = new Point(...$data['location']);
+        $query = new Ad;
 
-        $query = Ad::orderByDistanceSphere('location', $locationGeometry, 'asc');
+        if (isset($data['longitude']) && isset($data['latitude'])) {
+            $data['location'] = [$data['latitude'], $data['longitude']];            
+            $locationGeometry = new Point(...$data['location']);
+            $query = $query->orderByDistanceSphere('location', $locationGeometry, 'asc');    
+            $query = $query->orderBy('created_at','desc');    
+            $query = $query->select(DB::raw("*, ST_Distance_Sphere(location, point(".$data['longitude'].",".$data['latitude'].")) as calcDistance"));
+        } else {
+            $query = $query->orderBy('created_at','desc');    
+        }
 
         if (isset($data['search'])) {
             $query = $query->where('title', 'like', '%' . $data['search'] . '%')

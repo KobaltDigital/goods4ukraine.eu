@@ -82,8 +82,6 @@
       </div>
     </div>
   </div>
-
-
   <section class="w-full">
     <div class="mx-4 max-w-5xl py-10 md:mx-auto space-y-4">
       @forelse ($ads as $ad)
