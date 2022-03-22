@@ -1366,14 +1366,6 @@ select {
   border-top-right-radius: 0.375rem;
   border-bottom-right-radius: 0.375rem;
 }
-.rounded-l-lg {
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-}
-.rounded-r-lg {
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-}
 .border {
   border-width: 1px;
 }
@@ -1460,9 +1452,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(1 90 188 / var(--tw-bg-opacity));
 }
-.bg-accent {
+.bg-yellow {
   --tw-bg-opacity: 1;
-  background-color: rgb(156 201 211 / var(--tw-bg-opacity));
+  background-color: rgb(254 215 2 / var(--tw-bg-opacity));
 }
 .bg-gray-100 {
   --tw-bg-opacity: 1;
@@ -1471,10 +1463,6 @@ select {
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
-}
-.bg-yellow {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 215 2 / var(--tw-bg-opacity));
 }
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
@@ -2416,6 +2404,10 @@ p {
     padding-bottom: 0.5rem;
   }
 
+  .md\:text-right {
+    text-align: right;
+  }
+
   .md\:align-middle {
     vertical-align: middle;
   }
@@ -2522,26 +2514,22 @@ p {
     overflow-y: visible;
   }
 
-  .lg\:rounded-lg {
-    border-radius: 0.5rem;
+  .lg\:rounded-none {
+    border-radius: 0px;
   }
 
   .lg\:rounded-md {
     border-radius: 0.375rem;
   }
 
-  .lg\:rounded-none {
-    border-radius: 0px;
+  .lg\:rounded-l-lg {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
   }
 
   .lg\:rounded-r-lg {
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-  }
-
-  .lg\:rounded-l-lg {
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
   }
 
   .lg\:p-2 {

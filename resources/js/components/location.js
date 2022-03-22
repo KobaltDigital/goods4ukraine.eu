@@ -16,10 +16,12 @@ export default () => ({
         });
     },
     success(data) {
+        console.log('fetching');
         const key = 'AIzaSyBR-4XYGeEEnH5A0L3qVMt1yjcY8Exd82k';
         const { latitude, longitude } = data.coords;
         const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${key}`;
         fetch(url).then(response => response.json()).then(json => {
+            console.log(json.results[0]);
             const city = json.results[0].address_components.find(component => component.types.includes('locality'));
             this.location = city;
         });
@@ -49,11 +51,11 @@ function showPosition(position) {
     latitude.value = position.coords.latitude;
     longitude.value = position.coords.longitude;
 
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=`+position.coords.latitude+`,`+position.coords.longitude+`&key=AIzaSyBR-4XYGeEEnH5A0L3qVMt1yjcY8Exd82k`;
+    // using other key because this is an open key, not restricted.
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=`+position.coords.latitude+`,`+position.coords.longitude+`&key=AIzaSyCxzPwEB7A9i6Fwvi41SrVbApygce3Sq9c`;
     console.log('Checking ' + url);
 
     fetch(url).then(response => response.json()).then(json => {
-
         console.log('Getting response', json.results[0].address_components);
         const city = json.results[0].address_components.find(component => component.types.includes('locality'));
         console.log('Checking if  location.value: (' +  location.value + ') is empty');
@@ -61,5 +63,4 @@ function showPosition(position) {
             location.value = city.long_name;
         }
     });
-
 }
