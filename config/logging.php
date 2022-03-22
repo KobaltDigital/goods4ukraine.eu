@@ -53,7 +53,7 @@ return [
             'channels' => ['single', 'bugsnag'],
             'ignore_exceptions' => false,
         ],
-      
+
         'bugsnag' => [
             'driver' => 'bugsnag',
         ],

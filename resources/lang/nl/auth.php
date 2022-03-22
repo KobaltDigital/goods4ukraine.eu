@@ -15,5 +15,5 @@ return [
 
     'failed' => 'Deze inloggegevens matchen niet met onze database',
     'password' => 'Het opgegeven wachtwoord is onjuist.',
-    'throttle' => 'Te veel keer geprobeert in te loggen. Probeer het nogmaals in :seconds seconden.',
+    'throttle' => 'Te veel keer geprobeerd in te loggen. Probeer het nogmaals in :seconds seconden.',
 ];

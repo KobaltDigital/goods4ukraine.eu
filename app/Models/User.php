@@ -58,6 +58,6 @@ class User extends Authenticatable implements Auditable, HasLocalePreference
      */
     public function preferredLocale()
     {
-        return $this->lang;
+        return $this->locale;
     }
 }
