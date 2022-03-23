@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \App\Models\Language::create([
-            'title' => 'Dutch',
+            'title' => 'Nederlands',
             'locale' => 'nl',
             'locale_long' => 'nl_NL',
         ]);
@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Language::create([
-            'title' => 'український',
+            'title' => 'Український',
             'locale' => 'ua',
             'locale_long' => 'ua_UA',
         ]);
