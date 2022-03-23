@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="w-full lg:w-auto md:text-right">
                                     <x-label>&nbsp;</x-label>
-                                    <x-button-secondary class="text-base px-5 h-16 md:w-full rounded-lg shadow-3xl lg:rounded-none lg:rounded-r-lg bg-yellow text-blue hover:text-black">
+                                    <x-button-secondary class="text-base px-5 md:h-16 md:w-full rounded-lg shadow-3xl lg:rounded-none lg:rounded-r-lg bg-yellow text-blue hover:text-black">
                                         {{ __('Search') }}
                                     </x-button>
                                 </div>

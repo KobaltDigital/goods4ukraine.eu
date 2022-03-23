@@ -1,8 +1,8 @@
 <div class="overflow-hidden bg-white shadow-lg rounded-md sm:rounded-lg">
     <div class="">
         <div class="grid grid-cols-1 sm:grid-cols-6">
-            <div class="sm:col-span-1 bg-gray-100">
-                <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" class="w-full h-full object-cover rounded-l-md sm:rounded-l-lg" />
+            <div class="sm:col-span-1">
+                <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" class="w-full h-full object-cover rounded-t-md sm:rounded-l-lg" />
             </div>
             <div class="sm:col-span-5 p-5">
                 <div class="relative flex justify-between">
