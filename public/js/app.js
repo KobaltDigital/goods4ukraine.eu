@@ -5535,14 +5535,10 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
-/* harmony import */ var _components_location__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/location */ "./resources/js/components/location.js");
-/* harmony import */ var _components_location__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_location__WEBPACK_IMPORTED_MODULE_1__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
-
-alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('location', (_components_location__WEBPACK_IMPORTED_MODULE_1___default()));
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 $(document).ready(function () {
   /* This is basic - uses default settings */
@@ -5562,6 +5558,55 @@ $(document).ready(function () {
     'overlayShow': false
   });
 });
+window.googleAutocomplete = {
+  autocompleteField: function autocompleteField(fieldId) {
+    var autocomplete = new google.maps.places.Autocomplete(document.getElementById(fieldId));
+    google.maps.event.addListener(autocomplete, "place_changed", function () {
+      // Segment results into usable parts.
+      var place = autocomplete.getPlace();
+      document.getElementById("latitude").value = place.geometry.location.lat();
+      document.getElementById("longitude").value = place.geometry.location.lng();
+    });
+  }
+}; // Attach listener to address input field.
+
+window.googleAutocomplete.autocompleteField("location_field"); // for first time when lat and long is still empty
+
+var latitude = document.getElementById("latitude");
+var longitude = document.getElementById("longitude");
+var location_field = document.getElementById("location_field");
+
+if (latitude && latitude.value == '' && longitude.value == '') {
+  console.log('latitude is empty, asking for geolocation');
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    console.log('Geolocation is not supported by this browser.');
+  }
+}
+
+function showPosition(position) {
+  console.log('new lat and long will be set.');
+  latitude.value = position.coords.latitude;
+  longitude.value = position.coords.longitude; // using other key because this is an open key, not restricted.
+
+  var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyCxzPwEB7A9i6Fwvi41SrVbApygce3Sq9c";
+  console.log('Checking ' + url);
+  fetch(url).then(function (response) {
+    return response.json();
+  }).then(function (json) {
+    console.log('Getting response', json.results[0].address_components);
+    var city = json.results[0].address_components.find(function (component) {
+      return component.types.includes('locality');
+    });
+    console.log('Checking if  location.value: (' + location_field.value + ') is empty');
+
+    if (location_field.value == "") {
+      location_field.value = city.long_name;
+    }
+  });
+}
 
 /***/ }),
 
@@ -5593,64 +5638,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/components/location.js":
-/*!*********************************************!*\
-  !*** ./resources/js/components/location.js ***!
-  \*********************************************/
-/***/ (() => {
-
-window.googleAutocomplete = {
-  autocompleteField: function autocompleteField(fieldId) {
-    var autocomplete = new google.maps.places.Autocomplete(document.getElementById(fieldId));
-    google.maps.event.addListener(autocomplete, "place_changed", function () {
-      // Segment results into usable parts.
-      var place = autocomplete.getPlace();
-      document.getElementById("latitude").value = place.geometry.location.lat();
-      document.getElementById("longitude").value = place.geometry.location.lng();
-    });
-  }
-}; // Attach listener to address input field.
-
-window.googleAutocomplete.autocompleteField("location"); // for first time when lat and long is still empty
-
-var latitude = document.getElementById("latitude");
-var longitude = document.getElementById("longitude");
-var location = document.getElementById("location");
-
-if (latitude && latitude.value == '' && longitude.value == '') {
-  console.log('latitude is empty, asking for geolocation');
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    console.log('Geolocation is not supported by this browser.');
-  }
-}
-
-function showPosition(position) {
-  console.log('new lat and long will be set.');
-  latitude.value = position.coords.latitude;
-  longitude.value = position.coords.longitude; // using other key because this is an open key, not restricted.
-
-  var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyCxzPwEB7A9i6Fwvi41SrVbApygce3Sq9c";
-  console.log('Checking ' + url);
-  fetch(url).then(function (response) {
-    return response.json();
-  }).then(function (json) {
-    console.log('Getting response', json.results[0].address_components);
-    var city = json.results[0].address_components.find(function (component) {
-      return component.types.includes('locality');
-    });
-    console.log('Checking if  location.value: (' + location.value + ') is empty');
-
-    if (location.value == "") {
-      location.value = city.long_name;
-    }
-  });
-}
 
 /***/ }),
 
@@ -23146,18 +23133,6 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	

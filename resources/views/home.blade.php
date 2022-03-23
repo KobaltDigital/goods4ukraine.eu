@@ -35,8 +35,8 @@
                             </div>
                             <div class="w-full md:w-1/5">
                                 <x-label class="text-white">{{ __('Location') }}</x-label>
-                                <div x-data="location" class="relative z-10  h-full">
-                                    <x-input x-model="location" x-on:change="autocompleteLocation($event)" id="location" type="text"
+                                <div class="relative z-10  h-full">
+                                    <x-input id="location_field" type="text"
                                         name="location"
                                         class="w-full md:h-16 rounded-none text-black  border-0 border-r"
                                         value="{{ request('location') }}"
