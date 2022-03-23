@@ -83,7 +83,20 @@
     </div>
   </div>
   <section class="w-full">
-    <div class="mx-4 max-w-5xl py-10 md:mx-auto space-y-4">
+    <div class="mx-4 max-w-5xl mb-10 md:mx-auto space-y-4">
+      <div class="md:flex justify-between">
+        <div class="my-4 md:mt-0">
+          <x-button href="{{ route('admin.ads.create') }}">{{ __("Place advertisement") }}</x-button>
+        </div>
+        <div class="text-gray-500 text-sm">
+          {{ __('Sorted by') }}: 
+          @if($sortedBy == 'nearest')
+          {{ __('nearest') }}            
+          @else
+          {{ __('recently added') }}
+          @endif
+        </div>
+      </div>
       @forelse ($ads as $ad)
         <x-card :ad="$ad" />    
       @empty

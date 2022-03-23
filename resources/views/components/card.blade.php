@@ -2,7 +2,7 @@
     <div class="px-4 py-5 sm:px-6">
         <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-4">
             <div class="sm:col-span-1">
-                <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" />
+                <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" class="rounded" />
             </div>
             <div class="sm:col-span-3">
                 <div class="relative flex justify-between">
