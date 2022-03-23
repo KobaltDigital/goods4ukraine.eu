@@ -28,7 +28,7 @@
                             <div class="w-full md:w-1/5">
                                 <x-label class="text-white truncate pr-4">{{ __('Wanted or offered') }}</x-label>
                                 <select id="type" name="type" class="text-black bg-light w-full md:h-16 border-0 border-r border-gray-300 focus:ring focus:ring-blue focus:ring-opacity-50">
-                                    <option value=" {{ request()->input('type') == "" ? 'selected' : '' }}">{{ __('Both') }}</option>
+                                    <option {{ request()->input('type') == "" ? 'selected' : '' }} value="">{{ __('Both') }}</option>
                                     <option value="Wanted" {{ request()->input('type') == "Wanted" ? 'selected' : '' }}>{{ __('Wanted') }}</option>
                                     <option value="Offered" {{ request()->input('type') == "Offered" ? 'selected' : '' }}>{{ __('Offered') }}</option>
                                 </select>
