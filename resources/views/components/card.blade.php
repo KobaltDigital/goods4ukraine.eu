@@ -14,13 +14,15 @@
                         </a>
                         <div class="text-sm font-bold">
                             {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
-                            <span class="font-sans text-gray-400">(
-                            @if($ad->calcDistance < 1000)
-                                {{ round($ad->calcDistance) . __('mtr') }}
-                            @else 
-                                {{ round($ad->calcDistance / 1000) . __('km') }}
+                            @if($ad->calcDistance > 0)
+                                <span class="font-sans text-gray-400">
+                                @if($ad->calcDistance < 1000)
+                                    ({{ round($ad->calcDistance) . __('mtr') }})
+                                @else 
+                                    ({{ round($ad->calcDistance / 1000) . __('km') }})
+                                @endif
+                                </span>
                             @endif
-                            )</span>
                         </div>
                     </div>
                     <div>
