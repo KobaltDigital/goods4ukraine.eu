@@ -8,7 +8,7 @@
                 <div class="relative flex justify-between">
                     <div>
                         <a href="{{ route('ads.show', $ad) }}">
-                            <h3 class="font-serif text-lg font-medium leading-6 text-black">
+                            <h3 class="font-serif text-lg md:text-2xl font-medium leading-6 hover:text-black hover:underline text-blue py-1">
                                 {!! $ad->title_translated !!}
                             </h3>
                         </a>
