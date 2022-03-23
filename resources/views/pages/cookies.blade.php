@@ -7,7 +7,6 @@
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h1>Cookiebeleid</h1>
                 <p>Geplaatst: 14 maart 2022.</p>
-
                 <p class="intro">
                     Als u onze websites, diensten, applicaties, communicatiediensten (zoals e-mail) en hulpmiddelen
                     bezoekt of gebruikt, kunnen wij, of door ons geautoriseerde dienstverleners, cookies, web beacons en
@@ -18,9 +17,7 @@
                 </p>
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
-
-                <h2>Wat zijn cookies, web beacons en soortgelijke technologieën?
-                </h2>
+                <h2>Wat zijn cookies, web beacons en soortgelijke technologieën?</h2>
                 <p>
                     Zoals de meeste websites, gebruiken ook wij technologieën die kleine databestanden plaatsen op uw
                     computer, tablet of mobiele telefoon (gezamenlijk genoemd ‘apparaat’). Deze kleine bestanden stellen
@@ -34,10 +31,7 @@
                 </p>
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 lg:mb-20 prose max-w-none">
-
-                <h2>Uw keuze en ons gebruik van cookies, web beacons en soortgelijke technologieën
-                </h2>
-
+                <h2>Uw keuze en ons gebruik van cookies, web beacons en soortgelijke technologieën</h2>
                 <p>
                     We bieden bepaalde website functionaliteiten, diensten, applicaties en hulpmiddelen die alleen
                     beschikbaar zijn door het gebruik van deze technologieën. Het staat u altijd vrij om deze
@@ -71,10 +65,8 @@
                 <p>
                     Ons gebruik van deze technologieën valt uiteen in de volgende algemene categorieën:
                 </p>
-
                 <ul>
                     <li>
-
                         Technisch noodzakelijk. We kunnen cookies of soortgelijke technologieën gebruiken die nodig zijn
                         voor de werking van onze websites, diensten, applicaties of hulpmiddelen.
                     </li>
@@ -101,40 +93,29 @@
                         de inhoud die aan u zijn geleverd.
                     </li>
                 </ul>
-
-
                 <p>
                     Voor de opt-out-functie voor advertentie-gerelateerde cookies van derden en Web beacons, zie de
                     sectie ‘Advertentienetwerken’ hieronder.
                 </p>
-
-
                 <p>
                     Als u de andere typen technologieën die we kunnen inzetten op onze websites, diensten, applicaties
                     of hulpmiddelen, wilt blokkeren, verwijderen of uitschakelen, dan kun u dit doen via de instellingen
                     van uw browser of apparaat, in zoverre de browser of het apparaat dit toelaat.
                 </p>
-
-
                 <p>
                     Voor een overzicht van de cookies die op onze website worden geplaatst, klik hier. Voor meer
                     informatie over advertentie-gerelateerde cookies, zie 'Advertentienetwerken en advertentie
                     uitwisselplatforms uitgevoerd door derde partijen'.
                 </p>
-
-
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 lg:mb-20 prose max-w-none">
-
-                <h2>Gebruik van deze technologieën door dienstverlenende derden                </h2>
-
+                <h2>Gebruik van deze technologieën door dienstverlenende derden</h2>
                 <p>
                     Wij kunnen met dienstverleners samenwerken die met onze toestemming third-party cookies, web beacons
                     of soortgelijke technologieën gebruiken. Deze dienstverleners helpen ons bij het beheren van onze
                     websites, applicaties, diensten en hulpmiddelen en leveren u een betere, snellere en veiligere
                     ervaring.
                 </p>
-
                 <p>
                     Deze diensten kunnen technologieën gebruiken om ons te helpen bij het leveren van onze eigen inhoud
                     en advertenties en om anonieme website statistieken en analyses op te stellen. Wij staan deze
@@ -144,7 +125,6 @@
                     betrekking tot het gebruik en verzamelen van persoonlijke informatie.
 
                 </p>
-
                 <p>
                     Afgezien van het gebruik van deze technologieën door onze dienstverleners, staan wij op onze
                     websites geen inhoud van derde partijen toe (zoals advertenties, gebruiker-tot-gebruiker
@@ -154,7 +134,6 @@
                     persoonlijke informatie verzameld of gebruik maakt van volgtechnologieën, meld dit dan via
                     team@kobaltdigital.nl
                 </p>
-
             </div>
         </div>
     </div>
