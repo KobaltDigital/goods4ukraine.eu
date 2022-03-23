@@ -1,14 +1,14 @@
 <div class="overflow-hidden bg-white shadow-lg rounded-md sm:rounded-lg">
-    <div class="px-4 py-5 sm:px-6">
-        <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-4">
-            <div class="sm:col-span-1">
-                <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" class="rounded" />
+    <div class="">
+        <div class="grid grid-cols-1 sm:grid-cols-6">
+            <div class="sm:col-span-1 bg-gray-100">
+                <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" class="w-full h-full object-cover rounded-l-md sm:rounded-l-lg" />
             </div>
-            <div class="sm:col-span-3">
+            <div class="sm:col-span-5 p-5">
                 <div class="relative flex justify-between">
                     <div>
                         <a href="{{ route('ads.show', $ad) }}">
-                            <h3 class="font-serif text-lg md:text-2xl font-medium leading-6 hover:text-black hover:underline text-blue py-1">
+                            <h3 class="font-serif text-lg md:text-2xl font-medium leading-6 hover:text-black hover:underline text-blue pb-1">
                                 {!! $ad->title_translated !!}
                             </h3>
                         </a>
@@ -40,13 +40,14 @@
                 <div class="mt-1 text-sm text-black">
                     {{ \Illuminate\Support\Str::limit($ad->description_translated, 150) }}
                 </div>
-            </div>
-        </div>
-        <div class="flex justify-between">
-            <div class="text-sm text-gray-500 mt-4">
-                {{ $ad->created_at->diffForHumans()}} {{ strtolower(__('Added.')) }}
-            </div>
-            <x-button :href="route('ads.show', $ad)">{{ __('View') }}</x-button>
+                <div class="flex justify-between">
+                    <div class="text-sm text-gray-500 mt-4">
+                        {{ $ad->created_at->diffForHumans()}} {{ strtolower(__('Added.')) }}
+                    </div>
+                    <x-button :href="route('ads.show', $ad)">{{ __('View') }}</x-button>
+                </div>
+                </div>
+    
         </div>
     </div>
 </div>
