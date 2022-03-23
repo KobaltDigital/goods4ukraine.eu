@@ -6,7 +6,6 @@
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h1>Persinformatie</h1>
-
                 <p class="intro">
                     Journalisten van de schrijvende pers, radio, televisie en (pers)fotografen zijn zeer welkom op deze website. Neem <a href="{{ route('contact') }}">contact</a> op meer informatie of check de informatie hieronder.
                 </p>
@@ -26,9 +25,7 @@
                 </div>
 
                 <div class="bg-white p-6 overflow-hidden shadow rounded-lg prose max-w-none">
-                    <h2>
-                        Logo's
-                    </h2>
+                    <h2>Logo's</h2>
                     <div class="flex">
                         <div>
                             <img src="/img/beeldmerk.svg" class="my-2" />
@@ -65,18 +62,13 @@
                         </p>   
                     </div>
                 </div>
-
                 <div class="bg-white p-6 overflow-hidden shadow rounded-lg prose max-w-none">
-                    <h2>
-                        Perscontact
-                    </h2>
+                    <h2>Perscontact</h2>
                     <p>
                         Voor meer informatie, beeldmateriaal of vragen neemt u contact op met Els
                         Schipper, info@elsschipper.nl, 06-44186197
                     </p>
                 </div>
-                
-
             </div>
         </div>
     </div>

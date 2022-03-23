@@ -7,11 +7,9 @@
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h1>Privacyverklaring</h1>
                 <p>Geplaatst: 14 maart 2022.</p>
-
                 <p class="intro">
                     Kobalt Digital B.V. ('Kobalt', 'we', 'wij', 'ons' of 'onze'), Koelmalaan 350, unit 3.08 te
                     Alkmaar, is de verwerkingsverantwoordelijke en exploitant van goods4ukraine.eu.
-
                 </p>
                 <p class="intro">
                     Goods4ukraine.eu spant zich in om uw privacy te beschermen. In deze privacyverklaring wordt
@@ -20,7 +18,6 @@
                 </p>
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
-
                 <h2>Reikwijdte</h2>
                 <p>
                     Deze privacyverklaring is van toepassing op de goods4ukraine.eu-website(s), -toepassingen, -diensten
@@ -40,9 +37,7 @@
                 </p>
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 lg:mb-20 prose max-w-none">
-
                 <h2>Persoonsgegevens die we verzamelen</h2>
-
                 <h3>
                     Wat zijn persoonsgegevens?
                 </h3>
@@ -54,7 +49,6 @@
                     kenmerkend zijn voor de fysieke, fysiologische, genetische, psychische, economische, culturele
                     of sociale identiteit van die natuurlijke persoon.
                 </p>
-
                 <p>
                     Gegevens die geanonimiseerd of geaggregeerd zijn, zodat deze niet meer kunnen worden gebruikt om
                     een specifieke natuurlijke persoon te identificeren, hetzij in combinatie met andere informatie
@@ -111,7 +105,6 @@
                     Persoonsgegevens die we automatisch verzamelen wanneer u onze Diensten gebruikt of zich
                     inschrijft voor een account bij ons
                 </h3>
-
                 <ul>
                     <li>
 
@@ -146,7 +139,6 @@
                         technologieën en hoe u ze beheert.
                     </li>
                 </ul>
-
                 <h3>
                     Persoonsgegevens die uit andere bronnen worden verzameld
                 </h3>
@@ -175,18 +167,14 @@
                 </ul>
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 lg:mb-20 prose max-w-none">
-
                 <h2>Cookies en soortgelijke technologieën </h2>
-
                 <p>Wanneer u onze sites, diensten, toepassingen, tools of berichtfuncties bezoekt of gebruikt, mogen wij
                     of onze geautoriseerde dienstverleners cookies en vergelijkbare technologieën gebruiken om u een
                     betere, snellere en veiligere ervaring te bieden, en voor advertentie- en marketingdoeleinden. Zie
                     onze volledige Cookieverklaring voor meer informatie.
                 </p>
-
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 lg:mb-20 prose max-w-none">
-
                 <h2>Hoe we uw persoonsgegevens beveiligen
                 </h2>
                 <p>
@@ -198,15 +186,12 @@
                 </p>
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 lg:mb-20 prose max-w-none">
-
                 <h2>
                     Overige belangrijke informatie over privacy
                 </h2>
-
                 <h3>
                     Wat gebeurt er wanneer u uw persoonsgegevens deelt op onze sites of in onze toepassingen?
                 </h3>
-
                 <p>
                     Andere gebruikers hebben toegang tot de informatie die u op goods4ukraine.eu deelt. Andere
                     gebruikers kunnen bijvoorbeeld uw advertenties, feedback, beoordelingen en bijbehorende commentaren
@@ -244,7 +229,6 @@
                     gebruikers, waartoe u toegang hebt, voor enig ander doel gebruiken, houdt een schending van onze
                     Gebruiksvoorwaarden in.
                 </p>
-
                 <h3>
                     Ongewenste of bedreigende e-mail (spam)
                 </h3>
@@ -262,7 +246,6 @@
                     schadelijke activiteiten of illegale of verboden content. We slaan berichten verzonden via deze
                     middelen echter niet permanent op.
                 </p>
-
                 <h3>
                     Communicatietools
                 </h3>
@@ -271,7 +254,6 @@
                     kwaadwillende activiteit, illegale of verboden content of schendingen van onze Gebruiksvoorwaarden,
                     deze privacyverklaring of ons overige beleid.
                 </p>
-
                 <h3>
                     Privacy van kinderen
                 </h3>
@@ -280,7 +262,6 @@
                     opzettelijk persoonsgegevens van gebruikers die onder hun nationale wetgeving als kinderen worden
                     beschouwd.
                 </p>
-
                 <h3>
                     Privacypraktijken van derden
                 </h3>
@@ -298,14 +279,9 @@
                     lezen voordat u een transactie uitvoert en uw persoonsgegevens deelt. Dat geldt ook als de derden
                     aan wie u persoonsgegevens openbaar maakt, bieders, vraag, of aanbod op onze site zijn.
                 </p>
-
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 lg:mb-20 prose max-w-none">
-
-                <h2>
-                    Contact met ons opnemen
-                </h2>
-
+                <h2>Contact met ons opnemen</h2>
                 <p>
                     Als u een vraag of klacht hebt over deze privacyverklaring of onze praktijken voor omgang met
                     gegevens, kunt u met ons en onze functionaris voor gegevensbescherming contact opnemen, met als
@@ -318,7 +294,6 @@
                     Uw recht om klachten in te dienen bij een autoriteit op het gebied van gegevensbescherming blijft
                     ongewijzigd.
                 </p>
-
             </div>
         </div>
     </div>
