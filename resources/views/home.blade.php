@@ -93,5 +93,7 @@
           <h2>{{ __('No search results') }}</h2>
           <h4>{{ __('Searchtip') }}</h4>
         </div>
+      </div>
+      @endforelse
     </section>
 </x-layout>
