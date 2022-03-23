@@ -13,7 +13,6 @@
                     andere soortgelijke technologieën voor het opslaan van informatie gebruiken om ons te helpen u een
                     betere, snellere en veiligere ervaring te bieden. Deze pagina is bedoeld om u te helpen met het
                     beter begrijpen van deze technologieën en ons gebruik hiervan.
-
                 </p>
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
