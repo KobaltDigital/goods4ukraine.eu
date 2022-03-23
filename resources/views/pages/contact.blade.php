@@ -6,9 +6,7 @@
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h1>Contact</h1>
-
                 <div class="lg:flex">
-
                     <div class="lg:mr-6">
                         <h3>Reinier Sierag (initiatiefnemer)</h3>
                         <ul>
@@ -19,7 +17,7 @@
                                 <a href="mailto:team@kobaltdigital.nl">team@kobaltdigital.nl</a> (kantoor)
                             </li>
                             <li>
-                                    <a href="tel:+31 72 2100600">+31 72 2100600</a>
+                                <a href="tel:+31 72 2100600">+31 72 2100600</a>
                             </li>
                         </ul>    
                     </div>
@@ -33,7 +31,7 @@
                                 <a href="mailto:team@kobaltdigital.nl">team@kobaltdigital.nl</a> (kantoor)
                             </li>
                             <li>
-                                    <a href="tel:+31 72 2100600">+31 72 2100600</a>
+                                <a href="tel:+31 72 2100600">+31 72 2100600</a>
                             </li>
                         </ul>    
                     </div>
@@ -44,7 +42,7 @@
                                 <a href="mailto:els@kobaltdigital.nl">els@schipper.nl</a>
                             </li>
                             <li>
-                                    <a href="tel:+31 6 44186197">+31 6 44186197</a>
+                                <a href="tel:+31 6 44186197">+31 6 44186197</a>
                             </li>
                         </ul>    
                     </div>

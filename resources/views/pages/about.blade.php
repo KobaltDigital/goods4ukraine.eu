@@ -6,7 +6,6 @@
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h1>Over Goods4ukraine.eu</h1>
-
                 <p class="intro">
                     Goods4Ukraine brengt vraag en aanbod bij elkaar met als doel om vluchtelingen te helpen aan missende
                     benodigdheden.
@@ -31,8 +30,6 @@
                     website zich vooral kenmerkt door het laagdrempelige karakter ziet Goods4ukraine.eu het als haar
                     missie om hen zo goed mogelijk te adviseren over prettig, veilig en verantwoord handelen. De website
                     is zeer eenvoudig in gebruik. Het enige dat hiervoor nodig is, is een e-mailadres, enkele lokatiegegevens en een paar minuten tijd.
-                    
-                    
                 </p>
                 <h3>
                     Duurzaam en lokaal

@@ -4,7 +4,6 @@
             <div class="mb-10">
                 <x-nav-sub />
             </div>
-
             <div class="lg:grid lg:grid-cols-2 lg:gap-10">
                 <div>
                     <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
@@ -164,10 +163,8 @@
                         </ul>
                     </div>
                 </div>
-                
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
-
                 <h2>Help goods4ukraine.eu schoon en veilig te houden! </h2>
                 <p>
                     Als u verboden, verdachte of inbreukmakende objecten of diensten opmerkt, kunt u contact met ons opnemen. Onze medewerkers zullen
