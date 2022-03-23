@@ -10,17 +10,15 @@
                         <h1>Verboden of verdachte objecten en diensten</h1>
 
                         <p class="intro">
-                            Goods4ukraine.eu is een advertentiesite die vraag en aanbod samenbrengt.
+                            Goods4ukraine.eu is een gratis advertentiesite die vraag en aanbod samenbrengt.
                         </p>
                         <p>
                             Goods4ukraine.eu stelt regels met betrekking tot het plaatsen van
-                            advertenties en
-                            het
-                            gebruik van haar platform. In sommige gevallen wijkt goods4ukraine.eu hierbij af van
-                            bovenstaand
-                            uitgangspunt en verbieden deze regels het aanbieden van sommige objecten en diensten, ook
-                            als handel
-                            in deze volgens geldende wet- en regelgeving niet verboden is.
+                            advertenties en het gebruik van haar platform. In sommige gevallen wijkt goods4ukraine.eu
+                            hierbij af van
+                            bovenstaand uitgangspunt en verbieden deze regels het aanbieden van sommige objecten en
+                            diensten, ook
+                            als handel in deze volgens geldende wet- en regelgeving niet verboden is.
                         </p>
                         <p>
                             Voor uw gemak hebben we een lijst met verboden en verdachte objecten en diensten opgesteld.
@@ -36,7 +34,7 @@
                             namaaktas van
                             een bekend merk, dan mag de tas niet worden aangeboden. Is het een originele tas van een
                             bekend
-                            merk, dan wel.                        </p>
+                            merk, dan wel. </p>
                         <p>
                             Let op! Deze lijst geeft slechts richtlijnen en is niet uitputtend. Als gebruiker van
                             goods4ukraine.eu
@@ -104,9 +102,6 @@
                                 Financiële producten en diensten (sparen, lenen, beleggen en verzekeren)
                             </li>
                             <li>
-                                Frontjes van autoradio’s en/of navigatiesystemen
-                            </li>
-                            <li>
                                 Geneesmiddelen
                             </li>
                             <li>
@@ -167,7 +162,8 @@
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h2>Help goods4ukraine.eu schoon en veilig te houden! </h2>
                 <p>
-                    Als u verboden, verdachte of inbreukmakende objecten of diensten opmerkt, kunt u contact met ons opnemen. Onze medewerkers zullen
+                    Als u verboden, verdachte of inbreukmakende objecten of diensten opmerkt, kunt u contact met ons
+                    opnemen. Onze medewerkers zullen
                     uw tips bekijken en waar nodig actie ondernemen.
                 </p>
             </div>
