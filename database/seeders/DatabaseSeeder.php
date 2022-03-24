@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Language::create([
             'title' => 'English',
-            'locale' => 'gb',
+            'locale' => 'en',
             'locale_long' => 'en_GB',
         ]);
 
@@ -30,6 +30,12 @@ class DatabaseSeeder extends Seeder
             'title' => 'український',
             'locale' => 'ua',
             'locale_long' => 'ua_UA',
+        ]);
+
+        \App\Models\Language::create([
+            'title' => 'русский',
+            'locale' => 'ru',
+            'locale_long' => 'ru_RU',
         ]);
         
         \App\Models\User::factory(1000)->create();
