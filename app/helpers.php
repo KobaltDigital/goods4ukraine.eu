@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Cache;
 if (!function_exists('languages')) {
     function languages()
     {
-        $cacheKey = 'languages';
+        $cacheKey = 'language';
         if (Cache::has($cacheKey)) {
             return Cache::get($cacheKey);
         }
