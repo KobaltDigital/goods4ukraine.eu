@@ -51,7 +51,7 @@ class AdManagerController extends Controller
 
     public function edit(Ad $ad)
     {
-        if ($ad->user_id !== auth()->user()->id) {
+        if (!auth()->user()->admin && $ad->user_id !== auth()->user()->id) {
             return abort(403);
         }
 
@@ -63,11 +63,9 @@ class AdManagerController extends Controller
     public function update(StoreAdRequest $request, UpdateAd $updateAd, Ad $ad)
     {
 
-        if ($ad->user_id !== auth()->user()->id) {
+        if (!auth()->user()->admin && $ad->user_id !== auth()->user()->id) {
             return abort(403);
         }
-
-
 
         $updateAd->execute($ad, $request->validated());
 
@@ -84,7 +82,7 @@ class AdManagerController extends Controller
     {
         $ad = Ad::withTrashed()->findOrFail($id);
 
-        if ($ad->user_id !== auth()->user()->id) {
+        if (!auth()->user()->admin && $ad->user_id !== auth()->user()->id) {
             return abort(403);
         }
 
@@ -96,7 +94,7 @@ class AdManagerController extends Controller
 
     public function reserve(Ad $ad)
     {
-        if ($ad->user_id !== auth()->user()->id) {
+        if (!auth()->user()->admin && $ad->user_id !== auth()->user()->id) {
             return abort(403);
         }
 
@@ -107,7 +105,7 @@ class AdManagerController extends Controller
 
     public function destroy(Ad $ad)
     {
-        if ($ad->user_id !== auth()->user()->id) {
+        if (!auth()->user()->admin && $ad->user_id !== auth()->user()->id) {
             return abort(403);
         }
 
