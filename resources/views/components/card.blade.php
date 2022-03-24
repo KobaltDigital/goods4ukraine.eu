@@ -6,7 +6,7 @@
                 </a>
             </div>
             <div class="sm:col-span-5 p-5">
-                <div class="relative flex justify-between">
+                <div class="relative flex items-center justify-between">
                     <div>
                         <a href="{{ route('ads.show', $ad) }}">
                             <h3 class="font-serif text-lg md:text-2xl font-medium leading-6 hover:text-black hover:underline text-blue pb-1">
