@@ -96,5 +96,6 @@
         </div>
       </div>
       @endforelse
+      {{ $ads->links() }}
     </section>
 </x-layout>
