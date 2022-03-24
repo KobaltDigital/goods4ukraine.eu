@@ -1,8 +1,9 @@
-<div class="overflow-hidden bg-white shadow-lg rounded-md sm:rounded-lg">
-    <div class="">
+<div class="overflow-hidden bg-white shadow rounded-md sm:rounded-lg">
         <div class="grid grid-cols-1 sm:grid-cols-6">
             <div class="sm:col-span-1">
-                <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" class="w-full h-full object-cover rounded-t-md sm:rounded-l-lg" />
+                <a href="{{ route('ads.show', $ad) }}">
+                    <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" class="w-full h-full object-cover rounded-t-md sm:rounded-l-lg" />
+                </a>
             </div>
             <div class="sm:col-span-5 p-5">
                 <div class="relative flex justify-between">
@@ -15,7 +16,7 @@
                         <div class="text-sm font-bold">
                             {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
                             @if($ad->calcDistance > 0)
-                                <span class="font-sans text-gray-400">
+                                <span class="font-sans text-accent">
                                 @if($ad->calcDistance < 1000)
                                     ({{ round($ad->calcDistance) . __('mtr') }})
                                 @else 
@@ -41,7 +42,7 @@
                     {{ \Illuminate\Support\Str::limit($ad->description_translated, 150) }}
                 </div>
                 <div class="flex justify-between">
-                    <div class="text-sm text-gray-500 mt-4">
+                    <div class="text-sm text-accent mt-4">
                         {{ $ad->created_at->diffForHumans()}} {{ strtolower(__('Added.')) }}
                     </div>
                     <x-button :href="route('ads.show', $ad)">{{ __('View') }}</x-button>
@@ -49,5 +50,4 @@
                 </div>
     
         </div>
-    </div>
 </div>
