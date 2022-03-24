@@ -16,6 +16,7 @@
                     </p>
                     <div class="max-w-4xl mx-auto mt-6 text-xl text-white ">
                         <form action="{{ route('ads.index') }}" method="GET" class="md:flex md:justify-center">
+                            
                             <input x-model="latitude" id="latitude" type="hidden" value="{{ request()->input('latitude') }}" name="latitude">
                             <input x-model="longitude" id="longitude" type="hidden" value="{{ request()->input('longitude') }}" name="longitude">
 
