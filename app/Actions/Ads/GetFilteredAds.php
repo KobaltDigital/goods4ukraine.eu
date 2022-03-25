@@ -10,7 +10,7 @@ class GetFilteredAds
 {
     public function execute(array $data)
     {
-        $query = new Ad;
+        $query = new Ad();
         $locationGeometry = null;
 
         if (isset($data['longitude']) && isset($data['latitude'])) {
@@ -18,7 +18,7 @@ class GetFilteredAds
             $locationGeometry = new Point(...$data['location']);
             $query = $query->orderByDistanceSphere('location', $locationGeometry, 'asc');
             $query = $query->orderBy('created_at', 'desc');
-            $query = $query->select(DB::raw("*, ST_Distance_Sphere(location, point(".$data['longitude'].",".$data['latitude'].")) as calcDistance"));
+            $query = $query->select(DB::raw("*, ST_Distance_Sphere(location, point(" . $data['longitude'] . "," . $data['latitude'] . ")) as calcDistance"));
         } else {
             $query = $query->orderBy('created_at', 'desc');
         }
@@ -35,6 +35,12 @@ class GetFilteredAds
 
         if (isset($data['type'])) {
             $query = $query->where('type', $data['type']);
+        }
+
+        if (isset($data['category'])) {
+            $query = $query->whereHas('categories', function ($query) use ($data) {
+                return $query->where('id', $data['category']);
+            });
         }
 
         return $query->paginate(25);

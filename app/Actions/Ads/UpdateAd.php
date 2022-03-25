@@ -40,8 +40,10 @@ class UpdateAd
             }
         }
 
+        $ad->update($data);
 
+        $ad->categories()->sync([$data['category']]);
 
-        return $ad->update($data);
+        return true;
     }
 }
