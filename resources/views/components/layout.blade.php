@@ -124,19 +124,17 @@
                     <div class="flex items-center justify-center mx-auto">
                         <h3 class="text-lg font-medium leading-6 text-black" id="modal-title">Choose your language</h3>
                     </div>
-                    <div class="grid-cols-2 mt-5 sm:mt-6 sm:grid md:grid-cols-3 sm:gap-3">
+                    <div class="grid-cols-1 mt-5 sm:mt-6 sm:grid md:grid-cols-2 sm:gap-3">
                         @foreach (languages() as $language)
-                            <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}" class="py-5 rounded-md text-center md:border bottom-1 hover:bg-light hover:border-blue">
-                                <div class="md:flex justify-center mx-auto">
-                                    <img src="/img/{{ $language->locale }}.svg" class="w-1/2 my-3 sm:mt-5" />
-                                </div>
-                                <x-button class="text-center">{{ $language->title }}</x-button>
+                            <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}" class="flex flex-col items-center py-5 text-center rounded-md md:border bottom-1 hover:bg-light hover:border-blue">
+                                <img src="/img/{{ $language->locale }}.svg" class="w-1/2 my-3 sm:mt-5" />
+                                {{ $language->title }}
                             </a>
                         @endforeach
                     </div>
                 </div>
             </div>
-        </div>    
+        </div>
     @endempty
 
     @stack('scripts')
