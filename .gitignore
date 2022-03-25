@@ -2,6 +2,7 @@
 /public/hot
 /public/media
 /public/storage
+/storage/*
 /public/css/*
 /public/js/*
 /storage/*.key
