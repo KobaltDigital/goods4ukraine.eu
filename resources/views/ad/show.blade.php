@@ -17,7 +17,18 @@
                             <h1 class="mb-2 font-serif text-3xl font-medium leading-6 text-black">
                                 {{ $ad->title_translated }}
                             </h1>
-                            <div class="text-sm font-bold">
+                            <div>
+                                <ul>
+                                    @foreach ($ad->categories as $category)
+                                        <li class="text-sm">
+                                            <a href="{{ route('ads.index', ['category' => $category->id]) }}" class="underline">
+                                                {{ $category->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <div class="text-sm">
                                 {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
                             </div>
                         </div>
@@ -35,13 +46,16 @@
                             @endif
                         </div>
                     </div>
-                    <a data-fancybox href="{{ $ad->getFirstMediaUrl('images', 'large') }}">
-                        <img class="w-full mb-3 border" src="{{ $ad->getFirstMediaUrl('images', 'single') }}" />
-                    </a>
 
-                    <div class="flex items-center justify-between border-b pb-3">
-                        <div class="text-black font-semibold">{{ __('Share') }}</div>
-                        <div class="flex space-x-2 md:space-x-4 items-center">
+                    @if (!$ad->hasPlaceholder)
+                        <a data-fancybox href="{{ $ad->getFirstMediaUrl('images', 'large') }}">
+                            <img class="w-full mb-3 border" src="{{ $ad->getFirstMediaUrl('images', 'single') }}" />
+                        </a>
+                    @endif
+
+                    <div class="flex items-center pb-3 space-x-2 border-b md:justify-end md:space-x-4">
+                        <div class="text-sm text-black">{{ __('Share') }}:</div>
+                        <div class="flex items-center space-x-2 md:space-x-4">
                             <div class="w-8 h-8">
                                 <a target="_blank" href="whatsapp://send?text={{ urlencode(route('ads.show', ['ad'=>$ad])) }}" data-action="share/whatsapp/share">
                                     <img src="/img/social-share-whatsapp.svg" alt="{{ __('Share') }} whatsapp" class="" />
@@ -62,21 +76,22 @@
                                     <img src="/img/social-share-email.svg" alt="{{ __('Share') }} Email" />
                                 </a>
                             </div>
-                            <a href="#" onclick="navigator.clipboard.writeText('{{ route('ads.show', ['ad'=>$ad]) }}');const feedback = new Notyf({duration: 5000, dismissible: false});feedback.success('Copy!')" class="text-blue hover:underline flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <a href="#" onclick="navigator.clipboard.writeText('{{ route('ads.show', ['ad'=>$ad]) }}');const feedback = new Notyf({duration: 5000, dismissible: false});feedback.success('Copy!')" class="flex items-center space-x-2 text-sm text-blue hover:underline">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                                 </svg>
-                                {{ __('copy link') }}
-                                    
+                                <span>{{ __('copy link') }}</span>
+
                             </a>
                         </div>
                     </div>
-                    <div class="border-b pb-3">
-                        <h3 class="mt-3">{{ __('Description') }}</h3>
-                        <p class="text-lg leading-6 text-black">
-                            {{ $ad->translated_description }}
-                        </p>
-                    </div>
+                    @if ($ad->translated_description)
+                        <div class="py-3 border-b">
+                            <p class="leading-6 text-black text-md">
+                                {{ $ad->translated_description }}
+                            </p>
+                        </div>
+                    @endif
                     <dl class="mt-8 text-base text-black">
                         <h4 class="mb-2">{{ __("From:")}} {{ $ad->user->name}}</h4>
                         <div class="flex">
@@ -132,7 +147,7 @@
                 </div>
             </div>
             <div class="lg:col-span-1">
-                <div class="max-w-lg p-6 mx-auto bg-white rounded shadow lg:max-w-none sticky top-0">
+                <div class="sticky top-0 max-w-lg p-6 mx-auto bg-white rounded shadow lg:max-w-none">
                     <x-ad.contact :ad="$ad" />
                 </div>
             </div>

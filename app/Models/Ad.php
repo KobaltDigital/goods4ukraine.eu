@@ -2,17 +2,18 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Spatie\Sluggable\HasSlug;
+use Spatie\Image\Manipulations;
+use Spatie\MediaLibrary\HasMedia;
 use Spatie\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
 use OwenIt\Auditing\Contracts\Auditable;
 use Spatie\Translatable\HasTranslations;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Grimzy\LaravelMysqlSpatial\Eloquent\SpatialTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\Image\Manipulations;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Ad extends Model implements Auditable, HasMedia
@@ -38,6 +39,8 @@ class Ad extends Model implements Auditable, HasMedia
         'translated_title',
         'translated_description',
     ];
+
+    public const PLACEHOLDER = '/img/beeldmerk-grijs.svg';
 
     public $translatable = ['translated_title', 'translated_description'];
 
@@ -65,7 +68,7 @@ class Ad extends Model implements Auditable, HasMedia
         $this
             ->addMediaCollection('images')
             ->singleFile()
-            ->useFallbackUrl('/img/beeldmerk-grijs.svg');
+            ->useFallbackUrl(self::PLACEHOLDER);
     }
 
     public function registerMediaConversions(Media $media = null): void
@@ -106,5 +109,10 @@ class Ad extends Model implements Auditable, HasMedia
     public function getDescriptionTranslatedAttribute()
     {
         return $this->translated_description ?: $this->description;
+    }
+
+    public function getHasPlaceholderAttribute()
+    {
+        return $this->getFirstMediaUrl('images', 'medium') && Str::contains($this->getFirstMediaUrl('images', 'medium'), self::PLACEHOLDER);
     }
 }
