@@ -41,6 +41,16 @@ class Ad extends Model implements Auditable, HasMedia
 
     public $translatable = ['translated_title', 'translated_description'];
 
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class)->withTimestamps();
+    }
+
+    public function getCategoryAttribute()
+    {
+        return $this->categories()->first();
+    }
+
     protected $spatialFields = ['location'];
 
     public function getSlugOptions(): SlugOptions
@@ -48,6 +58,14 @@ class Ad extends Model implements Auditable, HasMedia
         return SlugOptions::create()
             ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this
+            ->addMediaCollection('images')
+            ->singleFile()
+            ->useFallbackUrl('/img/beeldmerk-grijs.svg');
     }
 
     public function registerMediaConversions(Media $media = null): void

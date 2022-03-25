@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ad;
-use Illuminate\Http\Request;
-use App\Http\Requests\StoreAdRequest;
-use App\Actions\Ads\GetOwnAds;
+use App\Models\Category;
 use App\Enums\AdTypeEnum;
+use Illuminate\Http\Request;
 use App\Actions\Ads\CreateAd;
 use App\Actions\Ads\UpdateAd;
+use App\Actions\Ads\GetOwnAds;
 use App\Actions\GetClientLocation;
 use App\Actions\Ads\GetFilteredAds;
+use App\Http\Requests\StoreAdRequest;
 
 class AdManagerController extends Controller
 {
@@ -33,12 +34,13 @@ class AdManagerController extends Controller
     {
         $adTypes = AdTypeEnum::toArray();
 
-        return view('admin.ad.create-or-edit', compact('adTypes'));
+        $categories = Category::all()->pluck('name', 'id');
+
+        return view('admin.ad.create-or-edit', compact('adTypes', 'categories'));
     }
 
     public function store(StoreAdRequest $request, CreateAd $createAd)
     {
-
         $ad = $createAd->execute($request->validated(), auth()->user());
 
         if (count($request->files) > 0) {
@@ -57,7 +59,9 @@ class AdManagerController extends Controller
 
         $adTypes = AdTypeEnum::toArray();
 
-        return view('admin.ad.create-or-edit', compact('ad', 'adTypes'));
+        $categories = Category::all()->pluck('name', 'id');
+
+        return view('admin.ad.create-or-edit', compact('ad', 'adTypes', 'categories'));
     }
 
     public function update(StoreAdRequest $request, UpdateAd $updateAd, Ad $ad)

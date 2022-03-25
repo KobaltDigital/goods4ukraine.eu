@@ -23,7 +23,7 @@ class CreateAd
             $lng = $jsonDecoded->candidates[0]->geometry->location->lng;
         }
 
-        return Ad::create([
+        $ad = Ad::create([
             'user_id' => auth()->user()->id,
             'title' => $data['title'],
             'description' => $data['description'],
@@ -36,5 +36,9 @@ class CreateAd
             'country' => $data['country'],
             'location' => DB::raw("ST_GeomFromText('POINT({$lng} {$lat})', 0)"),
         ]);
+
+        $ad->categories()->sync([$data['category']]);
+
+        return $ad;
     }
 }

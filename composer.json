@@ -18,6 +18,7 @@
         "owen-it/laravel-auditing": "^13.0",
         "spatie/laravel-enum": "^3.0",
         "spatie/laravel-medialibrary": "^9.0.0",
+        "spatie/laravel-ray": "^1.29",
         "spatie/laravel-sluggable": "^3.3",
         "spatie/laravel-translatable": "^5.0.0",
         "stevebauman/location": "^6.3"
