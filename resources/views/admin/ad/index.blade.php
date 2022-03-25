@@ -1,6 +1,6 @@
 <x-layout>
     <div class="relative mx-auto max-w-7xl">
-        <div class="py-12 px-4">
+        <div class="px-4 py-12">
 
         @if(count($ads)<1)
             <div class="w-full mb-6 text-center">
@@ -21,56 +21,64 @@
                 </div>
             </div>
 
-            <table class="w-full bg-white divide-y divide-gray-300 rounded-lg shadow-lg">
-                <thead>
-                    <tr>
-                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-black">{{ __('Ad') }}</th>
-                        <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
-                            <span class="sr-only">{{ __('Edit') }}</span>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    @foreach($ads as $ad)
-                        <tr class="@if(isset($ad->deleted_at)) bg-gray-100  @endif">
-                            <td class="whitespace-nowrap px-3 py-4 @if(isset($ad->deleted_at)) text-gray-400 @else text-black @endif">
-                                <div class="flex">
-                                    <img class="h-10 w-10 md:h-20 md:w-20 rounded @if(isset($ad->deleted_at)) opacity-50  @endif"
-                                        src="{{ $ad->getFirstMediaUrl('images', 'thumb') }}"
-                                        alt="">
+        <table class="w-full bg-white divide-y divide-gray-300 rounded-lg shadow-lg">
+            <thead>
+                <tr>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-black">{{ __('Ad') }}</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-black">{{ __('Category') }}</th>
+                    <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                        <span class="sr-only">{{ __('Edit') }}</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
 
-                                    <div class="pl-2">
-                                        {{ $ad->title }}<br>
-                                        <div class="text-sm text-gray-500">
-                                            {{ $ad->created_at->diffForHumans(); }}
-                                        </div>
-                                    </div>
+                @foreach($ads as $ad)
+
+                <tr class="@if(isset($ad->deleted_at)) bg-gray-100  @endif">
+                    <td class="whitespace-nowrap px-3 py-4 @if(isset($ad->deleted_at)) text-gray-400 @else text-black @endif">
+                        <div class="flex">
+                                <img class="h-10 w-10 md:h-20 md:w-20 rounded @if(isset($ad->deleted_at)) opacity-50  @endif"
+                                src="{{ $ad->getFirstMediaUrl('images', 'thumb') }}"
+                                alt="">
+
+                            <div class="pl-2">
+                                {{ $ad->title }}<br>
+                                <div class="text-sm text-gray-500">
+                                    {{ $ad->created_at->diffForHumans(); }}
                                 </div>
-                            </td>
-                            <td class="relative py-4 pl-3 pr-4 text-sm font-medium text-right whitespace-nowrap sm:pr-6">
-                                <div class="md:flex md:justify-end w-full">
-                                    @if(isset($ad->deleted_at))
-                                        <form action="{{ route('admin.ads.activate', ['id'=> $ad->id]) }}" method="POST">
-                                            @method('put')
-                                            @csrf
-                                            <x-button-secondary class="mb-2 md:mb-0 mr-2">{{ __("Activate") }}</x-button>
-                                        </form>
-                                    @else
-                                        <x-button-secondary href="{{ route('admin.ads.reserve', ['ad'=> $ad]) }}" class="mb-2 md:mb-0 mr-2">{{ __("Reserve") }}</x-button>
-                                        <x-button-secondary href="{{ route('admin.ads.destroy', ['ad'=> $ad]) }}" onclick="return confirm('{{__('Are you sure you want to delete this resource?')}}');" class="mb-2 md:mb-0 mr-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-                                            </svg>
-                                        </x-button>
-                                        <x-button href="{{ route('admin.ads.edit', ['ad'=> $ad]) }}"  class="mr-1">{{ __("Edit") }}</x-button>
-                                    @endif
-                                </div>
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-            {{ $ads->links() }}
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-3">{{ optional($ad->category)->name ?? '-' }}</td>
+                    <td class="relative py-4 pl-3 pr-4 text-sm font-medium text-right whitespace-nowrap sm:pr-6">
+                        <div class="w-full md:flex md:justify-end">
+                            @if(isset($ad->deleted_at))
+                                <form action="{{ route('admin.ads.activate', ['id'=> $ad->id]) }}" method="POST">
+                                    @method('put')
+                                    @csrf
+                                    <x-button-secondary class="mb-2 mr-2 md:mb-0">{{ __("Activate") }}</x-button>
+                                </form>
+                            @else
+                                <x-button-secondary href="{{ route('admin.ads.reserve', ['ad'=> $ad]) }}" class="mb-2 mr-2 md:mb-0">{{ __("Reserve") }}</x-button>
+                                <x-button-secondary href="{{ route('admin.ads.destroy', ['ad'=> $ad]) }}" onclick="return confirm('{{__('Are you sure you want to delete this resource?')}}');" class="mb-2 mr-2 md:mb-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                        </svg>
+                                </x-button>
+                                <x-button href="{{ route('admin.ads.edit', ['ad'=> $ad]) }}"  class="mr-1">{{ __("Edit") }}</x-button>
+                            @endif
+                        </div>
+                    </td>
+                </tr>
+
+                @endforeach
+
+            </tbody>
+        </table>
+
+        {{ $ads->links() }}
+
         @endif
     </div>
     </div>

@@ -26,6 +26,7 @@ class StoreAdRequest extends FormRequest
             'postcode' => ['required', 'max:10'],
             'city' => ['required', 'max:50'],
             'country' => ['required','max:50'],
+            'category' => ['required'],
         ];
     }
 }
