@@ -24,6 +24,14 @@ class EnsureCategoriesArePresent
                 'ru' => 'игрушки',
             ],
         ],
+        [
+            'name' => [
+                'en' => 'Other',
+                'nl' => 'Overig',
+                'ua' => 'інший',
+                'ru' => 'Другой',
+            ],
+        ],
     ];
 
     public function __invoke()
