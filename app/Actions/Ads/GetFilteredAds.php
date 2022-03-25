@@ -11,15 +11,16 @@ class GetFilteredAds
     public function execute(array $data)
     {
         $query = new Ad;
+        $locationGeometry = null;
 
         if (isset($data['longitude']) && isset($data['latitude'])) {
-            $data['location'] = [$data['latitude'], $data['longitude']];            
+            $data['location'] = [$data['latitude'], $data['longitude']];
             $locationGeometry = new Point(...$data['location']);
-            $query = $query->orderByDistanceSphere('location', $locationGeometry, 'asc');    
-            $query = $query->orderBy('created_at','desc');    
+            $query = $query->orderByDistanceSphere('location', $locationGeometry, 'asc');
+            $query = $query->orderBy('created_at', 'desc');
             $query = $query->select(DB::raw("*, ST_Distance_Sphere(location, point(".$data['longitude'].",".$data['latitude'].")) as calcDistance"));
         } else {
-            $query = $query->orderBy('created_at','desc');    
+            $query = $query->orderBy('created_at', 'desc');
         }
 
         if (isset($data['search'])) {
@@ -28,7 +29,7 @@ class GetFilteredAds
                 ->orWhere('description', 'like', '%' . $data['search'] . '%');
         }
 
-        if (isset($data['distance']) && $data['distance'] > 10) {
+        if (isset($data['distance']) && $data['distance'] > 10 && $locationGeometry) {
             $query = $query->distanceSphere('location', $locationGeometry, (int) $data['distance']);
         }
 
