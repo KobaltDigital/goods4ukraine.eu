@@ -53,7 +53,7 @@
                         </a>
                     @endif
 
-                    <div class="flex items-center pb-3 space-x-2 border-b md:justify-end md:space-x-4">
+                    <div class="flex items-center pb-3 space-x-2 border-b {{ !$ad->hasPlaceholder ? 'md:justify-end' : '' }} md:space-x-4">
                         <div class="text-sm text-black">{{ __('Share') }}:</div>
                         <div class="flex items-center space-x-2 md:space-x-4">
                             <div class="w-8 h-8">
@@ -115,7 +115,7 @@
                             @endif
                         </div>
 
-                        @if ($ad->user->show_phone)
+                        @if ($ad->user->show_phone && $ad->user->phone)
                         <div class="mt-6">
                             <dt class="sr-only">{{ __('Phone number') }}</dt>
                             <dd class="flex">
@@ -129,7 +129,7 @@
                             </dd>
                         </div>
                         @endif
-                        @if ($ad->user->show_email)
+                        @if ($ad->user->show_email && $ad->user->email)
                         <div class="mt-3">
                             <dt class="sr-only">{{ __('Email') }}</dt>
                             <dd class="flex">
