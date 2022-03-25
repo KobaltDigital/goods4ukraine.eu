@@ -57,7 +57,7 @@ class Ad extends Model implements Auditable, HasMedia
               ->sharpen(10);
 
         $this->addMediaConversion('medium')
-              ->crop('crop-center', 150, 150)
+              ->crop('crop-center', 350, 350)
               ->sharpen(10);
 
               $this->addMediaConversion('single')

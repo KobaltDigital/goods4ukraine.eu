@@ -20,7 +20,8 @@ class Translate
         $languages = [
             'en' => 'en',
             'nl' => 'nl',
-            'ua' => 'uk'
+            'ua' => 'uk',
+            'ru' => 'ru'
         ];
 
         $translations = [];

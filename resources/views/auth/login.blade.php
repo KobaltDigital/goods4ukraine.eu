@@ -50,4 +50,12 @@
             </div>
         </form>
     </x-auth-card>
+
+    <x-auth-card>
+        <h3>{{ __('Create Account') }}</h3>
+        <div class="my-3">
+            {{ __('Create an account in a few seconds.')}}
+        </div>
+        <x-button-secondary href="{{ route('register') }}">{{ __('Register') }}</x-button>
+    </x-auth-card>
 </x-layout>

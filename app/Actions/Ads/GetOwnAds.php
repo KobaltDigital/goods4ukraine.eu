@@ -10,8 +10,11 @@ class GetOwnAds
     public function execute()
     {
         $query = Ad::withTrashed()
-            ->where('user_id', '=', auth()->user()->id)
-            ->orderBy('created_at');
+        ->orderBy('created_at');
+
+        if(!auth()->user()->admin) {
+            $query = $query->where('user_id', '=', auth()->user()->id);
+        }
 
         return $query->paginate(25);
     }
