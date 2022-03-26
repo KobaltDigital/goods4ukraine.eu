@@ -21,7 +21,7 @@ class Translate
             'en' => 'en',
             'nl' => 'nl',
             'ua' => 'uk',
-            'ru' => 'ru'
+            'ru' => 'ru',
         ];
 
         $translations = [];

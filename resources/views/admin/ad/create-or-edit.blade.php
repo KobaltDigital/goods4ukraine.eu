@@ -12,9 +12,9 @@
 
 
             @if($editing)
-                <form 
+                <form
                     method="POST"
-                    action="{{ route('admin.ads.update', ['ad' => $ad]) }}" 
+                    action="{{ route('admin.ads.update', ['ad' => $ad]) }}"
                     class="space-y-8" enctype="multipart/form-data">
                     @method('PUT')
             @else
@@ -27,7 +27,7 @@
             @endif
             @csrf
 
-                <div class="lg:grid lg:grid-cols-2 gap-6">
+                <div class="gap-6 lg:grid lg:grid-cols-2">
                     <div>
                         <h3>{{ __('Ad details') }}</h3>
                         <div class="mt-6 space-y-6 sm:mt-5 sm:space-y-5">
@@ -35,6 +35,13 @@
                                 <x-input.select
                                     :options="$adTypes ?? ''"
                                     value="{{ old('type', ($editing ? $ad->type ?? '' : '')) }}"
+                                />
+                            </x-input.group>
+
+                            <x-input.group name="category" :label="__('Category')" required>
+                                <x-input.select
+                                    :options="$categories ?? ''"
+                                    value="{{ old('category', ($editing ? $ad->category->id ?? '' : '')) }}"
                                 />
                             </x-input.group>
 
@@ -123,7 +130,7 @@
                                 />
                             </x-input.group>
                         </div>
-                        <div class="text-sm text-gray-600 mt-4">
+                        <div class="mt-4 text-sm text-gray-600">
                             {{ __('This information is used to make a good match with the searcher and is not shown online unless you want it to.') }}
                         </div>
                     </div>

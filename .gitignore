@@ -2,7 +2,9 @@
 /public/hot
 /public/media
 /public/storage
-/storage/*.key
+/storage/*
+/public/css/*
+/public/js/*
 /vendor
 .env
 .env.backup

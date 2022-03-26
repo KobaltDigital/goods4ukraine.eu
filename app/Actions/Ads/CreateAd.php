@@ -31,7 +31,7 @@ class CreateAd
             dd($jsonDecoded);
         }
 
-        return Ad::create([
+        $ad = Ad::create([
             'user_id' => auth()->user()->id,
             'title' => $data['title'],
             'description' => $data['description'],
@@ -44,5 +44,9 @@ class CreateAd
             'country' => $data['country'],
             'location' => $data['location'],
         ]);
+
+        $ad->categories()->sync([$data['category']]);
+
+        return $ad;
     }
 }

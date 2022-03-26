@@ -17,14 +17,12 @@ class AdController extends Controller
         $data = $request->all();
         $location = $getClientLocation->execute($data);
         $ads = $getFilteredAds->execute($data);
-        $currentLocation = '';
 
-        $sortedBy = 'created_at';
-        if(isset($data['location'])) {
-            $sortedBy = 'nearest';
-        }
+        $sortedBy = isset($data['location'])
+            ? 'nearest'
+            : 'created_at';
 
-        return view('home', compact('ads', 'location','sortedBy'));
+        return view('home', compact('ads', 'location', 'sortedBy'));
     }
 
     public function show(Request $request, Ad $ad)

@@ -1,15 +1,15 @@
-<div class="overflow-hidden bg-white shadow rounded-md sm:rounded-lg">
+<div class="overflow-hidden bg-white rounded-md shadow sm:rounded-lg">
         <div class="grid grid-cols-1 sm:grid-cols-6">
-            <div class="sm:col-span-1">
+            <div @class(['hidden sm:block' => $ad->hasPlaceholder, "sm:col-span-1"])>
                 <a href="{{ route('ads.show', $ad) }}">
-                    <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" class="w-full h-full object-cover rounded-t-md sm:rounded-l-lg" />
+                    <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" class="object-cover w-full h-full rounded-t-md sm:rounded-l-lg" />
                 </a>
             </div>
-            <div class="sm:col-span-5 p-5">
+            <div class="p-5 sm:col-span-5">
                 <div class="relative flex items-stretch justify-between">
                     <div>
                         <a href="{{ route('ads.show', $ad) }}">
-                            <h3 class="font-serif text-lg md:text-2xl font-medium leading-6 hover:text-black hover:underline text-blue pb-1">
+                            <h3 class="pb-1 font-serif text-lg font-medium leading-6 md:text-2xl hover:text-black hover:underline text-blue">
                                 {!! $ad->title_translated !!}
                             </h3>
                         </a>
@@ -19,7 +19,7 @@
                                 <span class="font-sans text-accent">
                                 @if($ad->calcDistance < 1000)
                                     ({{ round($ad->calcDistance) . __('mtr') }})
-                                @else 
+                                @else
                                     ({{ round($ad->calcDistance / 1000) . __('km') }})
                                 @endif
                                 </span>
@@ -42,12 +42,12 @@
                     {{ \Illuminate\Support\Str::limit($ad->description_translated, 150) }}
                 </div>
                 <div class="flex justify-between">
-                    <div class="text-sm text-accent mt-4">
+                    <div class="mt-4 text-sm text-accent">
                         {{ $ad->created_at->diffForHumans()}} {{ strtolower(__('Added.')) }}
                     </div>
                     <x-button :href="route('ads.show', $ad)">{{ __('View') }}</x-button>
                 </div>
                 </div>
-    
+
         </div>
 </div>
