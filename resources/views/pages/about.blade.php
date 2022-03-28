@@ -8,10 +8,24 @@ $volunteers = [[
         'role' => 'Developer'
     ],
     [
+        'name' => 'Ruben Hoogeveen',
+        'img' =>
+        'https://media-exp1.licdn.com/dms/image/C5603AQGFNlpM_m3f1A/profile-displayphoto-shrink_400_400/0/1632477906829?e=1654128000&v=beta&t=1N0bp-DSQ0nTIsdHjBQPjZvCUBK5JysDUpVGFso4tPA',
+        'url' => 'https://www.linkedin.com/in/ruben-hoogeveen/',
+        'role' => 'Developer'
+    ],
+    [
         'name' => 'Arne van Hoorn',
         'img' =>
         'https://media-exp1.licdn.com/dms/image/C5603AQGfI_4P_IsBaw/profile-displayphoto-shrink_400_400/0/1629296836414?e=1653523200&v=beta&t=FVKzqrSKzhGfu8O6o_Yy3nfbWIoSwo_7iszmc2C2mi0',
         'url' => 'https://www.linkedin.com/in/arne-van-hoorn-0844663/',
+        'role' => 'Developer'
+    ],
+    [
+        'name' => 'Mick Bosman',
+        'img' =>
+        'https://media-exp1.licdn.com/dms/image/C4D03AQFKCZ9Jghku_Q/profile-displayphoto-shrink_400_400/0/1605107134866?e=2147483647&v=beta&t=CTxwtWrg_2-eXbAQwztRoh7yOjH6pHQwWWdICTcGIM0',
+        'url' => 'https://www.linkedin.com/in/mick-bosman-7768b816b/',
         'role' => 'Developer'
     ],
     [
