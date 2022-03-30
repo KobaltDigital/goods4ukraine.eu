@@ -32,7 +32,7 @@ module.exports = {
                 transparent: 'transparent',
                 white: '#FFFDFA',
                 light: '#FFF9EF',
-                accent: '#9CC9D3',
+                accent: '#6a929c',
                 yellow: '#FED702',
                 blue: '#015ABC',
                 black: '#013772'

@@ -8,7 +8,7 @@ use Grimzy\LaravelMysqlSpatial\Types\Point;
 
 class GetFilteredAds
 {
-    public function execute(array $data)
+    public function execute(array $data, $paginate = 25)
     {
         $query = new Ad();
         $locationGeometry = null;
@@ -43,6 +43,6 @@ class GetFilteredAds
             });
         }
 
-        return $query->paginate(25);
+        return $query->paginate($paginate);
     }
 }
