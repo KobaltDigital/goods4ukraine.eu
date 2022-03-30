@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\AdContactController;
 use App\Http\Controllers\AdManagerController;
-use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SessionLanguageController;
 
 /*

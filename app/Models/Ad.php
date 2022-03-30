@@ -14,6 +14,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Grimzy\LaravelMysqlSpatial\Eloquent\SpatialTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Notifications\Notifiable;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Ad extends Model implements Auditable, HasMedia
@@ -24,6 +25,7 @@ class Ad extends Model implements Auditable, HasMedia
     use SpatialTrait;
     use \OwenIt\Auditing\Auditable;
     use HasTranslations;
+    use Notifiable;
     use InteractsWithMedia;
 
     protected $fillable = [
@@ -114,5 +116,10 @@ class Ad extends Model implements Auditable, HasMedia
     public function getHasPlaceholderAttribute()
     {
         return $this->getFirstMediaUrl('images', 'medium') && Str::contains($this->getFirstMediaUrl('images', 'medium'), self::PLACEHOLDER);
+    }
+
+    public function routeNotificationForSlack()
+    {
+        return env('SLACK_WEBHOOKS_TOKEN');
     }
 }
