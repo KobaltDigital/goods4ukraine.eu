@@ -97,9 +97,6 @@ function initialize() {
 
                         '</div>' +
                     '</div>' +
-                    '<div class="mt-1 text-sm text-black">' +
-                        ' {{ \Illuminate\Support\Str::limit(nl2br($ad->description_translated), 150) }}' +
-                    '</div>' +
                     '<div class="flex justify-between">' +
                         '<div class="mt-4 text-sm text-accent">' +
                             ' {{ $ad->created_at->diffForHumans()}} {{ strtolower(__('Added.')) }}' +
