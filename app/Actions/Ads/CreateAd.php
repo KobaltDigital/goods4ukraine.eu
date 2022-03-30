@@ -5,6 +5,7 @@ namespace App\Actions\Ads;
 use App\Models\Ad;
 use App\Actions\Ads\Translate;
 use Illuminate\Support\Facades\DB;
+use App\Notifications\SendNotification;
 
 class CreateAd
 {
@@ -46,6 +47,7 @@ class CreateAd
         ]);
 
         $ad->categories()->sync([$data['category']]);
+        $ad->notify(new SendNotification($ad));
 
         return $ad;
     }
