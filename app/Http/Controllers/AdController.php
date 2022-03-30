@@ -25,6 +25,23 @@ class AdController extends Controller
         return view('home', compact('ads', 'location', 'sortedBy'));
     }
 
+    public function map(
+        Request $request,
+        GetFilteredAds $getFilteredAds,
+        GetClientLocation $getClientLocation
+    ) {
+        $data = $request->all();
+        $location = $getClientLocation->execute($data);
+        $ads = $getFilteredAds->execute($data, 1000);
+
+        $sortedBy = isset($data['location'])
+            ? 'nearest'
+            : 'created_at';
+
+        return view('map', compact('ads', 'location', 'sortedBy'));
+    }
+
+
     public function show(Request $request, Ad $ad)
     {
         return view('ad.show', compact('ad'));
