@@ -1,11 +1,13 @@
 <?php
 
+use App\Models\Ad;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
+use App\Notifications\SendNotification;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\AdContactController;
 use App\Http\Controllers\AdManagerController;
-use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SessionLanguageController;
 
 /*
@@ -20,6 +22,12 @@ use App\Http\Controllers\SessionLanguageController;
 */
 
 Route::get('/', [AdController::class, 'index'])->name('ads.index');
+
+Route::get('test', function () {
+    $ad = Ad::first();
+    $ad->notify(new SendNotification($ad));
+});
+
 Route::get('session-language/{lang}', [SessionLanguageController::class, 'update'])->name('sessions.languages.update');
 
 Route::view('/privacy', 'pages.privacy')->name('privacy');
