@@ -6,14 +6,15 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\SlackMessage;
 
-class SendNotification extends Notification
+class MailReactionNotification extends Notification
 {
     use Queueable;
 
     private $ad;
 
-    public function __construct($ad)
+    public function __construct($data, $ad)
     {
+        $this->data = (object) $data;
         $this->ad = $ad;
     }
 
@@ -24,18 +25,22 @@ class SendNotification extends Notification
 
     public function toSlack($notifiable)
     {
+        $data = $this->data;
         $url = route('ads.show', ['ad' => $this->ad->slug]);
         $message = sprintf(
-            'Nieuwe advertentie: %s (#%d), geplaatst door: %s (#%d)',
+            'Reactie op: %s (#%d), verstuurd door: %s (ip: %s, email: %s)',
             $this->ad->title,
             $this->ad->id,
-            $this->ad->user->name,
-            $this->ad->user->id,
+            $data->name,
+            request()->ip(),
+            $data->email,
         );
 
         return (new SlackMessage)
-            ->attachment(function ($attachment) use ($url, $message) {
-                $attachment->title($url)->content($message);
+            ->content($message)
+            ->attachment(function ($attachment) use ($url, $message, $data) {
+                $attachment->title($url)
+                    ->content(sprintf('Message: %s', $data->message));
             });
     }
 }
