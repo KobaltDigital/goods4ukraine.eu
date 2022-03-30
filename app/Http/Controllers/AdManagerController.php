@@ -113,6 +113,7 @@ class AdManagerController extends Controller
             return abort(403);
         }
 
+        $ad->categories()->detach();
         $ad->forceDelete();
 
         return redirect()->route('admin.ads.index')->withSuccess(__('Deleted'));
