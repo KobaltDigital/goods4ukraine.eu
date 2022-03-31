@@ -3,17 +3,15 @@
 namespace App\Actions\Ads;
 
 use App\Models\Ad;
-use App\Actions\Ads\Translate;
+use App\Helpers\Translate;
 use Illuminate\Support\Facades\DB;
 
 class UpdateAd
 {
     public function execute(Ad $ad, array $data)
     {
-        $translate = new Translate();
-
-        $data['translated_title'] = $translate->execute($data['title']);
-        $data['translated_description'] = $translate->execute($data['description']);
+        $data['translated_title'] = Translate::string($data['title']);
+        $data['translated_description'] = Translate::string($data['description']);
 
         // check if address is changed/dirty
         if (
@@ -35,8 +33,6 @@ class UpdateAd
                 $lat = $jsonDecoded->candidates[0]->geometry->location->lat;
                 $lng = $jsonDecoded->candidates[0]->geometry->location->lng;
                 $data['location'] = DB::raw("ST_GeomFromText('POINT({$lng} {$lat})', 0)");
-            } else {
-                dd($jsonDecoded);
             }
         }
 
