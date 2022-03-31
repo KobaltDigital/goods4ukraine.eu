@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\AdContactController;
 use App\Http\Controllers\AdManagerController;
-use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SessionLanguageController;
 
 /*
@@ -20,6 +20,7 @@ use App\Http\Controllers\SessionLanguageController;
 */
 
 Route::get('/', [AdController::class, 'index'])->name('ads.index');
+Route::get('/map', [AdController::class, 'map'])->name('ads.map');
 Route::get('session-language/{lang}', [SessionLanguageController::class, 'update'])->name('sessions.languages.update');
 
 Route::view('/privacy', 'pages.privacy')->name('privacy');
