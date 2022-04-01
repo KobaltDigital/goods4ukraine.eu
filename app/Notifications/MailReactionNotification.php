@@ -41,7 +41,7 @@ class MailReactionNotification extends Notification
             ->content($message)
             ->attachment(function ($attachment) use ($url, $message, $data) {
                 $attachment->title($url)
-                    ->content(sprintf('Message: %s', $data->message));
+                    ->content(sprintf('Message: %s', $data->message_translated['nl']));
             });
     }
 
