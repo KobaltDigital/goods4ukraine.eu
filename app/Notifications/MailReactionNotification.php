@@ -15,8 +15,8 @@ class MailReactionNotification extends Notification
 
     public function __construct($data, $ad)
     {
-        $this->data = (object) $data;
         $this->ad = $ad;
+        $this->data = (object) $data;
     }
 
     public function via($notifiable)
