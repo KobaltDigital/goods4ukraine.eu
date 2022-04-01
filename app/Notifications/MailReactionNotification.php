@@ -47,6 +47,6 @@ class MailReactionNotification extends Notification
 
     public function toMail($notifiable)
     {
-        return (new OwnerContacted($this->data, $this->ad))->to($notifiable->email);
+        return (new OwnerContacted($this->data, $this->ad))->to($this->ad->user->email);
     }
 }
