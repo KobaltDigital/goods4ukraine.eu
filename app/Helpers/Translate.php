@@ -1,22 +1,17 @@
 <?php
 
-namespace App\Actions\Ads;
+namespace App\Helpers;
 
 use Google\Cloud\Translate\V3\TranslationServiceClient;
 
 class Translate
 {
-    private $translationClient;
-
-    public function __construct()
+    public static function string(string $string)
     {
-        $this->translationClient = new TranslationServiceClient([
+        $translationClient = new TranslationServiceClient([
             'credentials' => json_decode(config('goods4ukraine.google.service_account'), true),
         ]);
-    }
 
-    public function execute(string $string)
-    {
         $languages = [
             'en' => 'en',
             'nl' => 'nl',
@@ -26,7 +21,7 @@ class Translate
 
         $translations = [];
         foreach ($languages as $key => $language) {
-            $response = $this->translationClient->translateText(
+            $response = $translationClient->translateText(
                 [$string],
                 $language,
                 TranslationServiceClient::locationName(config('goods4ukraine.google.project'), 'global')

@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\Mail\OwnerContacted;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\SlackMessage;
@@ -14,13 +15,13 @@ class MailReactionNotification extends Notification
 
     public function __construct($data, $ad)
     {
-        $this->data = (object) $data;
         $this->ad = $ad;
+        $this->data = (object) $data;
     }
 
     public function via($notifiable)
     {
-        return ['slack'];
+        return ['slack', 'mail'];
     }
 
     public function toSlack($notifiable)
@@ -40,7 +41,12 @@ class MailReactionNotification extends Notification
             ->content($message)
             ->attachment(function ($attachment) use ($url, $message, $data) {
                 $attachment->title($url)
-                    ->content(sprintf('Message: %s', $data->message));
+                    ->content(sprintf('Message: %s', $data->message_translated['nl']));
             });
+    }
+
+    public function toMail($notifiable)
+    {
+        return (new OwnerContacted($this->data, $this->ad))->to($notifiable->email);
     }
 }

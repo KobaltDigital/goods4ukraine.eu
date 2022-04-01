@@ -3,18 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ad;
-use App\Notifications\ContactOwner;
-use Illuminate\Support\Facades\Mail;
+use App\Actions\Ads\Contact;
 use App\Http\Requests\ContactOwnerRequest;
-use App\Mail\OwnerContacted;
-use App\Notifications\MailReactionNotification;
 
 class AdContactController extends Controller
 {
-    public function update(ContactOwnerRequest $request, Ad $ad)
+    public function update(ContactOwnerRequest $request, Ad $ad, Contact $contact)
     {
-        // Mail::to($ad->user)->send(new OwnerContacted($request->all(), $ad));
-        $ad->notify(new MailReactionNotification($request->all(), $ad));
+        $contact->execute($request->all(), $ad);
 
         return redirect()->route('ads.show', $ad)->withSuccess(__('Message send'));
     }
