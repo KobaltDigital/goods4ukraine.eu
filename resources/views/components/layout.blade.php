@@ -132,8 +132,8 @@
                     </div>
                     <div class="grid-cols-1 mt-5 sm:mt-6 sm:grid md:grid-cols-2 sm:gap-3">
                         @foreach (languages() as $language)
-                            <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}" class="flex flex-col items-center py-5 text-center rounded-md md:border bottom-1 hover:bg-light hover:border-blue">
-                                <img src="/img/{{ $language->locale }}.svg" class="w-1/2 my-3 sm:mt-5" />
+                            <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}" class="flex flex-col items-center py-3 text-center rounded-md md:border md:py-5 bottom-1 hover:bg-light hover:border-blue">
+                                <img src="/img/{{ $language->locale }}.svg" class="w-1/2 my-3 border sm:mt-5" />
                                 {{ $language->title }}
                             </a>
                         @endforeach

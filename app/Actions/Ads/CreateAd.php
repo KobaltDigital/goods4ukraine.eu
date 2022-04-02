@@ -3,7 +3,7 @@
 namespace App\Actions\Ads;
 
 use App\Models\Ad;
-use App\Actions\Ads\Translate;
+use App\Helpers\Translate;
 use Illuminate\Support\Facades\DB;
 use App\Notifications\AdCreatedNotification;
 
@@ -11,8 +11,6 @@ class CreateAd
 {
     public function execute(array $data)
     {
-        $translate = new Translate();
-
         // update location
         $url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=geometry&input=%s&inputtype=textquery&key=%s';
         $json = file_get_contents(sprintf(
@@ -36,8 +34,8 @@ class CreateAd
             'user_id' => auth()->user()->id,
             'title' => $data['title'],
             'description' => $data['description'],
-            'translated_title' => $translate->execute($data['title']),
-            'translated_description' => $translate->execute($data['description']),
+            'translated_title' => Translate::string($data['title']),
+            'translated_description' => Translate::string($data['description']),
             'type' => $data['type'],
             'street' => $data['street'],
             'postcode' => $data['postcode'],
