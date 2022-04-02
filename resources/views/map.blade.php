@@ -14,9 +14,6 @@
     </section>
 </x-layout>
 
-
-
-
 <style>
 #map_wrapper {
     height: 75vh;
@@ -54,7 +51,9 @@ function initialize() {
             @php
                 $location = explode(" ", $ad->location);
             @endphp
+            @if(is_array($location) && array_key_exists(1, $location))
             ['{{$ad->title}}', {{$location[1]}}, {{$location[0]}}],
+            @endif
         @endforeach
     ];
 
@@ -62,7 +61,8 @@ function initialize() {
     var infoWindowContent = [
         @foreach ($ads as $ad)
         @php
-        $location = explode(" ", $ad->location);
+
+            $location = explode(" ", $ad->location);
 
         @endphp
         ['<div class="overflow-hidden bg-white rounded-md shadow sm:rounded-lg">' + 

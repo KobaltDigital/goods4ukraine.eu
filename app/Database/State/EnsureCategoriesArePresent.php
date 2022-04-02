@@ -18,6 +18,38 @@ class EnsureCategoriesArePresent
         ],
         [
             'name' => [
+                'en' => 'Bicycles',
+                'nl' => 'Fietsen',
+                'ua' => 'велосипеди',
+                'ru' => 'велосипеды',
+            ],
+        ],
+        [
+            'name' => [
+                'en' => 'to Sleep',
+                'nl' => 'Slapen',
+                'ua' => 'спальний',
+                'ru' => 'спальный',
+            ],
+        ],
+        [
+            'name' => [
+                'en' => 'Furniture',
+                'nl' => 'Meubels',
+                'ua' => 'меблі',
+                'ru' => 'мебель',
+            ],
+        ],
+        [
+            'name' => [
+                'en' => 'Koken',
+                'nl' => 'Sleeping',
+                'ua' => 'приготування їжі',
+                'ru' => 'приготовление еды',
+            ],
+        ],
+        [
+            'name' => [
                 'en' => 'Toys',
                 'nl' => 'Speelgoed',
                 'ua' => 'іграшки',
