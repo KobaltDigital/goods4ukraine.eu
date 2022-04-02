@@ -1,6 +1,6 @@
-<div class="justify-between md:flex items-center">
+<div class="justify-between flex items-center mt-3">
     <x-button href="{{ route('admin.ads.create') }}">{{ __("Place advertisement") }}</x-button>
-    <div class="text-sm text-gray-500">
+    <div class="hidden md:inline text-sm text-gray-500">
         {{ __('Sorted by') }}:
         @if($sortedBy == 'nearest')
         {{ __('nearest') }}

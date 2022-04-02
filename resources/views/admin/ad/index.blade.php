@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-        <table class="w-full bg-white divide-y divide-gray-300 rounded-lg shadow-lg">
+        <table class="w-full bg-white divide-y divide-gray-300 rounded-lg shadow-lg mb-6">
             <thead>
                 <tr>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-black">{{ __('Ad') }}</th>
@@ -36,8 +36,8 @@
                 @foreach($ads as $ad)
 
                 <tr class="@if(isset($ad->deleted_at)) bg-gray-100  @endif">
-                    <td class="whitespace-nowrap px-3 py-4 @if(isset($ad->deleted_at)) text-gray-400 @else text-black @endif">
-                        <div class="flex">
+                    <td class="px-3 py-4 @if(isset($ad->deleted_at)) text-gray-400 @else text-black @endif">
+                        <div class="flex items-center">
                                 <img class="h-10 w-10 md:h-20 md:w-20 rounded @if(isset($ad->deleted_at)) opacity-50  @endif"
                                 src="{{ $ad->getFirstMediaUrl('images', 'thumb') }}"
                                 alt="">

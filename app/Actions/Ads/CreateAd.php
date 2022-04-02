@@ -20,14 +20,14 @@ class CreateAd
         ));
         $jsonDecoded = json_decode($json);
 
-        $data['location'] = '';
-
+        $data['location'] = null;
+        $deleted_at = null;
         if ($jsonDecoded && $jsonDecoded->status == 'OK') {
             $lat = $jsonDecoded->candidates[0]->geometry->location->lat;
             $lng = $jsonDecoded->candidates[0]->geometry->location->lng;
             $data['location'] = DB::raw("ST_GeomFromText('POINT({$lng} {$lat})', 0)");
         } else {
-            dd($jsonDecoded);
+            $deleted_at = now();
         }
 
         $ad = Ad::create([
@@ -42,6 +42,7 @@ class CreateAd
             'city' => $data['city'],
             'country' => $data['country'],
             'location' => $data['location'],
+            'deleted_at' => $deleted_at
         ]);
 
         $ad->categories()->sync([$data['category']]);
