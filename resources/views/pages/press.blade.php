@@ -22,11 +22,11 @@
                     <p>
                         <a href="/Persbericht_Goods4Ukraine_21_maart_2022.pdf">Download het persbericht</a>.
                     </p>
-                    <h2>Interview NH Radio (31 maart 2022)</h2>
+                    <h3>Interview NH Radio (31 maart 2022)</h3>
                     <audio controls>
                         <source src="/goods4ukraine_nhradio_30march2022.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
-                      </audio>
+                    </audio>
                 </div>
 
                 <div class="bg-white p-6 overflow-hidden shadow rounded-lg prose max-w-none">
