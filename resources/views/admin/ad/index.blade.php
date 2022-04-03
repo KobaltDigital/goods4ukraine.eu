@@ -37,7 +37,7 @@
 
                 <tr class="@if(isset($ad->deleted_at)) bg-gray-100  @endif">
                     <td class="px-3 py-4 @if(isset($ad->deleted_at)) text-gray-400 @else text-black @endif">
-                        <div class="flex items-center">
+                        <a href="{{ route('ads.show', $ad) }}" class="flex items-center hover:underline">
                                 <img class="h-10 w-10 md:h-20 md:w-20 rounded @if(isset($ad->deleted_at)) opacity-50  @endif"
                                 src="{{ $ad->getFirstMediaUrl('images', 'thumb') }}"
                                 alt="">
@@ -48,7 +48,7 @@
                                     {{ $ad->created_at->diffForHumans(); }}
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </td>
                     <td class="px-3 hidden sm:table-cell">{{ optional($ad->category)->name ?? '-' }}</td>
                     <td class="relative py-4 pl-3 pr-4 text-sm font-medium text-right sm:pr-6">
