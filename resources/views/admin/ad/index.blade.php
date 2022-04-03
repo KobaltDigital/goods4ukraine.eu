@@ -25,7 +25,7 @@
             <thead>
                 <tr>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-black">{{ __('Ad') }}</th>
-                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-black">{{ __('Category') }}</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-black hidden sm:block">{{ __('Category') }}</th>
                     <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
                         <span class="sr-only">{{ __('Edit') }}</span>
                     </th>
@@ -50,23 +50,22 @@
                             </div>
                         </div>
                     </td>
-                    <td class="px-3">{{ optional($ad->category)->name ?? '-' }}</td>
-                    <td class="relative py-4 pl-3 pr-4 text-sm font-medium text-right whitespace-nowrap sm:pr-6">
+                    <td class="px-3 hidden sm:table-cell">{{ optional($ad->category)->name ?? '-' }}</td>
+                    <td class="relative py-4 pl-3 pr-4 text-sm font-medium text-right sm:pr-6">
                         <div class="w-full md:flex md:justify-end">
                             @if(isset($ad->deleted_at))
                                 <form action="{{ route('admin.ads.activate', ['id'=> $ad->id]) }}" method="POST">
                                     @method('put')
                                     @csrf
-                                    <x-button-secondary class="mb-2 mr-2 md:mb-0">{{ __("Activate") }}</x-button>
+                                    <x-button-secondary class="mb-2 mr-2 md:mb-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                          </svg>                                
+                                        {{ __("Activate") }}</x-button>
                                 </form>
                             @else
-                                <x-button-secondary href="{{ route('admin.ads.reserve', ['ad'=> $ad]) }}" class="mb-2 mr-2 md:mb-0">{{ __("Reserve") }}</x-button>
-                                <x-button-secondary href="{{ route('admin.ads.destroy', ['ad'=> $ad]) }}" onclick="return confirm('{{__('Are you sure you want to delete this resource?')}}');" class="mb-2 mr-2 md:mb-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-                                        </svg>
-                                </x-button>
-                                <x-button href="{{ route('admin.ads.edit', ['ad'=> $ad]) }}"  class="mr-1">{{ __("Edit") }}</x-button>
+                            <x-editbuttons :ad=$ad />
                             @endif
                         </div>
                     </td>
