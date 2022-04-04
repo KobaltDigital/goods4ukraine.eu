@@ -9,8 +9,14 @@
 
 <x-layout>
     <div class="py-10 mx-auto max-w-7xl">
+        @if(auth()->user() && (auth()->user()->id = $ad->user_id || auth()->user()->admin == 1))
+        <div class="px-2 sm:px-6 mb-4">
+            <x-editbuttons :ad=$ad />
+        </div>
+        @endif
         <div class="lg:grid lg:grid-cols-3">
             <div class="lg:pr-10 sm:px-6 lg:col-span-2">
+
                 <div class="p-6 bg-white rounded shadow">
                     <div class="relative flex justify-between mb-4">
                         <div>
@@ -32,7 +38,7 @@
                                 {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
                             </div>
                         </div>
-                        <div>
+                        <div class="inline md:flex items-center">
                             @if($ad->type == 'Wanted')
                             <span
                                 class="inline-block px-2 py-1 mr-1 text-xs font-semibold text-purple-600 uppercase bg-purple-200 rounded last:mr-0">
@@ -100,7 +106,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
 
-                            <dt class="sr-only">Postal address</dt>
+                            <dt class="sr-only">{{ __('Postal address') }}</dt>
                             @if ($ad->user->show_full_address)
                             <dd class="ml-3">
                                 <p>{{ $ad->street }} {{ $ad->house_number }}{{ $ad->house_number_suffix }}</p>
