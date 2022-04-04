@@ -6,7 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\SlackMessage;
 
-class AdCreatedNotification extends Notification
+class AdDestroyedNotification extends Notification
 {
     use Queueable;
 
@@ -26,7 +26,7 @@ class AdCreatedNotification extends Notification
     {
         $url = route('ads.show', ['ad' => $this->ad->slug]);
         $message = sprintf(
-            'Nieuwe advertentie: %s (#%d), geplaatst door: %s (#%d - ip: %s)',
+            'Advertentie verwijderd: %s (#%d), geplaatst door: %s (#%d - ip: %s)',
             sprintf(
                 '%s (%s)',
                 $this->ad->title,
