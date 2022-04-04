@@ -27,7 +27,7 @@ class AdCreatedNotification extends Notification
         $url = route('ads.show', ['ad' => $this->ad->slug]);
         $message = sprintf(
             'Nieuwe advertentie: %s (#%d), geplaatst door: %s (#%d - ip: %s)',
-            $this->ad->title,
+            $this->ad->title_translated,
             $this->ad->id,
             $this->ad->user->name,
             $this->ad->user->id,
