@@ -4,18 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta property="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}" />
 
     @if (request()->routeIs('ads.show'))
-        @stack('ogtags')
+        @stack('tags')
     @else
+        <title>{{ config('app.name', 'Laravel') }}</title>
         <meta property="og:site_name" content="Goods4Ukraine.eu">
         <meta property="og:title" content="Goods4Ukraine - {{ __('Bringing people and goods together in times of need') }}" />
         <meta property="og:description" content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
         <meta property="og:type" content="website" />
-        <meta property="og:updated_time" content="1440432930" />
+        <meta property="og:updated_time" content="{{ now() }}" />
+        <meta property="og:image" content="{{ secure_asset('/img/photo.jpg') }}" />
+        <meta name="description" content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
     @endif
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <style>
         [x-cloak] {
@@ -63,7 +65,7 @@
         </div>
         <div class="items-center md:flex">
             <div class="mb-10 mr-10 lg:mb-2">
-                <a href="/">
+                <a href="/" title="">
                     <x-application-logo class="block w-auto h-10 fill-current lg:h-20" />
                 </a>
             </div>
@@ -124,7 +126,7 @@
     @empty(Session::get('language'))
         <div class="fixed inset-0 z-10 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
             <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-                <div class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" aria-hidden="true"></div>
+                <div class="fixed inset-0 bg-gray-900 bg-opacity-75" aria-hidden="true"></div>
                 <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
                 <div class="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 md:align-middle md:max-w-lg md:w-full sm:p-6">
                     <div class="flex items-center justify-center mx-auto">
@@ -132,8 +134,8 @@
                     </div>
                     <div class="grid-cols-1 mt-5 sm:mt-6 sm:grid md:grid-cols-2 sm:gap-3">
                         @foreach (languages() as $language)
-                            <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}" class="flex flex-col items-center py-3 text-center rounded-md md:border md:py-5 bottom-1 hover:bg-light hover:border-blue">
-                                <img src="/img/{{ $language->locale }}.svg" class="w-1/2 my-3 border sm:mt-5" />
+                            <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}" class="flex flex-col items-center text-center rounded-md md:border px-10 py-5 bottom-1 hover:bg-light hover:border-blue">
+                                <img src="/img/{{ $language->locale }}.svg" class="w-full h-full mb-2" alt="{{ $language->title }}" />
                                 {{ $language->title }}
                             </a>
                         @endforeach
@@ -145,7 +147,7 @@
 
     @stack('scripts')
 
-    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
     @if (session()->has('success'))
         <script>

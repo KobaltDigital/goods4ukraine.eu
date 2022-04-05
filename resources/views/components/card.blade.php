@@ -2,7 +2,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-6">
             <div @class(['hidden sm:block' => $ad->hasPlaceholder, "sm:col-span-1"])>
                 <a href="{{ route('ads.show', $ad) }}">
-                    <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" class="object-cover w-full h-full rounded-t-md sm:rounded-l-lg" />
+                    <img src="{{ $ad->getFirstMediaUrl('images', 'medium') }}" class="object-cover w-full h-full rounded-t-md sm:rounded-l-lg" alt="{{ $ad->title_translated }}" />
                 </a>
             </div>
             <div class="p-5 sm:col-span-5">
