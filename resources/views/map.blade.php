@@ -28,11 +28,12 @@
 
 <script>
 jQuery(function($) {
-    // Asynchronously Load the map API 
+    // Asynchronously Load the map API
     var script = document.createElement('script');
     script.src = "https://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize&key=AIzaSyCxzPwEB7A9i6Fwvi41SrVbApygce3Sq9c";
     document.body.appendChild(script);
 });
+
 
 function initialize() {
     var map;
@@ -40,11 +41,11 @@ function initialize() {
     var mapOptions = {
         mapTypeId: 'roadmap'
     };
-                    
+
     // Display a map on the page
     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
     map.setTilt(45);
-        
+
     // Multiple Markers
     var markers = [
         @foreach ($ads as $ad)
@@ -65,7 +66,8 @@ function initialize() {
             $location = explode(" ", $ad->location);
 
         @endphp
-        ['<div class="overflow-hidden bg-white rounded-md shadow sm:rounded-lg">' + 
+        @if(is_array($location) && array_key_exists(1, $location))
+        ['<div class="overflow-hidden bg-white rounded-md shadow sm:rounded-lg">' +
                 '<div class="grid grid-cols-1 sm:grid-cols-6">' +
                     '<div class="sm:col-span-1">' +
                         '<a href="{{ route('ads.show', $ad) }}">' +
@@ -101,7 +103,7 @@ function initialize() {
                         '<div class="mt-4 text-sm text-accent">' +
                             ' {{ $ad->created_at->diffForHumans()}} {{ strtolower(__('Added.')) }}' +
                         '</div>' +
-                        '<a href="{{ route('ads.show', $ad) }}" class="inline-flex items-center px-2 md:px-4 py-1 md:py-2 bg-blue border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue hover:text-yellow active:bg-blue focus:outline-none focus:border-blue focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" >' +
+                        '<a href="{{ route('ads.show', $ad) }}" class="inline-flex items-center px-2 py-1 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out border border-transparent rounded-md md:px-4 md:py-2 bg-blue hover:bg-blue hover:text-yellow active:bg-blue focus:outline-none focus:border-blue focus:ring ring-gray-300 disabled:opacity-25" >' +
                             'Bekijk' +
                         '</a>' +
                     '</div>' +
@@ -109,13 +111,14 @@ function initialize() {
             '</div>' +
         '</div>'
         ],
+        @endif
         @endforeach
     ];
-        
+
     // Display multiple markers on a map
     var infoWindow = new google.maps.InfoWindow(), marker, i;
-    
-    // Loop through our array of markers & place each one on the map  
+
+    // Loop through our array of markers & place each one on the map
     for( i = 0; i < markers.length; i++ ) {
         var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
         bounds.extend(position);
@@ -124,8 +127,8 @@ function initialize() {
             map: map,
             title: markers[i][0]
         });
-        
-        // Allow each marker to have an info window    
+
+        // Allow each marker to have an info window
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
                 infoWindow.setContent(infoWindowContent[i][0]);
@@ -142,6 +145,6 @@ function initialize() {
         this.setZoom(7);
         google.maps.event.removeListener(boundsListener);
     });
-    
+
 }
 </script>

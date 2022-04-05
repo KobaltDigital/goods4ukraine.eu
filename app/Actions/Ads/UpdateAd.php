@@ -5,6 +5,7 @@ namespace App\Actions\Ads;
 use App\Models\Ad;
 use App\Helpers\Translate;
 use Illuminate\Support\Facades\DB;
+use App\Notifications\AdUpdatedNotification;
 
 class UpdateAd
 {
@@ -39,6 +40,8 @@ class UpdateAd
         $ad->update($data);
 
         $ad->categories()->sync([$data['category']]);
+
+        $ad->notify(new AdUpdatedNotification($ad));
 
         return true;
     }

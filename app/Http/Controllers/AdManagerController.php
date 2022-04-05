@@ -8,7 +8,9 @@ use App\Enums\AdTypeEnum;
 use Illuminate\Http\Request;
 use App\Actions\Ads\CreateAd;
 use App\Actions\Ads\UpdateAd;
+use App\Actions\Ads\DestroyAd;
 use App\Actions\Ads\GetOwnAds;
+use App\Actions\Ads\ReserveAd;
 use App\Actions\GetClientLocation;
 use App\Actions\Ads\GetFilteredAds;
 use App\Http\Requests\StoreAdRequest;
@@ -96,25 +98,24 @@ class AdManagerController extends Controller
         ;
     }
 
-    public function reserve(Ad $ad)
+    public function reserve(Ad $ad, ReserveAd $reserveAd)
     {
         if (!auth()->user()->admin && $ad->user_id !== auth()->user()->id) {
             return abort(403);
         }
 
-        $ad->delete();
+        $reserveAd->execute($ad);
 
         return redirect()->route('admin.ads.index')->withSuccess(__('Reserved'));
     }
 
-    public function destroy(Ad $ad)
+    public function destroy(Ad $ad, DestroyAd $destroyAd)
     {
         if (!auth()->user()->admin && $ad->user_id !== auth()->user()->id) {
             return abort(403);
         }
 
-        $ad->categories()->detach();
-        $ad->forceDelete();
+        $destroyAd->execute($ad);
 
         return redirect()->route('admin.ads.index')->withSuccess(__('Deleted'));
     }
