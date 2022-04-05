@@ -93,9 +93,6 @@
                                 Eigendom van de overheid
                             </li>
                             <li>
-                                Elektronische apparatuur
-                            </li>
-                            <li>
                                 Explosieve objecten, gevaarlijke stoffen en andere schadelijke materialen
                             </li>
                             <li>
