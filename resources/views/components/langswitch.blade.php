@@ -5,7 +5,7 @@
             class="flex items-center max-w-xs text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 lg:p-2 lg:rounded-md lg:hover:bg-blue-50"
             id="menu-button" aria-expanded="true" aria-haspopup="true" @click="langOpen = !langOpen"
             @keydown.escape="langOpen = false">
-            <img src="/img/{{ Session::get('language') }}.svg" class="w-6 h-auto border border-gray-300 shadow-md">
+            <img src="/img/{{ Session::get('language') }}.svg" class="w-6 h-auto border border-gray-300 shadow-md" alt="{{ Session::get('language') }}">
             <!-- Heroicon name: solid/chevron-down -->
             <svg class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                 aria-hidden="true">
@@ -33,9 +33,9 @@
         <div class="py-1" role="none">
             @foreach (languages() as $language)
             @if (Session::get('language') != $language->locale)
-            <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}"
+            <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}" title="{{ $language->title }}"
                 class="flex block px-4 py-2 text-sm text-blue" role="menuitem" tabindex="-1" id="menu-item-1">
-                <img src="/img/{{ $language->locale }}.svg" class="h-auto mr-3 shadow-md w-7">
+                <img src="/img/{{ $language->locale }}.svg" class="h-auto mr-3 shadow-md w-7" alt="{{ $language->title }}">
                 <span class="ml-2">
                     {!! __($language->title) !!}
                 </span>

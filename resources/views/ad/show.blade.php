@@ -1,10 +1,14 @@
-@push('ogtags')
-    <meta property="og:site_name" content="Goods4Ukraine.eu">
-    <meta property="og:title" content="{{ $ad->title_translated }} - Goods4Ukraine" />
-    <meta property="og:description" content="{{  substr($ad->description, 0, 200)  }}" />
+@push('tags')
+    <meta property="og:site_name" content="{{ config('app.name', 'Laravel') }}">
+    <meta property="og:title" content="{{ $ad->title_translated }} - {{ config('app.name', 'Laravel') }}" />
+    <meta property="og:description" content="{{  substr($ad->translated_description, 0, 200)  }}" />
     <meta property="og:image" itemprop="image" content="{{ $ad->getFirstMediaUrl('images', 'single') }}">
-    <meta property="og:type" content="website" />
-    <meta property="og:updated_time" content="1440432930" />
+    <meta property="og:type" content="article">
+    <meta property="og:updated_time" content="{{ $ad->updated_at }}">
+    <meta property="article:published_time" content="{{ $ad->created_at }}">
+    <meta property="article:modified_time" content="{{ $ad->created_at }}">
+    <title>{{ $ad->title_translated }} - {{ config('app.name', 'Laravel') }}</title>
+    <meta name="description" content="{{  substr($ad->translated_description, 0, 200)  }}" />
 @endpush
 
 <x-layout>
@@ -53,7 +57,7 @@
 
                     @if (!$ad->hasPlaceholder)
                         <a data-fancybox href="{{ $ad->getFirstMediaUrl('images', 'large') }}">
-                            <img class="w-full mb-3 border" src="{{ $ad->getFirstMediaUrl('images', 'single') }}" />
+                            <img class="w-full mb-3 border" src="{{ $ad->getFirstMediaUrl('images', 'single') }}" alt="{{ $ad->title_translated }}" />
                         </a>
                     @endif
 
