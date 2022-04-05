@@ -11,12 +11,12 @@
         @empty
         <div class="overflow-hidden bg-white shadow-lg sm:rounded-lg">
             <div class="px-4 py-5 border-t border-gray-200 sm:px-6">
-            <h2>{{ __('No search results') }}</h2>
-            <h4>{{ __('Searchtip') }}</h4>
+                <h2>{{ __('No search results') }}</h2>
+                <h4>{{ __('Searchtip') }}</h4>
             </div>
         </div>
         @endforelse
-        {{ $ads->links() }}
+        {{ $ads->appends(\Illuminate\Support\Facades\Request::all())->links() }}
     </div>
     </section>
 </x-layout>

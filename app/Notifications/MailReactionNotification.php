@@ -30,7 +30,7 @@ class MailReactionNotification extends Notification
         $url = route('ads.show', ['ad' => $this->ad->slug]);
         $message = sprintf(
             'Reactie op: %s (#%d), verstuurd door: %s (ip: %s, email: %s)',
-            $this->ad->title,
+            $this->ad->title_translated,
             $this->ad->id,
             $data->name,
             request()->ip(),
