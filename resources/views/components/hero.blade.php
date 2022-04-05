@@ -10,9 +10,9 @@
                     <h1 class="text-2xl font-extrabold tracking-tight text-center text-white sm:text-3xl lg:text-4xl">
                         {{ __('Bringing people and goods together in times of need') }}
                     </h1>
-                    <p class="max-w-lg mx-auto my-6 text-base text-center text-white md:text-xl sm:max-w-3xl lg:py-6">
+                    <h2 class="font-light max-w-lg mx-auto my-6 text-base text-center text-white md:text-xl sm:max-w-3xl lg:py-6">
                         {{ __("Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.") }}
-                    </p>
+                    </h2>
                     <div class="max-w-4xl mx-auto mt-6 text-xl text-white ">
                         <form id="search" action="" method="GET" class="md:flex md:justify-center">
 

@@ -29,15 +29,15 @@
         <lastmod>{{ gmdate('Y-m-d\TH:i:s\Z',strtotime('yesterday')) }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>{{url('contact')}}</loc>
-        <lastmod>{{ gmdate('Y-m-d\TH:i:s\Z',strtotime('yesterday')) }}</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.6</priority>
     </url>   
     <url>
         <loc>{{url('terms-of-use')}}</loc>
+        <lastmod>{{ gmdate('Y-m-d\TH:i:s\Z',strtotime('yesterday')) }}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>       
+    <url>
+        <loc>{{url('press')}}</loc>
         <lastmod>{{ gmdate('Y-m-d\TH:i:s\Z',strtotime('yesterday')) }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>

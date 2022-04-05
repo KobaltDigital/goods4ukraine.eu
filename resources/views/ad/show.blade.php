@@ -20,20 +20,18 @@
                 <div class="p-6 bg-white rounded shadow">
                     <div class="relative flex justify-between mb-4">
                         <div>
-                            <h1 class="mb-2 font-serif text-3xl font-medium leading-6 text-black">
-                                {{ $ad->title_translated }}
-                            </h1>
                             <div>
-                                <ul>
-                                    @foreach ($ad->categories as $category)
-                                        <li class="text-sm">
-                                            <a href="{{ route('ads.index', ['category' => $category->id]) }}" class="underline">
+                                @foreach ($ad->categories as $category)
+                                        <h6 class="font-sans text-accent text-sm uppercase font-medium leading-6">
+                                            <a href="{{ route('ads.index', ['category' => $category->id]) }}" class="hover:underline">
                                                 {{ $category->name }}
                                             </a>
-                                        </li>
-                                    @endforeach
-                                </ul>
+                                        </h6>
+                                @endforeach
                             </div>
+                            <h1 class="mb-2 font-serif text-3xl font-medium leading-7 text-black">
+                                {{ $ad->title_translated }}
+                            </h1>
                             <div class="text-sm">
                                 {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
                             </div>

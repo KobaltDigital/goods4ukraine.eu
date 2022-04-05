@@ -8,23 +8,18 @@
             <div class="p-5 sm:col-span-5">
                 <div class="relative flex items-stretch justify-between">
                     <div>
+                        @foreach ($ad->categories as $category)
+                            <h6 class="font-sans text-accent text-sm uppercase font-medium leading-6">
+                                <a href="{{ route('ads.index', ['category' => $category->id]) }}" class="hover:underline">
+                                    {{ $category->name }}
+                                </a>
+                            </h6>
+                        @endforeach
                         <a href="{{ route('ads.show', $ad) }}">
-                            <h3 class="pb-1 font-serif text-lg font-medium leading-6 md:text-2xl hover:text-black hover:underline text-blue">
+                            <h3 class="pb-1 font-serif text-lg font-medium leading-6 md:text-lg hover:text-black hover:underline text-blue lg:pr-10">
                                 {!! $ad->title_translated !!}
                             </h3>
                         </a>
-                        <div class="text-sm font-bold">
-                            {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
-                            @if($ad->calcDistance > 0)
-                                <span class="font-sans text-accent">
-                                @if($ad->calcDistance < 1000)
-                                    ({{ round($ad->calcDistance) . __('mtr') }})
-                                @else
-                                    ({{ round($ad->calcDistance / 1000) . __('km') }})
-                                @endif
-                                </span>
-                            @endif
-                        </div>
                     </div>
                     <div>
                         @if($ad->type == 'Wanted')
@@ -42,8 +37,22 @@
                     {{ \Illuminate\Support\Str::limit($ad->description_translated, 150) }}
                 </div>
                 <div class="flex justify-between">
-                    <div class="mt-4 text-sm text-accent">
-                        {{ $ad->created_at->diffForHumans()}} {{ strtolower(__('Added.')) }}
+                    <div class="flex items-center text-accent">
+                        <div class="text-sm font-bold ">
+                            {{ $ad->city }}, {{ __(config('goods4ukraine.countries')[$ad->country]) }}
+                        </div>
+                        @if($ad->calcDistance > 0)
+                            <span class="font-sans text-accent">
+                            @if($ad->calcDistance < 1000)
+                                ({{ round($ad->calcDistance) . __('mtr') }})
+                            @else
+                                ({{ round($ad->calcDistance / 1000) . __('km') }})
+                            @endif
+                            </span>
+                        @endif
+                        <div class="text-sm ml-4">
+                            {{ $ad->created_at->diffForHumans()}} {{ strtolower(__('Added.')) }}
+                        </div>
                     </div>
                     <x-button :href="route('ads.show', $ad)">{{ __('View') }}</x-button>
                 </div>

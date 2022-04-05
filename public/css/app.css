@@ -1077,6 +1077,9 @@ select {
 .mr-2 {
   margin-right: 0.5rem;
 }
+.ml-4 {
+  margin-left: 1rem;
+}
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -1088,9 +1091,6 @@ select {
 }
 .mt-10 {
   margin-top: 2.5rem;
-}
-.ml-4 {
-  margin-left: 1rem;
 }
 .block {
   display: block;
@@ -1615,11 +1615,11 @@ select {
 .align-bottom {
   vertical-align: bottom;
 }
-.font-serif {
-  font-family: Lora;
-}
 .font-sans {
   font-family: Roboto;
+}
+.font-serif {
+  font-family: Lora;
 }
 .text-sm {
   font-size: .875rem;
@@ -1654,6 +1654,9 @@ select {
 .font-extrabold {
   font-weight: 800;
 }
+.font-light {
+  font-weight: 300;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1668,6 +1671,9 @@ select {
 }
 .leading-6 {
   line-height: 1.5rem;
+}
+.leading-7 {
+  line-height: 1.75rem;
 }
 .tracking-tight {
   letter-spacing: -0.025em;
@@ -1687,6 +1693,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(1 55 114 / var(--tw-text-opacity));
 }
+.text-accent {
+  --tw-text-opacity: 1;
+  color: rgb(106 146 156 / var(--tw-text-opacity));
+}
 .text-purple-600 {
   --tw-text-opacity: 1;
   color: rgb(147 51 234 / var(--tw-text-opacity));
@@ -1698,10 +1708,6 @@ select {
 .text-blue {
   --tw-text-opacity: 1;
   color: rgb(1 90 188 / var(--tw-text-opacity));
-}
-.text-accent {
-  --tw-text-opacity: 1;
-  color: rgb(106 146 156 / var(--tw-text-opacity));
 }
 .text-green-600 {
   --tw-text-opacity: 1;
@@ -1792,6 +1798,10 @@ select {
 .ring-blue {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(1 90 188 / var(--tw-ring-opacity));
+}
+.ring-gray-400 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(156 163 175 / var(--tw-ring-opacity));
 }
 .ring-opacity-5 {
   --tw-ring-opacity: 0.05;
@@ -2429,6 +2439,10 @@ p {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.25rem;
   }
 
   .md\:text-2xl {
