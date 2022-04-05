@@ -53,7 +53,7 @@
         >{{ old('message') }}</x-textarea>
     </div>
     <div>
-        <x-button>
+        <x-button onclick="this.disabled=true;this.value='Sending, please wait...';this.form.submit();">
             {{ __('Contact') }}
         </x-button>
     </div>
