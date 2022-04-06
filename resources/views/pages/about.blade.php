@@ -2,71 +2,61 @@
 
 $volunteers = [[
         'name' => 'Reinier Sierag',
-        'img' =>
-        'https://media-exp1.licdn.com/dms/image/C4D03AQGbpkSm8XcBsQ/profile-displayphoto-shrink_400_400/0/1626265660326?e=2147483647&v=beta&t=upO6CNNifXr0t1HbucsEMowHWuWuEWL0y8wJyUlb0EA',
+        'img' => asset('img/team/reinier-sierag.jpg'),
         'url' => 'https://www.linkedin.com/in/sierag/',
         'role' => 'Developer'
     ],
     [
         'name' => 'Ruben Hoogeveen',
-        'img' =>
-        'https://media-exp1.licdn.com/dms/image/C5603AQGFNlpM_m3f1A/profile-displayphoto-shrink_400_400/0/1632477906829?e=1654128000&v=beta&t=1N0bp-DSQ0nTIsdHjBQPjZvCUBK5JysDUpVGFso4tPA',
+        'img' => asset('img/team/ruben-hoogeveen.jpg'),
         'url' => 'https://www.linkedin.com/in/ruben-hoogeveen/',
         'role' => 'Developer'
     ],
     [
         'name' => 'Arne van Hoorn',
-        'img' =>
-        'https://media-exp1.licdn.com/dms/image/C5603AQGfI_4P_IsBaw/profile-displayphoto-shrink_400_400/0/1629296836414?e=1653523200&v=beta&t=FVKzqrSKzhGfu8O6o_Yy3nfbWIoSwo_7iszmc2C2mi0',
+        'img' => asset('img/team/arne-van-hoorn.jpg'),
         'url' => 'https://www.linkedin.com/in/arne-van-hoorn-0844663/',
         'role' => 'Developer'
     ],
     [
         'name' => 'Mick Bosman',
-        'img' =>
-        'https://media-exp1.licdn.com/dms/image/C4D03AQFKCZ9Jghku_Q/profile-displayphoto-shrink_400_400/0/1605107134866?e=2147483647&v=beta&t=CTxwtWrg_2-eXbAQwztRoh7yOjH6pHQwWWdICTcGIM0',
+        'img' => asset('img/team/mick-bosman.jpg'),
         'url' => 'https://www.linkedin.com/in/mick-bosman-7768b816b/',
         'role' => 'Developer'
     ],
     [
         'name' => 'Huub Duinmeijer',
-        'img' =>
-        'https://media-exp1.licdn.com/dms/image/C4E03AQH3OB5zcTrMrQ/profile-displayphoto-shrink_400_400/0/1648197243160?e=1653523200&v=beta&t=GEfNc0nKBcJIQa5kabF8WdDyHXaSrmAKSuXQ8wDjw9w',
+        'img' => asset('img/team/huub-duinmeijer.jpg'),
         'url' => 'https://www.linkedin.com/in/huub-duinmeijer-6ba563a9/',
         'role' => 'Developer'
     ],
     [
         'name' => 'Brenda Koning',
-        'img' =>
-        'https://media-exp1.licdn.com/dms/image/C4D03AQEsRLWKt-0vxQ/profile-displayphoto-shrink_400_400/0/1626169602403?e=1653523200&v=beta&t=6m3tWYvzkGVNHFHc-DnrO0bfJYW_36sBVNQmq66YV20',
+        'img' => asset('img/team/brenda-koning.jpg'),
         'url' => 'https://www.linkedin.com/in/brenda-koning-aa436312/',
         'role' => 'Communicatie'
     ],
     [
         'name' => 'Kylian Wester',
-        'img' =>
-        'https://media-exp1.licdn.com/dms/image/C4D03AQEHEyNXVTXG8Q/profile-displayphoto-shrink_400_400/0/1558088501046?e=1653523200&v=beta&t=byTfgOgYbtL2vcPPZARihNwIzb2KiK6IoIZiBGWP840',
+        'img' => asset('img/team/kylian-wester.jpg'),
         'url' => 'https://www.linkedin.com/in/kylian-wester/',
         'role' => 'Developer'
     ],
     [
         'name' => 'Luuk Kenselaar',
-        'img' =>
-        'https://media-exp1.licdn.com/dms/image/D4E03AQEnJVjkwVgTBA/profile-displayphoto-shrink_400_400/0/1643897549689?e=1653523200&v=beta&t=e2zohY8SaLmrPekVXiDxkoc5LRj6m3KBmQWXoY2a_R8',
+        'img' => asset('img/team/luuk-kenselaar.jpg'),
         'url' => 'https://www.linkedin.com/in/lkenselaar/',
         'role' => 'Developer'
     ],
     [
         'name' => 'Milan Bakker',
-        'img' =>
-        'https://media-exp1.licdn.com/dms/image/C4D03AQGfx-pQr6CXaQ/profile-displayphoto-shrink_400_400/0/1645107278836?e=1653523200&v=beta&t=Tj5V_fOrxhzOO1q7RnU8XismDczw85DfuA9vFeIl0-Q',
+        'img' => asset('img/team/milan-bakker.jpg'),
         'url' => 'https://www.linkedin.com/in/milan-bakker-a9bb00141/',
         'role' => 'Developer'
     ],
     [
         'name' => 'Els Schipper',
-        'img' =>
-        'https://media-exp1.licdn.com/dms/image/C5603AQHVGqYB4jGzIA/profile-displayphoto-shrink_400_400/0/1633501324576?e=1653523200&v=beta&t=XZG652o69OVN2Jm4KxWrTBKXdhZKugjb5TCGflXUbOQ',
+        'img' => asset('img/team/els-schipper.jpg'),
         'url' => 'https://www.linkedin.com/in/elsschipper/',
         'role' => 'PR'
     ]];
