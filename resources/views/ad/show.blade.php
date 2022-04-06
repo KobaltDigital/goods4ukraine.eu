@@ -1,14 +1,24 @@
 @push('tags')
     <meta property="og:site_name" content="{{ config('app.name', 'Laravel') }}">
     <meta property="og:title" content="{{ $ad->title_translated }} - {{ config('app.name', 'Laravel') }}" />
-    <meta property="og:description" content="{{  substr($ad->translated_description, 0, 200)  }}" />
+    <meta property="og:description" content="{{  substr($ad->translated_description, 0, 160)  }}" />
     <meta property="og:image" itemprop="image" content="{{ $ad->getFirstMediaUrl('images', 'single') }}">
     <meta property="og:type" content="article">
     <meta property="og:updated_time" content="{{ $ad->updated_at }}">
     <meta property="article:published_time" content="{{ $ad->created_at }}">
     <meta property="article:modified_time" content="{{ $ad->created_at }}">
+
     <title>{{ $ad->title_translated }} - {{ config('app.name', 'Laravel') }}</title>
     <meta name="description" content="{{  substr($ad->translated_description, 0, 200)  }}" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="{{ config('app.name', 'Laravel') }}">
+    <meta property="twitter:url" content="https://goods4ukraine.eu/jas-boss-nooit-gedragen-maat-m/">
+    <meta name="twitter:title" content="{{ $ad->title_translated }} - {{ config('app.name', 'Laravel') }}">
+    <meta name="twitter:description" content="{{  substr($ad->translated_description, 0, 160)  }}">
+    <meta name="twitter:image" content="{{ $ad->getFirstMediaUrl('images', 'single') }}">
+
 @endpush
 
 <x-layout>
