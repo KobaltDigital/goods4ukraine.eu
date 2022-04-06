@@ -8,7 +8,7 @@
                 <h1>Contact</h1>
                 <div class="lg:flex">
                     <div class="lg:mr-6">
-                        <h3>Reinier Sierag (initiatiefnemer)</h3>
+                        <h3>Reinier Sierag (Initiatiefnemer)</h3>
                         <ul>
                             <li>
                                 <a href="mailto:reinier@kobaltdigital.nl">reinier@kobaltdigital.nl</a> (persoonlijk)
