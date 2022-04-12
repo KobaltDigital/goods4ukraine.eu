@@ -1,8 +1,12 @@
 @props([
     'ad' => null,
+    'partOfMultiple' => false,
 ])
 
-<div class="overflow-hidden bg-white rounded-md shadow sm:rounded-lg">
+<div @class([
+    'overflow-hidden bg-white',
+    'rounded-md shadow sm:rounded-lg' => !$partOfMultiple,
+    ])>
     <div class="grid grid-cols-1 sm:grid-cols-6">
         <div class="sm:col-span-1">
             <a href="{{ route('ads.show', $ad) }}">

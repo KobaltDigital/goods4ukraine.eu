@@ -23,7 +23,7 @@ const ads = [
                 lat: {{ explode(' ', $location)[1] }},
                 lng: {{ explode(' ', $location)[0] }},
             },
-            infoWindow: `<x-marker :ads="$adsCollection"></x-marker>`,
+            infoWindow: `<x-info-window :ads="$adsCollection"></x-info-window>`,
             adsCount: '{{ $adsCollection->count() }}'
         },
     @endforeach

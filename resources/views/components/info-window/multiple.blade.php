@@ -63,7 +63,7 @@
         <!-- Prev Button -->
         <button
             x-on:click="prev"
-            class="text-6xl"
+            class="text-[30px]"
             :aria-disabled="atBeginning"
             :tabindex="atEnd ? -1 : 0"
             :class="{ 'opacity-50 cursor-not-allowed': atBeginning }"
@@ -83,7 +83,7 @@
         >
         @foreach ($ads as $ad)
             <li x-bind="disableNextAndPreviousButtons" class="flex flex-col items-center justify-center w-full snap-start shrink-0" role="option">
-                <x-marker.single :ad="$ad"></x-marker.single>
+                <x-info-window.single :ad="$ad" :partOfMultiple="true"></x-info-window.single>
             </li>
         @endforeach
         </ul>
@@ -91,7 +91,7 @@
         <!-- Next Button -->
         <button
             x-on:click="next"
-            class="text-6xl"
+            class="text-[30px]"
             :aria-disabled="atEnd"
             :tabindex="atEnd ? -1 : 0"
             :class="{ 'opacity-50 cursor-not-allowed': atEnd }"
