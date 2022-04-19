@@ -117,6 +117,11 @@ class Ad extends Model implements Auditable, HasMedia
         return $this->getFirstMediaUrl('images', 'medium') && Str::contains($this->getFirstMediaUrl('images', 'medium'), self::PLACEHOLDER);
     }
 
+    public function getLocationPairAttribute()
+    {
+        return optional($this->location)->toPair();
+    }
+
     public function routeNotificationForSlack()
     {
         return env('SLACK_WEBHOOKS_TOKEN');
