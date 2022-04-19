@@ -2,6 +2,9 @@ require('./bootstrap');
 
 import Alpine from 'alpinejs';
 
+require('./components/map');
+
+
 window.Alpine = Alpine;
 
 Alpine.start();
@@ -9,32 +12,32 @@ Alpine.start();
 $(document).ready(function() {
 
 	/* This is basic - uses default settings */
-	
+
 	$("a#single_image").fancybox();
-	
+
 	/* Using custom settings */
-	
+
 	$("a#inline").fancybox({
 		'hideOnContentClick': true
 	});
 
 	/* Apply fancybox to multiple items */
-	
+
 	$("a.group").fancybox({
 		'transitionIn'	:	'elastic',
 		'transitionOut'	:	'elastic',
-		'speedIn'		:	600, 
-		'speedOut'		:	200, 
+		'speedIn'		:	600,
+		'speedOut'		:	200,
 		'overlayShow'	:	false
 	});
-	
+
 });
 
 window.googleAutocomplete = {
     autocompleteField: function (fieldId) {
         var autocomplete = new google.maps.places.Autocomplete(
             document.getElementById(fieldId)
-        );        
+        );
         google.maps.event.addListener(autocomplete, "place_changed", function () {
             // Segment results into usable parts.
             var place = autocomplete.getPlace();

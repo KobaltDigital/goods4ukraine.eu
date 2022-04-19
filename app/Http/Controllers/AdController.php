@@ -32,7 +32,10 @@ class AdController extends Controller
     ) {
         $data = $request->all();
         $location = $getClientLocation->execute($data);
-        $ads = $getFilteredAds->execute($data, 1000);
+        $ads = $getFilteredAds
+            ->execute($data, 1000)
+            ->whereNotNull('location')
+            ->groupBy('locationPair');
 
         $sortedBy = isset($data['location'])
             ? 'nearest'
@@ -40,7 +43,6 @@ class AdController extends Controller
 
         return view('map', compact('ads', 'location', 'sortedBy'));
     }
-
 
     public function show(Request $request, Ad $ad)
     {
