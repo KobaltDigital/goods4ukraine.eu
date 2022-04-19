@@ -1,3 +1,8 @@
+@props([
+    'ads' => null,
+    'id' => time()
+])
+
 <div
     x-data="{
         skip: 1,
@@ -55,10 +60,10 @@
         x-on:keydown.left="prev"
         tabindex="0"
         role="region"
-        aria-labelledby="carousel-label"
+        aria-labelledby="carousel-label-{{$id}}"
         class="flex space-x-6"
     >
-        <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
+        <h2 id="carousel-label-{{$id}}" class="sr-only" hidden>{{ _('Carousel') }}</h2>
 
         <!-- Prev Button -->
         <button
@@ -69,16 +74,16 @@
             :class="{ 'opacity-50 cursor-not-allowed': atBeginning }"
         >
             <span aria-hidden="true">❮</span>
-            <span class="sr-only">Skip to previous slide page</span>
+            <span class="sr-only">{{ __('Skip to previous slide page') }}</span>
         </button>
 
-        <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
+        <span id="carousel-content-label-{{$id}}" class="sr-only" hidden>{{ __('Carousel') }}</span>
 
         <ul
             x-ref="slider"
             tabindex="0"
             role="listbox"
-            aria-labelledby="carousel-content-label"
+            aria-labelledby="carousel-content-label-{{$id}}"
             class="flex w-full overflow-x-scroll snap-x snap-mandatory"
         >
         @foreach ($ads as $ad)
@@ -97,7 +102,7 @@
             :class="{ 'opacity-50 cursor-not-allowed': atEnd }"
         >
             <span aria-hidden="true">❯</span>
-            <span class="sr-only">Skip to next slide page</span>
+            <span class="sr-only">{{ __('Skip to next slide page') }}</span>
         </button>
     </div>
 </div>
