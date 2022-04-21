@@ -7,16 +7,16 @@
     <meta property="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}" />
 
     @if (request()->routeIs('ads.show'))
-        @stack('tags')
+    @stack('tags')
     @else
-        <title>{{ config('app.name', 'Laravel') }}</title>
-        <meta property="og:site_name" content="Goods4Ukraine.eu">
-        <meta property="og:title" content="Goods4Ukraine - {{ __('Bringing people and goods together in times of need') }}" />
-        <meta property="og:description" content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
-        <meta property="og:type" content="website" />
-        <meta property="og:updated_time" content="{{ now() }}" />
-        <meta property="og:image" content="{{ secure_asset('/img/photo.jpg') }}" />
-        <meta name="description" content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <meta property="og:site_name" content="Goods4Ukraine.eu">
+    <meta property="og:title" content="Goods4Ukraine - {{ __('Bringing people and goods together in times of need') }}" />
+    <meta property="og:description" content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="{{ now() }}" />
+    <meta property="og:image" content="{{ secure_asset('/img/photo.jpg') }}" />
+    <meta name="description" content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
     @endif
 
     <style>
@@ -110,57 +110,75 @@
                         <rect x=".75" y="1.275" width="22.5" height="22.5" rx="11.25"></rect>
                         <mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                             <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M12 .75C5.646.75.5 5.896.5 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547 4.543-1.524 7.835-5.837 7.835-10.911C23.5 5.896 18.354.75 12 .75Z"
-                                fill="#fff">
-                            </path>
-                        </mask>
-                        <g mask="url(#a)">
-                            <path fill="#005BBB" d="M0 0h24v12H0z"></path>
-                            <path fill="#FFD500" d="M0 12h24v12H0z"></path>
-                        </g>
-                    </svg>
-                </a>
-            </div>
+                            d="M12 .75C5.646.75.5 5.896.5 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547 4.543-1.524 7.835-5.837 7.835-10.911C23.5 5.896 18.354.75 12 .75Z"
+                            fill="#fff">
+                        </path>
+                    </mask>
+                    <g mask="url(#a)">
+                        <path fill="#005BBB" d="M0 0h24v12H0z"></path>
+                        <path fill="#FFD500" d="M0 12h24v12H0z"></path>
+                    </g>
+                </svg>
+            </a>
         </div>
-    </footer>
-    @empty(Session::get('language'))
-        <div class="fixed inset-0 z-10 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-            <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-                <div class="fixed inset-0 bg-gray-900 bg-opacity-75" aria-hidden="true"></div>
-                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-                <div class="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 md:align-middle md:max-w-lg md:w-full sm:p-6">
-                    <div class="flex items-center justify-center mx-auto">
-                        <h3 class="text-lg font-medium leading-6 text-black" id="modal-title">Choose your language</h3>
+    </div>
+</footer>
+@empty(Session::get('language'))
+    <div class="fixed inset-0 z-10 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-gray-900 bg-opacity-75" aria-hidden="true"></div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div class="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 md:align-middle md:max-w-lg md:w-full sm:p-6">
+                <div class="flex items-center justify-center mx-auto">
+                    <h3 class="text-lg font-medium leading-6 text-black" id="modal-title">Choose your language</h3>
+                </div>
+                <div class="mt-5 sm:mt-6">
+
+                    <div class="flow-root mt-6">
+                        <ul role="list" class="-my-5 divide-y divide-gray-200">
+                            @foreach (languages() as $language)
+                                <li class="py-4">
+                                    <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}" class="flex items-center space-x-4">
+                                        <div class="flex-shrink-0">
+                                            <img class="object-cover w-8 h-8 rounded-full" src="{{ url(sprintf('img/%s.svg', $language->locale)) }}" alt="{{ $language->title }}s">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <p class="text-sm font-medium text-gray-900">{{ $language->title }}</p>
+                                            <p class="text-sm text-gray-500 truncate">{{ $language->select_language_title }} <span aria-hidden="true">&rarr;</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
-                    <div class="grid-cols-1 mt-5 sm:mt-6 sm:grid md:grid-cols-2 sm:gap-3">
-                        @foreach (languages() as $language)
-                            <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}" class="flex flex-col items-center text-center rounded-md md:border px-10 py-5 bottom-1 hover:bg-light hover:border-blue">
-                                <img src="/img/{{ $language->locale }}.svg" class="w-full h-full mb-2" alt="{{ $language->title }}" />
-                                {{ $language->title }}
-                            </a>
-                        @endforeach
-                    </div>
+                {{-- @foreach (languages() as $language)
+
+                        <img src="/img/{{ $language->locale }}.svg" class="w-full h-full mb-2" alt="{{ $language->title }}" />
+                        {{ $language->title }}
+                    </a>
+                    @endforeach --}}
                 </div>
             </div>
         </div>
-    @endempty
+    </div>
+@endempty
 
     @stack('scripts')
 
     <script async src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
     @if (session()->has('success'))
-        <script>
-            const notyf = new Notyf({duration: 5000, dismissible: false})
-            notyf.success('{{ session('success') }}')
-        </script>
+    <script>
+        const notyf = new Notyf({duration: 5000, dismissible: false})
+        notyf.success('{{ session('success') }}')
+    </script>
     @endif
 
     @if (session()->has('error'))
-        <script>
-            const notyf = new Notyf({duration: 10000, dismissible: true})
-            notyf.error('{{ session('error') }}')
-        </script>
+    <script>
+        const notyf = new Notyf({duration: 10000, dismissible: true})
+        notyf.error('{{ session('error') }}')
+    </script>
     @endif
 </body>
 </html>
