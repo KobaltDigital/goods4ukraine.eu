@@ -32,15 +32,15 @@
         @click.away="langOpen = false">
         <div class="py-1" role="none">
             @foreach (languages() as $language)
-                @if (Session::get('language') != $language->locale)
-                    <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}" title="{{ $language->title }}"
-                        class="flex block px-4 py-2 text-sm text-blue" role="menuitem" tabindex="-1" id="menu-item-1">
-                        <img src="/img/{{ $language->locale }}.svg" class="h-auto mr-3 shadow-md w-7" alt="{{ $language->title }}">
-                        <span class="ml-2">
-                            {!! __($language->title) !!}
-                        </span>
-                    </a>
-                @endif
+            @if (Session::get('language') != $language->locale)
+            <a href="{{ route('sessions.languages.update', ['lang' => $language->locale]) }}" title="{{ $language->title }}"
+                class="flex block px-4 py-2 text-sm text-blue" role="menuitem" tabindex="-1" id="menu-item-1">
+                <img src="/img/{{ $language->locale }}.svg" class="h-auto mr-3 shadow-md w-7" alt="{{ $language->title }}">
+                <span class="ml-2">
+                    {!! __($language->title) !!}
+                </span>
+            </a>
+            @endif
             @endforeach
         </div>
     </div>
