@@ -1,4 +1,3 @@
-
 <div class="relative">
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8 md:my-10">
         <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
@@ -37,19 +36,19 @@
                             <x-label class="!text-white">{{ __('Location') }}</x-label>
                             <div class="relative z-10 h-full">
                                 <x-input id="location_field" type="text"
-                                name="location"
-                                class="w-full text-black border-0 border-r rounded-none md:h-16"
-                                value="{{ request('location') }}"
-                                />
+                                    name="location"
+                                    class="w-full text-black border-0 border-r rounded-none md:h-16"
+                                    value="{{ request('location') }}"
+                                    />
                             </div>
                         </div>
                         <div class="w-full md:w-1/5">
                             <x-label class="!text-white">{{ __('Distance') }}</x-label>
                             <select id="distance" name="distance" class="w-full text-black border-0 border-gray-300 bg-light md:h-16 focus:ring focus:ring-blue focus:ring-opacity-50">
                                 <option value="5000" {{ request()->input('distance') == 5000 ? 'selected' : '' }}>5{{ __('km') }}</option>
-                                <option value="15000" {{ request()->input('distance') == 15000 ? 'selected' : '' }}>15{{ __('km')}}</option>
-                                <option value="25000" {{ request()->input('distance') == 25000 ? 'selected' : '' }}>25{{ __('km')}}</option>
-                                <option value="50000" {{ request()->input('distance') == 50000 ? 'selected' : '' }}>50{{ __('km')}}</option>
+                                <option value="15000" {{ request()->input('distance') == 15000 ? 'selected' : '' }}>15{{ __('km') }}</option>
+                                <option value="25000" {{ request()->input('distance') == 25000 ? 'selected' : '' }}>25{{ __('km') }}</option>
+                                <option value="50000" {{ request()->input('distance') == 50000 ? 'selected' : '' }}>50{{ __('km') }}</option>
                                 <option value="100000" {{ request()->input('distance') == 100000 ? 'selected' : '' }}>100{{ __('km') }}</option>
                                 <option value="500000" {{ request()->input('distance') == 500000 ? 'selected' : '' }}>500{{ __('km') }}</option>
                                 <option value="1000000" {{ request()->input('distance') == 1000000 ? 'selected' : '' }}>1000{{__('km') }}</option>
@@ -60,7 +59,7 @@
                             <x-label>&nbsp;</x-label>
                             <x-button-secondary class="px-5 text-base rounded-lg md:h-16 md:w-full shadow-3xl lg:rounded-none lg:rounded-r-lg bg-yellow text-blue hover:text-black">
                                 {{ __('Search') }}
-                            </x-button>
+                            </x-button-secondary>
                         </div>
                     </form>
                 </div>
