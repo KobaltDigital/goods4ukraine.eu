@@ -49,8 +49,9 @@
             id="message"
             name="message"
             rows="4"
-            placeholder="{{ __('Message') }}"
-        >{{ old('message') }}</x-textarea>
+            placeholder="{{ __('Message') }}">
+            {{ old('message') }}
+        </x-input.textarea>
     </div>
     <div>
         <x-button onclick="this.disabled=true;this.value='Sending, please wait...';this.form.submit();">

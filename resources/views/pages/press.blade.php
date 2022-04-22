@@ -33,7 +33,7 @@
                     <h2>Logo's</h2>
                     <div class="flex items-center">
                         <div>
-                            <img src="/img/beeldmerk.svg" class="my-2" />
+                            <img src="/img/beeldmerk.svg" class="my-2" alt="Goods4Ukraine beeldmerk"/>
                         </div>
                         <p class="px-6">
                             Download het beeldmerk in <a href="/img/beeldmerk.svg">svg</a>, <a href="/img/beeldmerk.jpg">jpg</a>, <a href="/img/beeldmerk.pdf">pdf</a> of <a href="/img/beeldmerk.png">png</a> of <a href="/img/beeldmerk@3x.png">iets groter</a>.
@@ -41,15 +41,15 @@
                     </div>
                     <div class="flex items-center">
                         <div>
-                            <img src="/img/logo.svg" class="my-2" />
+                            <img src="/img/logo.svg" class="my-2" alt="Goods4Ukraine beeldmerk 2"/>
                         </div>
                         <p class="px-6">
                             Download het logo in <a href="/img/logo.svg">svg</a>, <a href="/img/logo.jpg">jpg</a>, <a href="/img/logo.pdf">pdf</a> of <a href="/img/logo.png">png</a> of <a href="/img/logo@3x.png">iets groter</a>.
                         </p>
                     </div>
-                    <div class="flex bg-black px-6 rounded-lg  items-center">
+                    <div class="flex bg-black px-6 rounded-lg items-center">
                         <div>
-                            <img src="/img/logo_dark.svg" class="mt-6" />
+                            <img src="/img/logo_dark.svg" class="mt-6"  alt="Goods4Ukraine donkere beeldmerk"/>
                         </div>
                         <p class="px-6 text-white">
                             Download het donkere logo in <a href="/img/logo_dark.svg" class="text-white">svg</a>, <a href="/img/logo_dark.jpg" class="text-white">jpg</a>, <a href="/img/logo_dark.pdf" class="text-white">pdf</a> of <a href="/img/logo_dark.png" class="text-white">png</a> of <a  class="text-white" href="/img/logo_dark@3x.png">iets groter</a>.
@@ -60,19 +60,19 @@
                     <h2>Campagnefoto's</h2>
                     <div class="flex items-center m-0">
                         <div class="w-full lg:w-1/4">
-                            <img src="/img/photo_small.jpg"  />
+                            <img src="/img/photo_small.jpg" alt="Goods4Ukraine campagne foto 1"/>
                         </div>
                         <p class="px-6">
                             <a href="/img/photo.jpg">Download</a> 4096px x 1468px (3,4MB).
-                        </p>   
+                        </p>
                     </div>
                     <div class="flex items-center m-0">
                         <div class="w-full lg:w-1/4">
-                            <img src="/img/photo_hand_small.jpg"  />
+                            <img src="/img/photo_hand_small.jpg" alt="Goods4Ukraine campagne foto 2" />
                         </div>
                         <p class="px-6">
                             <a href="/img/photo_hand.jpg">Download</a> 2160px × 2160px (3,2MB).
-                        </p>   
+                        </p>
                     </div>
                 </div>
                 <div class="bg-white p-6 overflow-hidden shadow rounded-lg prose max-w-none">

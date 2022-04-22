@@ -62,7 +62,6 @@
                 </div>
                 <div>
                     <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
-
                         <h2>Lijst verboden en verdachte objecten en diensten</h2>
                         <ul>
                             <li>
