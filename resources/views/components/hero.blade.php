@@ -35,11 +35,13 @@
                         <div class="w-full md:w-1/5">
                             <x-label class="!text-white">{{ __('Location') }}</x-label>
                             <div class="relative z-10 h-full">
-                                <x-input id="location_field" type="text"
+                                <x-input
+                                    id="location_field"
+                                    type="text"
                                     name="location"
                                     class="w-full text-black border-0 border-r rounded-none md:h-16"
                                     value="{{ request('location') }}"
-                                    />
+                                />
                             </div>
                         </div>
                         <div class="w-full md:w-1/5">

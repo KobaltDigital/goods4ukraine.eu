@@ -3,7 +3,7 @@
 
     <section class="w-full sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-4 mb-10 space-y-4 md:mx-auto">
-            <x-home-filters :sortedBy=$sortedBy  />
+            <x-home-filters :sortedBy="$sortedBy" />
 
             @forelse ($ads as $ad)
                 <x-card :ad="$ad" />

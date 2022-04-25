@@ -161,7 +161,10 @@
                     </a>
                 </div>
                 <div class="mr-10">
-                    <a href="https://dropsolid.com/en/choice" target="_blank">
+                    @php
+                        $lang = Session::get('language') === 'nl' ? 'nl' : 'en';
+                    @endphp
+                    <a href="https://dropsolid.com/{{ $lang }}/choice" target="_blank">
                         <svg width="89" height="26" viewBox="0 0 221 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
                                 <path
@@ -286,13 +289,6 @@
                             @endforeach
                         </ul>
                     </div>
-                    {{-- @foreach (languages() as $language)
-
-                        <img src="/img/{{ $language->locale }}.svg" class="w-full h-full mb-2"
-                    alt="{{ $language->title }}" />
-                    {{ $language->title }}
-                    </a>
-                    @endforeach --}}
                 </div>
             </div>
         </div>
