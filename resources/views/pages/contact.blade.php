@@ -54,7 +54,7 @@
                         <h3>Dropsolid</h3>
                         <ul>
                             <li>
-                                <a href="mailto:info@goods4ukraine.be">info@goods4Ukraine.be</a>
+                                <a href="mailto:info@goods4ukraine.be">info@goods4ukraine.be</a>
                             </li>
                             <li>
                                 <a href="tel:+32 9 395 02 90">+32 9 395 02 90</a>
