@@ -24,25 +24,6 @@
                                 <x-input id="search" type="text" name="search" value="{{ request()->input('search') }}"
                                 placeholder=""
                                 class="block w-full text-black border-0 border-r rounded-none md:h-16 lg:rounded-none lg:rounded-l-lg" />
-                        </div>
-                        <div class="w-full md:w-1/5">
-                            <x-label class="!text-white truncate pr-4">{{ __('Wanted or offered') }}</x-label>
-                            <select id="type" name="type" class="w-full text-black border-0 border-r border-gray-300 bg-light md:h-16 focus:ring focus:ring-blue focus:ring-opacity-50">
-                                <option {{ request()->input('type') == "" ? 'selected' : '' }} value="">{{ __('Both') }}</option>
-                                <option value="Wanted" {{ request()->input('type') == "Wanted" ? 'selected' : '' }}>{{ __('Wanted') }}</option>
-                                <option value="Offered" {{ request()->input('type') == "Offered" ? 'selected' : '' }}>{{ __('Offered') }}</option>
-                            </select>
-                        </div>
-                        <div class="w-full md:w-1/5">
-                            <x-label class="!text-white">{{ __('Location') }}</x-label>
-                            <div class="relative z-10 h-full">
-                                <x-input
-                                    id="location_field"
-                                    type="text"
-                                    name="location"
-                                    class="w-full text-black border-0 border-r rounded-none md:h-16"
-                                    value="{{ request('location') }}"
-                                />
                             </div>
                             <div class="w-full md:w-1/5">
                                 <x-label class="!text-white truncate pr-4">{{ __('Wanted or offered') }}</x-label>

@@ -10,16 +10,6 @@
     @if (request()->routeIs('ads.show'))
         @stack('tags')
     @else
-<<<<<<< HEAD
-        <title>{{ config('app.name', 'Laravel') }}</title>
-        <meta property="og:site_name" content="Goods4Ukraine.eu">
-        <meta property="og:title" content="Goods4Ukraine - {{ __('Bringing people and goods together in times of need') }}" />
-        <meta property="og:description" content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
-        <meta property="og:type" content="website" />
-        <meta property="og:updated_time" content="{{ now() }}" />
-        <meta property="og:image" content="{{ secure_asset('/img/photo.jpg') }}" />
-        <meta name="description" content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
-=======
     <title>{{ config('app.name', 'Laravel') }}</title>
     <meta property="og:site_name" content="Goods4Ukraine.eu">
     <meta property="og:title"
@@ -31,7 +21,6 @@
     <meta property="og:image" content="{{ secure_asset('/img/photo.jpg') }}" />
     <meta name="description"
         content="{{ __('Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.') }}" />
->>>>>>> develop
     @endif
 
     <style>
@@ -303,10 +292,7 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-=======
     </div>
->>>>>>> develop
     @endempty
 
     @stack('scripts')
@@ -314,19 +300,6 @@
     <script async src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
     @if (session()->has('success'))
-<<<<<<< HEAD
-        <script>
-            const notyf = new Notyf({duration: 5000, dismissible: false})
-            notyf.success('{{ session('success') }}')
-        </script>
-    @endif
-
-    @if (session()->has('error'))
-        <script>
-            const notyf = new Notyf({duration: 10000, dismissible: true})
-            notyf.error('{{ session('error') }}')
-        </script>
-=======
     <script>
         const notyf = new Notyf({
             duration: 5000,
@@ -346,7 +319,6 @@
         notyf.error('{{ session('
             error ') }}')
     </script>
->>>>>>> develop
     @endif
 </body>
 
