@@ -5,7 +5,7 @@
                 <x-nav-sub />
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
-                <h1>Over Goods4ukraine.eu</h1>
+                <h1>Over Goods4Ukraine.eu</h1>
                 <p class="intro">
                     Goods4Ukraine brengt vraag en aanbod bij elkaar met als doel om vluchtelingen te helpen aan missende
                     benodigdheden.
@@ -22,10 +22,10 @@
                 </p>
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
-                <h2>Hoe werkt Goods4ukraine.eu?</h2>
+                <h2>Hoe werkt Goods4Ukraine.eu?</h2>
                 <p>
-                    Goods4ukraine.eu is een website die vraag en aanbod samenbrengt. Ondanks het feit dat de
-                    website zich vooral kenmerkt door het laagdrempelige karakter ziet Goods4ukraine.eu het als haar
+                    Goods4Ukraine.eu is een website die vraag en aanbod samenbrengt. Ondanks het feit dat de
+                    website zich vooral kenmerkt door het laagdrempelige karakter ziet Goods4Ukraine.eu het als haar
                     missie om hen zo goed mogelijk te adviseren over prettig, veilig en verantwoord handelen. De website
                     is zeer eenvoudig in gebruik. Het enige dat hiervoor nodig is, is een e-mailadres, enkele lokatiegegevens en een paar minuten tijd.
                 </p>
@@ -33,7 +33,7 @@
                     Duurzaam en lokaal
                 </h3>
                 <p>
-                    Door de lokatiegegevens kunnen we de vraag- en aanbod optimaal laten samenkomen. Hierdoor proberen we lokaal en duurzame matches te maken. 
+                    Door de lokatiegegevens kunnen we de vraag- en aanbod optimaal laten samenkomen. Hierdoor proberen we lokaal en duurzame matches te maken.
                 </p>
             </div>
         </div>

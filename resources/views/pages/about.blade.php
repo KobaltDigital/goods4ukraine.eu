@@ -71,7 +71,7 @@ $volunteers = [[
             </div>
             <div class="md:grid md:gap-6 md:grid-cols-2">
                 <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-6 prose max-w-none">
-                    <h1>Over Goods4ukraine.eu</h1>
+                    <h1>Over Goods4Ukraine.eu</h1>
                     <p class="intro">
                         Goods4Ukraine brengt vraag en aanbod bij elkaar met als doel om vluchtelingen te helpen aan
                         missende
@@ -93,11 +93,11 @@ $volunteers = [[
                 </div>
                 <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-6 prose max-w-none">
                     <h2>
-                        Hoe werkt Goods4ukraine.eu?
+                        Hoe werkt Goods4Ukraine.eu?
                     </h2>
                     <p>
-                        Goods4ukraine.eu is een website die vraag en aanbod samenbrengt. Ondanks het feit dat de
-                        website zich vooral kenmerkt door het laagdrempelige karakter ziet Goods4ukraine.eu het als haar
+                        Goods4Ukraine.eu is een website die vraag en aanbod samenbrengt. Ondanks het feit dat de
+                        website zich vooral kenmerkt door het laagdrempelige karakter ziet Goods4Ukraine.eu het als haar
                         missie om hen zo goed mogelijk te adviseren over prettig, veilig en verantwoord handelen. De
                         website
                         is zeer eenvoudig in gebruik. Het enige dat hiervoor nodig is, is een e-mailadres, enkele
