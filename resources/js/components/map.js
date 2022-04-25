@@ -1,8 +1,11 @@
-import { MarkerClusterer } from '@googlemaps/markerclusterer';
+import {
+    MarkerClusterer
+} from '@googlemaps/markerclusterer';
 
 if (document.getElementById('map_canvas')) {
     const map = new google.maps.Map(document.getElementById('map_canvas'), {
         zoom: 7,
+        maxZoom: 10,
     });
 
     const infoWindow = new google.maps.InfoWindow({
