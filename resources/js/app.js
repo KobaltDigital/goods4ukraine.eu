@@ -72,7 +72,7 @@ function showPosition(position) {
     longitude.value = position.coords.longitude;
 
     // using other key because this is an open key, not restricted.
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=` + position.coords.latitude + `,` + position.coords.longitude + `&key=AIzaSyCxzPwEB7A9i6Fwvi41SrVbApygce3Sq9c`;
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=` + position.coords.latitude + `,` + position.coords.longitude + `&key=AIzaSyBR-4XYGeEEnH5A0L3qVMt1yjcY8Exd82k`;
     console.log('Checking ' + url);
 
     fetch(url).then(response => response.json()).then(json => {

@@ -10,9 +10,9 @@
                     <div class="link-block-content">
                         <h1>I. Algemene Bepalingen</h1>
                         <p class="intro">
-                            Het is voor iedereen mogelijk om eenvoudig en snel gebruik te maken van Goods4ukraine.eu.
+                            Het is voor iedereen mogelijk om eenvoudig en snel gebruik te maken van Goods4Ukraine.eu.
                             Wij hebben
-                            daarvoor duidelijke spelregels opgesteld. Dit betekent dat de Goods4ukraine.eu
+                            daarvoor duidelijke spelregels opgesteld. Dit betekent dat de Goods4Ukraine.eu
                             Gebruiksvoorwaarden op
                             u van toepassing zijn door het bezoeken van onze website. We raden u dan ook aan om deze
                             Gebruiksvoorwaarden regelmatig door te lezen.
@@ -23,13 +23,13 @@
                     <div class="link-block-content">
                         <h2 class="section-heading ">II. Regels voor het plaatsen van aanbiedings</h2>
                         <p>
-                            Om onze site zo schoon en overzichtelijk mogelijk te houden, heeft Goods4ukraine.eu regels
+                            Om onze site zo schoon en overzichtelijk mogelijk te houden, heeft Goods4Ukraine.eu regels
                             opgesteld
                             voor het plaatsen van een aanbieding. U kunt deze regels raadplegen door het drukken op
                             onderstaande onderwerpen:
                         </p>
                         <ol>
-                            <li><a href="#aanbiedingplatform"> Goods4ukraine.eu is een aanbiedingplatform
+                            <li><a href="#aanbiedingplatform"> Goods4Ukraine.eu is een aanbiedingplatform
                                     </a>
                             </li>
                             <li><a href="#algregels">Algemene regels voor het plaatsen van een aanbieding op de
@@ -41,11 +41,11 @@
                                         een aanbieding</a>
                             </li>
                             <li><a href="#illegale">Melden van illegale of inbreukmakende aanbiedings op
-                                        Goods4ukraine.eu</a>
+                                        Goods4Ukraine.eu</a>
                             </li>
                             <li><a href="#garanties">Wij geven geen garanties</a></li>
                             <li><a href="#Vrijwaring">Vrijwaring dienst aanbiedings en beperking aansprakelijkheid
-                                        Goods4ukraine.eu</a>
+                                        Goods4Ukraine.eu</a>
                             </li>
                             <li><a href="#wijzigingen">Wijzigingen</a></li>
                             <li>
@@ -60,25 +60,26 @@
                     <p><br clear="all" /> <a name="gebruiksvoorwaarden"></a></p>
                     <h2>I Algemene Bepalingen</h2>
                     <p><strong>
-                            1. Welkom bij Goods4ukraine.eu! </strong></p>
+                            1. Welkom bij Goods4Ukraine.eu! </strong></p>
 
-                    <p>Welkom bij www.Goods4ukraine.eu.nl (de "<b>Website</b>") en hartelijk dank voor uw
-                        bezoek.Deze 
+                    <p>Welkom bij www.Goods4Ukraine.eu.nl (de "<b>Website</b>") en hartelijk dank voor uw
+                        bezoek.Deze
+
                         gebruiksvoorwaarden (de "<b>Gebruiksvoorwaarden</b>") zijn met ingang van 14 maart 2022 van
-                        toepassing op ieder gebruik van de website Goods4ukraine.eu.nl (de "<b>Website</b>")(zowel via
+                        toepassing op ieder gebruik van de website Goods4Ukraine.eu.nl (de "<b>Website</b>")(zowel via
                         uw
                         computer als via mobiele apparatuur of enige andere software applicatie), op alle diensten die
-                        door Goods4ukraine.eu worden aangeboden en op alle overeenkomsten die Goods4ukraine.eu aangaat
+                        door Goods4Ukraine.eu worden aangeboden en op alle overeenkomsten die Goods4Ukraine.eu aangaat
                         voor het
                         gebruik van de Website en de diensten.</p>
-                    <p>Door het bezoeken van onze Website gaat u akkoord met deze Gebruiksvoorwaarden. Goods4ukraine.eu
+                    <p>Door het bezoeken van onze Website gaat u akkoord met deze Gebruiksvoorwaarden. Goods4Ukraine.eu
                         raadt
                         iedereen die gebruik maakt van de Website of van een van deze diensten (een "<b>Gebruiker</b>")
-                        aan, deze Gebruiksvoorwaarden vooraf te lezen. Goods4ukraine.eu kan deze Gebruiksvoorwaarden van
+                        aan, deze Gebruiksvoorwaarden vooraf te lezen. Goods4Ukraine.eu kan deze Gebruiksvoorwaarden van
                         tijd
                         tot tijd wijzigen. Wij raden u dan ook aan ze regelmatig te lezen.</p>
                     <p>Door een Gebruiker kunnen op de Website producten en diensten worden aangeboden of gezocht, zowel
-                        gratis als tegen betaling aan Goods4ukraine.eu (de "<strong>aanbieding</strong>"). Een
+                        gratis als tegen betaling aan Goods4Ukraine.eu (de "<strong>aanbieding</strong>"). Een
                         aanbieding
                         omvat onder meer de titel en de omschrijving van de aangeboden of gezochte producten of
                         diensten.</p>
@@ -87,7 +88,7 @@
                         wordt uitgelegd hoe we omgaan met uw persoonlijke gegevens en hoe we uw privacy beschermen
                         wanneer u onze Website gebruikt.</p>
                     <p><strong>4. Minderjarigen</strong></p>
-                    <p>De diensten van Goods4ukraine.eu zijn slechts toegankelijk voor minderjarige Gebruikers indien
+                    <p>De diensten van Goods4Ukraine.eu zijn slechts toegankelijk voor minderjarige Gebruikers indien
                         zij
                         daarvoor toestemming hebben gekregen van hun wettelijke vertegenwoordiger of het in het
                         maatschappelijk verkeer gebruikelijk is dat een bepaalde minderjarige van deze leeftijd de
@@ -104,7 +105,7 @@
                         plaatsen op de Website ("<b>Aanbieders</b>") (waaronder e-mailadressen en telefoonnummers) te
                         verzamelen en/of Aanbieders te benaderen voor het aanbieden van eigen producten en/of
                         diensten.</p>
-                    <p>Op de databank met aanbiedings rust het databankrecht van Goods4ukraine.eu. Dit houdt onder meer
+                    <p>Op de databank met aanbiedings rust het databankrecht van Goods4Ukraine.eu. Dit houdt onder meer
                         in
                         dat het de Gebruiker niet is toegestaan een substantieel gedeelte van de inhoud van de databank
                         met aanbiedings op te vragen en te hergebruiken en/of niet-substanti&euml;le delen van de
@@ -112,20 +113,20 @@
                         in de zin van de Databankenwet, tenzij aan de bovengenoemde uitzondering voor persoonlijk
                         gebruik en/of nieuwsberichten is voldaan. Ook is het de Gebruiker niet toegestaan om hyperlinks
                         naar aanbiedings op een andere website weer te geven, tenzij hiervoor voorafgaande
-                        schriftelijke toestemming van Goods4ukraine.eu is verkregen, of tenzij aan de bovengenoemde
+                        schriftelijke toestemming van Goods4Ukraine.eu is verkregen, of tenzij aan de bovengenoemde
                         uitzondering voor persoonlijk gebruik en/of nieuwsberichten is voldaan.  Tenzij
-                        Goods4ukraine.eu daarvoor toestemming heeft gegeven (bijvoorbeeld in het geval van API
+                        Goods4Ukraine.eu daarvoor toestemming heeft gegeven (bijvoorbeeld in het geval van API
                         partners), is
                         het niet toegestaan om aanbiedings op de Website te plaatsen via een geautomatiseerd systeem,
                         of op enige andere wijze dan via de &lsquo;Plaats aanbieding&rsquo; knop.   Het is
                         niet toegestaan om aanbiedings namens of in opdracht van derden te plaatsen, tenzij
-                        Goods4ukraine.eu
-                        daarvoor toestemming heeft gegeven (bijvoorbeeld in het geval van API partners). 
+                        Goods4Ukraine.eu
+                        daarvoor toestemming heeft gegeven (bijvoorbeeld in het geval van API partners).
                         <strong>6. Misbruik van de Website en de gevolgen hiervan</strong>
                     </p>
                     <p>Voor uw veiligheid en om misbruik tegen te gaan worden e-mailadressen afgeschermd door
-                        Goods4ukraine.eu. Uw reactie op een aanbieding en eventuele vervolgberichten tussen koper en
-                        aanbieder worden via de servers van Goods4ukraine.eu verzonden.  Voor het melden van
+                        Goods4Ukraine.eu. Uw reactie op een aanbieding en eventuele vervolgberichten tussen koper en
+                        aanbieder worden via de servers van Goods4Ukraine.eu verzonden.  Voor het melden van
                         illegale en inbreuk
                         makende aanbiedings, beledigende inhoud en andere problemen verzoeken wij u contact op te nemen;
                         zo kunnen wij er samen voor zorgen dat de site zo schoon en
@@ -134,23 +135,23 @@
                         dat een bepaalde Gebruiker niet handelt in overeenstemming met de wet en/of de
                         Gebruiksvoorwaarden en/of de Privacyverklaring, dan kunnen wij &ndash; indien wij daartoe
                         aanleiding zien &ndash; om veiligheidsredenen en ter bescherming van onze Gebruikers onder meer
-                        de onderstaande maatregelen treffen. Goods4ukraine.eu kan deze maatregelen ook treffen indien u
+                        de onderstaande maatregelen treffen. Goods4Ukraine.eu kan deze maatregelen ook treffen indien u
                         op
                         onredelijke wijze gebruik maakt van de Website, bijvoorbeeld indien uw gebruik andere Gebruikers
                         hindert of de goede werking van de Website verstoort:</p>
-                    <blockquote>a. Goods4ukraine.eu kan de desbetreffende Gebruiker uitsluiten van de diensten van
-                        Goods4ukraine.eu of bepaalde functionaliteiten voor deze Gebruiker beperken. U kunt hier denken
+                    <blockquote>a. Goods4Ukraine.eu kan de desbetreffende Gebruiker uitsluiten van de diensten van
+                        Goods4Ukraine.eu of bepaalde functionaliteiten voor deze Gebruiker beperken. U kunt hier denken
                         aan
                         bijvoorbeeld schorsing van de account van de betreffende Gebruiker, het verwijderen van
                         beoordelingen, het beperkt kunnen plaatsen van aanbiedings of reacties; en/ofb.
-                        Goods4ukraine.eu kan een of meerdere aanbiedings van de Gebruiker verwijderen zonder restitutie
+                        Goods4Ukraine.eu kan een of meerdere aanbiedings van de Gebruiker verwijderen zonder restitutie
                         van
                         het door Gebruiker betaald bedrag.
                     </blockquote>
 
                     </p>
-                    <p>Goods4ukraine.eu kan in het kader van de bovengenoemde maatregelen de persoonsgegevens van de
-                        betrokkenen verwerken. Indien daartoe aanleiding is kan Goods4ukraine.eu binnen de grenzen van
+                    <p>Goods4Ukraine.eu kan in het kader van de bovengenoemde maatregelen de persoonsgegevens van de
+                        betrokkenen verwerken. Indien daartoe aanleiding is kan Goods4Ukraine.eu binnen de grenzen van
                         de
                         wet, de persoonsgegevens van de betrokkenen doorgeven, bijvoorbeeld aan de politie. Hoe dit in
                         zijn werk gaat staat verder omschreven in onze <a href="{{ route("privacy")}}">Privacyverklaring</a>.
@@ -161,32 +162,32 @@
                         veilige toegang tot de Website of delen daarvan kan worden verkregen.</p>
                     <p>Alle informatie en getallen op de Website zijn onder voorbehoud van spel- of
                         typefouten.</p>
-                    <p><strong>8. Beperking aansprakelijkheid Goods4ukraine.eu</strong></p>
+                    <p><strong>8. Beperking aansprakelijkheid Goods4Ukraine.eu</strong></p>
 
                     <p>Wij sluiten, voor zover wettelijk toegestaan is, aansprakelijkheid uit voor alle schade die een
                         Gebruiker lijdt door</p>
-                    <p>(i) gebruik van de diensten van Goods4ukraine.eu;</p>
+                    <p>(i) gebruik van de diensten van Goods4Ukraine.eu;</p>
                     <p>(ii) het niet of niet veilig beschikbaar zijn van de Website of delen daarvan;</p>
                     <p>(iii) onjuiste informatie op de Website;</p>
                     <p>(iv) afname van diensten van derden of gebruik van gekochte producten via de Website;</p>
-                    <p>(v) wijzigingen in de diensten van Goods4ukraine.eu of wijzigingen in of op de Website;</p>
+                    <p>(v) wijzigingen in de diensten van Goods4Ukraine.eu of wijzigingen in of op de Website;</p>
                     <p>(vi) het handelen door Gebruiker in strijd met de Gebruiksvoorwaarden en/of toepasselijke wet- en
                         regelgeving.</p>
                     <p>Indien wij om wat voor reden dan ook toch aansprakelijk zijn, dan is onze aansprakelijkheid
-                        beperkt tot maximaal (a) de totale vergoeding die de Gebruiker aan Goods4ukraine.eu heeft
+                        beperkt tot maximaal (a) de totale vergoeding die de Gebruiker aan Goods4Ukraine.eu heeft
                         betaald
                         gedurende de 6 maanden voorafgaand aan de handeling waardoor de aansprakelijkheid is ontstaan,
                         of (b) &euro; 150, al naar gelang wat hoger is.</p>
                     
                     <p><strong>9. Wijzigingen van de diensten en de Website</strong></p>
-                    <p>Goods4ukraine.eu kan de Website of delen daarvan te allen tijde wijzigen. Tevens kunnen wij te
+                    <p>Goods4Ukraine.eu kan de Website of delen daarvan te allen tijde wijzigen. Tevens kunnen wij te
                         allen
                         tijde onze diensten wijzigen of be&euml;indigen. Wij zullen ernaar streven om een dergelijke
                         wijziging of be&euml;indiging binnen een redelijke termijn aan te kondigen voordat deze wordt
                         doorgevoerd. <strong></strong></p>
                     <p><strong>10. Websites en diensten van derden</strong></p>
                     <p>De Website bevat verwijzingen naar de websites van derden (bijvoorbeeld door middel van een
-                        hyperlink of banner). Goods4ukraine.eu heeft geen enkele zeggenschap of invloed op de inhoud van
+                        hyperlink of banner). Goods4Ukraine.eu heeft geen enkele zeggenschap of invloed op de inhoud van
                         deze
                         websites. Op deze websites gelden de (privacy)regels van die betreffende website. Indien u
                         vragen over deze regels van websites van derden heeft, dan verwijzen wij u graag naar hun
@@ -197,9 +198,9 @@
                     <p><strong>11. Klachtenregeling</strong></p>
                     <p>Antwoorden op vragen van Gebruikers zijn te vinden via onze Help en Info-pagina. Kunt u het
                         antwoord op uw vraag niet vinden, neem dan contact op . Mocht u toch een klacht hebben over
-                        Goods4ukraine.eu? . Een Gebruiker kan o.a. een klacht indienen over de vermeende overtreding van
+                        Goods4Ukraine.eu? . Een Gebruiker kan o.a. een klacht indienen over de vermeende overtreding van
                         Verordening (EU) 2019/1150 (voor zover van toepassing), technische problemen en maatregelen of
-                        gedragingen van Goods4ukraine.eu die aanzienlijke gevolgen voor de Gebruiker hebben. Klachten
+                        gedragingen van Goods4Ukraine.eu die aanzienlijke gevolgen voor de Gebruiker hebben. Klachten
                         over een gebrek in de dienstverlening dienen tijdig na ontdekking te worden ingediend, waarbij
                         een termijn van 2 maanden in ieder geval tijdig zal zijn. Klachten dienen volledig en duidelijk
                         omschreven te worden ingediend. Wij zullen ernaar streven binnen 14 dagen na het indienen van de
@@ -209,34 +210,34 @@
                             href="https://www.thuiswinkel.org/" target="_blank">Nederlandse Thuiswinkel Organisatie.</a>
                     </p><br></p>
                     <p><strong>12. Overige bepalingen</strong></p>
-                    <p>Goods4ukraine.eu kan de Gebruiksvoorwaarden of delen daarvan te allen tijde wijzigen.
-                        Goods4ukraine.eu zal
+                    <p>Goods4Ukraine.eu kan de Gebruiksvoorwaarden of delen daarvan te allen tijde wijzigen.
+                        Goods4Ukraine.eu zal
                         ernaar streven om een dergelijke wijziging binnen redelijke termijn voor inwerkingtreding aan te
                         kondigen. De wijzingen worden van kracht binnen redelijke termijn nadat deze zijn aangekondigd,
-                        of nadat u na de wijziging opnieuw van de Website en/of de diensten van Goods4ukraine.eu gebruik
+                        of nadat u na de wijziging opnieuw van de Website en/of de diensten van Goods4Ukraine.eu gebruik
                         heeft gemaakt, al naar gelang wat eerder plaatsvindt.</p>
                     <p> Indien wij een bepaling in de Gebruiksvoorwaarden niet afdwingen, dan heeft dat niet tot
                         gevolg dat wij afstand doen van het recht dit op een later tijdstip of jegens een andere
                         Gebruiker wel af te dwingen. Afspraken die afwijken van hetgeen is bepaald in de
-                        Gebruiksvoorwaarden zijn enkel geldig indien deze schriftelijk door Goods4ukraine.eu zijn
+                        Gebruiksvoorwaarden zijn enkel geldig indien deze schriftelijk door Goods4Ukraine.eu zijn
                         bevestigd.
                         Indien een of meerdere bepalingen van de Gebruiksvoorwaarden door een bevoegde rechter ongeldig
                         wordt verklaard, dan laat dit de overige bepalingen van de Gebruiksvoorwaarden onverlet.
                         
                     </p>
-                    <p>Kennisgevingen aan Goods4ukraine.eu (anders dan inzake inbreukmakende of op andere wijze
+                    <p>Kennisgevingen aan Goods4Ukraine.eu (anders dan inzake inbreukmakende of op andere wijze
                         onrechtmatige
-                        aanbiedings) kunnen worden gericht aan Goods4ukraine.eu B.V., Wibautstraat 224, 1097 DN te
+                        aanbiedings) kunnen worden gericht aan Goods4Ukraine.eu B.V., Wibautstraat 224, 1097 DN te
                         Amsterdam. Kennisgevingen aan Gebruikers zullen worden gestuurd naar het opgegeven e-mailadres,
                         of per aangetekende post ingeval hiertoe aanleiding is en een adres beschikbaar is.
                         Kennisgevingen gedaan per aangetekende post zullen worden geacht te zijn ontvangen 5 (vijf)
                         werkdagen na de datum van verzending.</p>
-                    <p>Goods4ukraine.eu is te allen tijde gerechtigd om haar rechten en verplichtingen uit de
+                    <p>Goods4Ukraine.eu is te allen tijde gerechtigd om haar rechten en verplichtingen uit de
                         overeenkomsten
-                        die betrekking hebben op de diensten van Goods4ukraine.eu over te dragen aan een van haar
+                        die betrekking hebben op de diensten van Goods4Ukraine.eu over te dragen aan een van haar
                         groepsvennootschappen. Gebruikers zullen hierover worden ge&iuml;nformeerd.</p>
-                    <p>Deze Gebruiksvoorwaarden vormen de hele overeenkomst tussen u en Goods4ukraine.eu vervangen alle
-                        eerdere overeenkomsten. De overeenkomsten die volgen uit alle diensten van Goods4ukraine.eu en
+                    <p>Deze Gebruiksvoorwaarden vormen de hele overeenkomst tussen u en Goods4Ukraine.eu vervangen alle
+                        eerdere overeenkomsten. De overeenkomsten die volgen uit alle diensten van Goods4Ukraine.eu en
                         de
                         Gebruiksvoorwaarden worden beheerst door Nederlands recht. In het geval van een geschil
                         voortvloeiend uit deze overeenkomsten of uit de Gebruiksvoorwaarden, zal enkel de rechtbank te
@@ -247,7 +248,7 @@
                             target="_blank">Europees
                             ODR Platform.</a> Indien de Gebruiker handelt als consument (een natuurlijk persoon die niet
                         handelt in de uitoefening van beroep of bedrijf), dan heeft deze Gebruiker verder de optie om
-                        binnen een maand nadat Goods4ukraine.eu zich op de bevoegdheid van de rechtbank Amsterdam
+                        binnen een maand nadat Goods4Ukraine.eu zich op de bevoegdheid van de rechtbank Amsterdam
                         beroept,
                         voor beslechting van het geschil door de volgens de wet bevoegde rechter te kiezen.
                     </p>
@@ -351,27 +352,27 @@
                         niet toegestaan een disclaimer in de aanbieding op te nemen met betrekking tot de echtheid van
                         het product dat in de aanbieding wordt aangeboden. Aanbieders dienen zich ervan te
                         vergewissen dat hun producten echt zijn en verhandeld mogen worden, alvorens ze aan te bieden op
-                        Goods4ukraine.eu.  <a name="plaatsen"></a><strong>3. Het plaatsen van een
+                        Goods4Ukraine.eu.  <a name="plaatsen"></a><strong>3. Het plaatsen van een
                             aanbieding</strong>3.1.
-                        Mijn Goods4ukraine.eu</p>
+                        Mijn Goods4Ukraine.eu</p>
                     <p>Een aanbieder plaatst zijn aanbieding via de knop 'Plaats aanbieding' op de Website. Voordat
                         een aanbieder een aanbieding kan plaatsen dient hij eerst in te loggen.</p>
                     <p>Bij het aanmaken van een gebruikersaccount is het niet toegestaan om een aanbiedernaam te
                         kiezen die een [url] of een gedeelte van een [url] bevat.  Het is niet toegestaan om
                         uw inloggegevens aan derden te verstrekken. Het is niet toegestaan om inloggegevens van derden
                         te gebruiken voor het plaatsen van aanbiedings.</p>
-                    
-                    <p>3.2. Totstandkoming aanbiedingovereenkomst tussen Goods4ukraine.eu en aanbiedera.
+
+                    <p>3.2. Totstandkoming aanbiedingovereenkomst tussen Goods4Ukraine.eu en aanbieders.
                         Nadat
                         de aanbieder heeft ingelogd, kan hij via de button 'Plaats aanbieding' een aanbieding
                         aanmaken. Tijdens het aanmaken van de aanbieding kan de aanbieder onder de knop &lsquo;Bekijk
                         aanbieding&rsquo; een voorbeeld van de aanbieding zien. De aanbieder kan de aanbieding
                         naar aanleiding van dit voorbeeld wijzigen. Na het zien van het voorbeeld kan op de button
                         &lsquo;Plaats aanbieding&rsquo; worden geklikt. Hiermee komt de aanbiedingovereenkomst (de
-                        <strong>"aanbiedingovereenkomst"</strong>) tussen Goods4ukraine.eu en de aanbieder bij gratis
+                        <strong>"aanbiedingovereenkomst"</strong>) tussen Goods4Ukraine.eu en de aanbieder bij gratis
                         aanbiedings tot stand. Bij betaalde aanbiedings komt de aanbiedingovereenkomst tot stand op
-                        het moment dat de betaalprocedure op de Website is doorlopen.<strong> 
-                        </strong>b. Goods4ukraine.eu bewaart alle gegevens van iedere aanbiedingovereenkomst gedurende
+                        het moment dat de betaalprocedure op de Website is doorlopen.<strong>
+                        </strong>b. Goods4Ukraine.eu bewaart alle gegevens van iedere aanbiedingovereenkomst gedurende
                         14
                         dagen na verwijdering van de aanbieding. Daarna zullen wij de gegevens van de
                         aanbiedingovereenkomst bewaren zoals is beschreven in onze <a
@@ -385,7 +386,7 @@
                     </p>
                     <p>Indien het product dat in de aanbieding wordt aangeboden, wordt verkocht, dient de aanbieding
                         te worden verwijderd. Bij verkoop van het product dat in de aanbieding wordt aangeboden eindigt
-                        de aanbiedingovereenkomst tussen u en Goods4ukraine.eu, en is Goods4ukraine.eu haar
+                        de aanbiedingovereenkomst tussen u en Goods4Ukraine.eu, en is Goods4Ukraine.eu haar
                         verplichtingen onder
                         de aanbiedingovereenkomst volledig nagekomen.
                         3.4. Opvallen
@@ -404,26 +405,26 @@
                         4.2 Het ontbindingsrecht is in ieder geval niet van toepassing op aanbiedings die op grond van
                         het bepaalde in de Gebruiksvoorwaarden (waaronder op grond van Hoofdstuk I, artikel 6) (i) van
                         de Website zijn verwijderd of (ii) zijn geplaatst door Gebruikers die zijn uitgesloten van de
-                        diensten van Goods4ukraine.eu of waarvoor bepaalde beperkingen gelden.<br>
+                        diensten van Goods4Ukraine.eu of waarvoor bepaalde beperkingen gelden.<br>
                         <br>
                         4.3 Tenzij anders overeengekomen gaat u ermee akkoord dat een aanbieding direct, tijdens de
                         wettelijke ontbindingstermijn, wordt geplaatst. Dit heeft gevolgen voor een eventueel van
                         toepassing zijnde ontbindingsrecht. U verklaart tevens dat u afstand doet van een eventueel van
-                        toepassing zijnde ontbindingsrecht, zodra Goods4ukraine.eu de aanbiedingovereenkomst is
+                        toepassing zijnde ontbindingsrecht, zodra Goods4Ukraine.eu de aanbiedingovereenkomst is
                         nagekomen.<br>
                         <br>
                         4.4 Indien het in artikel 4.1 bedoelde ontbindingsrecht van toepassing is op de door u
                         geplaatste aanbieding dan gaat u ermee akkoord dat indien u gebruik maakt van uw
-                        ontbindingsrecht, u aan Goods4ukraine.eu een evenredige vergoeding verschuldigd bent voor de
+                        ontbindingsrecht, u aan Goods4Ukraine.eu een evenredige vergoeding verschuldigd bent voor de
                         door
-                        Goods4ukraine.eu geleverde diensten. In bepaalde gevallen zal deze evenredige vergoeding worden
+                        Goods4Ukraine.eu geleverde diensten. In bepaalde gevallen zal deze evenredige vergoeding worden
                         berekend op basis van het aantal dagen dat bij uw gebruik van uw ontbindingsrecht resteert van
                         de overeengekomen aanbiedingperiode en/of het gemiddeld aantal biedingen op producten of
-                        diensten voor aanbiedings in dezelfde categorie, zoals door Goods4ukraine.eu van tijd tot tijd
+                        diensten voor aanbiedings in dezelfde categorie, zoals door Goods4Ukraine.eu van tijd tot tijd
                         wordt
                         vastgesteld.<br>
                         <br>
-                        4.5 Indien u gebruik maakt van het ontbindingsrecht zal Goods4ukraine.eu de prijs van de dienst,
+                        4.5 Indien u gebruik maakt van het ontbindingsrecht zal Goods4Ukraine.eu de prijs van de dienst,
                         verminderd met een evenredige vergoeding, binnen 14 dagen na uw ontbindingsverzoek aan u
                         terugbetalen. Klik [hier] voor meer informatie over de uitoefening van het ontbindingsrecht.
                     </p>
@@ -432,11 +433,11 @@
                         op basis van artikel 38 van de Wet op de omzetbelasting verplicht prijzen inclusief btw aan te
                         geven in een aanbieding.
                         <a name="illegale"></a><strong>7. Melden van illegale of inbreuk makende aanbiedings aan
-                            Goods4ukraine.eu</strong><strong>
+                            Goods4Ukraine.eu</strong><strong>
                         </strong>7.1. Meldingen van aanbiedings in strijd met de Gebruiksvoorwaarden
                         aanbiedings die op andere wijze in strijd zijn met de Gebruiksvoorwaarden, zoals aanbiedings
                         waarin illegale producten worden aangeboden of die smadelijke inhoud hebben, kunnen worden
-                        gemeld. b. Misbruik van het Meld aan Goods4ukraine.eu-systeem
+                        gemeld. b. Misbruik van het Meld aan Goods4Ukraine.eu-systeem
                         wordt gezien als een handeling in strijd met de Gebruiksvoorwaarden en kan ertoe leiden dat wij
                         de onder hoofdstuk I, artikel 6 beschreven maatregelen jegens de betrokken melder treffen.
                         
@@ -447,14 +448,14 @@
                         geen controle uit op de kwaliteit van de inhoud van de aanbieding, de veiligheid of de
                         rechtmatigheid van de geadverteerde producten of diensten, de juistheid van de aanbiedingen, de
                         bevoegdheid van Aanbieders om producten te verkopen of diensten aan te bieden en/of de
-                        bevoegdheid van Gebruikers om producten te kopen of de diensten af te nemen. Goods4ukraine.eu
+                        bevoegdheid van Gebruikers om producten te kopen of de diensten af te nemen. Goods4Ukraine.eu
                         geeft
-                        daarover geen garantie. 
-                        8.2. Goods4ukraine.eu kan u ook niet garanderen dat de producten of diensten die door Aanbieders
-                        op de Website worden aangeboden voldoen aan uw verwachtingen.<strong> 
+                        daarover geen garantie.
+                        8.2. Goods4Ukraine.eu kan u ook niet garanderen dat de producten of diensten die door Aanbieders
+                        op de Website worden aangeboden voldoen aan uw verwachtingen.<strong>
                         </strong> <a name="Vrijwaring"></a> <strong>9. Vrijwaring dienst aanbiedings en beperking
-                            aansprakelijkheid Goods4ukraine.eu
-                        </strong>9.1. Iedere Gebruiker vrijwaart Goods4ukraine.eu voor aanspraken van derden met
+                            aansprakelijkheid Goods4Ukraine.eu
+                        </strong>9.1. Iedere Gebruiker vrijwaart Goods4Ukraine.eu voor aanspraken van derden met
                         betrekking
                         tot schade geleden door;
                     </p>
@@ -465,21 +466,22 @@
                         van de) aanbieding en/of het geleverde product.
                     </p>
                     <p>
-                        9.2.&nbsp; De voorwaarden voor de beperking van de aansprakelijkheid van Goods4ukraine.eu zijn
+                        9.2.&nbsp; De voorwaarden voor de beperking van de aansprakelijkheid van Goods4Ukraine.eu zijn
                         opgenomen hoofdstuk I, artikel 8.<strong>
                         </strong> <a name="wijzigingen"></a><strong>10. Wijzigingen
-                        </strong>10.1. Goods4ukraine.eu kan de Website of delen daarvan, waaronder de aanbiedingduur,
+                        </strong>10.1. Goods4Ukraine.eu kan de Website of delen daarvan, waaronder de aanbiedingduur,
                         verlengingsmogelijkheden, de indeling van de categorieën, de indeling van de Website en
                         zoekopties, te allen tijde en naar eigen inzicht wijzigen. Wij zullen ernaar streven om een
                         dergelijke wijziging aan te kondigen binnen redelijke termijn voordat deze worden doorgevoerd.
-                        
-                        </strong>11.1. Goods4ukraine.eu kan de aanbieding en de inhoud daarvan gebruiken voor eigen
+
+                        </strong>11.1. Goods4Ukraine.eu kan de aanbieding en de inhoud daarvan gebruiken voor eigen
+
                         publiciteitsdoeleinden. Dit houdt onder andere in dat een aanbieding of een gedeelte daarvan
                         door ons via andere distributiekanalen kan worden getoond, zoals op websites van andere
                         Groepsvennootschappen (de <a href="https://kobaltdigital.nl/"
                             target="_blank">hier</a> vermelde ondernemingen kwalificeren als Groepsvennootschappen,
                         websites van derden, in gedrukte media of op televisie.
-                        11.2. Door het plaatsen van een aanbieding verstrek je Goods4ukraine.eu automatisch een
+                        11.2. Door het plaatsen van een aanbieding verstrek je Goods4Ukraine.eu automatisch een
                         kosteloze,
                         wereldwijde, onherroepelijke, sub-licentieerbare en overdraagbare licentie om de aanbieding
                         en/of (delen van) de inhoud daarvan te gebruiken, te verveelvoudigen, te verspreiden en openbaar
@@ -497,16 +499,12 @@
                         derden.
                         11.5. De Website bevat verwijzingen (bijvoorbeeld door middel van een hyperlink of banner) naar
                         de websites van derden. Deze verwijzingen kunnen ook worden geplaatst in of naast een
-                        aanbieding. Goods4ukraine.eu heeft geen enkele zeggenschap of invloed op de inhoud en het beleid
+                        aanbieding. Goods4Ukraine.eu heeft geen enkele zeggenschap of invloed op de inhoud en het beleid
                         van
                         deze websites. Op deze websites gelden de (privacy)regels van die betreffende
                         website.
-                        
+
                     </p>
-
-
-
-
                 </div>
             </div>
         </div>

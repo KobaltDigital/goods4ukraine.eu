@@ -5,7 +5,7 @@ import {
 if (document.getElementById('map_canvas')) {
     const map = new google.maps.Map(document.getElementById('map_canvas'), {
         zoom: 7,
-        maxZoom: 10,
+        maxZoom: 14,
     });
 
     const infoWindow = new google.maps.InfoWindow({

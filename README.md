@@ -8,17 +8,17 @@ The Goods4Ukraine platform was created specifically to help refugees from Ukrain
 
 You register with your e-mail address so that you can edit or close your advertisement if necessary. If someone responds to your offer, you will receive an e-mail. You can choose to get in touch with that person yourself.
 
-- [About](https://goods4ukraine.eu/about).
-- [Presskit](https://goods4ukraine.eu/press).
-- [Platform rules](https://goods4ukraine.eu/rules).
-- [Terms of use](https://goods4ukraine.eu/terms-of-use).
-- [Privacy](https://goods4ukraine.eu/privacy).
-- [Contact](https://goods4ukraine.eu/contact).
+- [About](https://goods4ukraine.eu/about)
+- [Presskit](https://goods4ukraine.eu/press)
+- [Platform rules](https://goods4ukraine.eu/rules)
+- [Terms of use](https://goods4ukraine.eu/terms-of-use)
+- [Privacy](https://goods4ukraine.eu/privacy)
+- [Contact](https://goods4ukraine.eu/contact)
 
 ## Credits
 * **Reinier Sierag** - [Sierag](https://github.com/sierag)
 * **Arne van Hoorn** - [ArnevanHoorn](https://github.com/arnevanhoorn)
-* **Huub Duinmeijer** [HuubDuinmeijer](https://github.com/huubduinmeijer)
+* **Huub Duinmeijer** - [HuubDuinmeijer](https://github.com/huubduinmeijer)
 * **Kylian Wester** - [KylWes](https://github.com/kylwes)
 * **Brenda Koning**
 * **Milan Bakker** - [BakkerMilan](https://github.com/bakkermilan)

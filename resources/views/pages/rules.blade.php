@@ -10,10 +10,10 @@
                         <h1>Verboden of verdachte objecten en diensten</h1>
 
                         <p class="intro">
-                            Goods4ukraine.eu is een gratis advertentiesite die vraag en aanbod samenbrengt.
+                            Goods4Ukraine.eu is een gratis advertentiesite die vraag en aanbod samenbrengt.
                         </p>
                         <p>
-                            Goods4ukraine.eu stelt regels met betrekking tot het plaatsen van
+                            Goods4Ukraine.eu stelt regels met betrekking tot het plaatsen van
                             advertenties en het gebruik van haar platform. In sommige gevallen wijkt goods4ukraine.eu
                             hierbij af van
                             bovenstaand uitgangspunt en verbieden deze regels het aanbieden van sommige objecten en

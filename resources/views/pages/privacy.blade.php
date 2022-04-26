@@ -2,17 +2,17 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="mb-10">
-                <x-nav-sub />          
+                <x-nav-sub />
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h1>Privacyverklaring</h1>
                 <p>Geplaatst: 14 maart 2022.</p>
                 <p class="intro">
                     Kobalt Digital B.V. ('Kobalt', 'we', 'wij', 'ons' of 'onze'), Koelmalaan 350, unit 3.08 te
-                    Alkmaar, is de verwerkingsverantwoordelijke en exploitant van goods4ukraine.eu.
+                    Alkmaar, is de verwerkingsverantwoordelijke en exploitant van Goods4Ukraine.eu.
                 </p>
                 <p class="intro">
-                    Goods4ukraine.eu spant zich in om uw privacy te beschermen. In deze privacyverklaring wordt
+                    Goods4Ukraine.eu spant zich in om uw privacy te beschermen. In deze privacyverklaring wordt
                     uitgelegd
                     hoe wij uw persoonsgegevens verzamelen, gebruiken, verstrekken, bewaren en beschermen.
                 </p>
@@ -20,13 +20,13 @@
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h2>Reikwijdte</h2>
                 <p>
-                    Deze privacyverklaring is van toepassing op de goods4ukraine.eu-website(s), -toepassingen, -diensten
+                    Deze privacyverklaring is van toepassing op de Goods4Ukraine.eu-website(s), -toepassingen, -diensten
                     en -tools (gezamenlijk aangeduid als “Diensten”) waarin naar deze privacyverklaring wordt
                     verwezen, ongeacht hoe u er toegang toe krijgt of ze gebruikt, inclusief met behulp van mobiele
                     apparaten.
                 </p>
                 <p>
-                    Deze privacyverklaring geldt voor alle goods4ukraine.eu-websites, -toepassingen, -diensten en -tools
+                    Deze privacyverklaring geldt voor alle Goods4Ukraine.eu-websites, -toepassingen, -diensten en -tools
                     (gezamenlijk “Diensten” genoemd) waarin naar deze privacyverklaring wordt verwezen, ongeacht hoe
                     u er toegang toe krijgt of ze gebruikt, inclusief met behulp van mobiele apparaten.
                 </p>
@@ -193,17 +193,17 @@
                     Wat gebeurt er wanneer u uw persoonsgegevens deelt op onze sites of in onze toepassingen?
                 </h3>
                 <p>
-                    Andere gebruikers hebben toegang tot de informatie die u op goods4ukraine.eu deelt. Andere
+                    Andere gebruikers hebben toegang tot de informatie die u op Goods4Ukraine.eu deelt. Andere
                     gebruikers kunnen bijvoorbeeld uw advertenties, feedback, beoordelingen en bijbehorende commentaren
                     zien. Andere gebruikers kunnen ook gegevens zien die u deelt in uw profiel.
                 </p>
                 <p>
                     Wanneer u onze Diensten gebruikt, kan uw openbare gebruikersnaam worden weergegeven, openbaar
-                    beschikbaar zijn en worden gekoppeld aan al uw openbare goods4ukraine.eu-activiteit. In
+                    beschikbaar zijn en worden gekoppeld aan al uw openbare Goods4Ukraine.eu-activiteit. In
                     kennisgevingen die naar andere gebruikers worden verzonden over verdachte activiteit en in
                     kennisgevingen over schendingen op onze sites, kan worden verwezen naar uw openbare gebruikersnaam
                     en naar specifieke objecten. Als u uw naam aan uw gebruikersnaam koppelt, kunnen personen aan wie u
-                    uw naam bekend hebt gemaakt, uw goods4ukraine.eu-activiteiten mogelijk persoonlijk identificeren.
+                    uw naam bekend hebt gemaakt, uw Goods4Ukraine.eu-activiteiten mogelijk persoonlijk identificeren.
                 </p>
                 <p>
                     Aangezien u op onze website ook in staat wordt gesteld om direct in contact te komen met een koper
@@ -213,7 +213,7 @@
                     dan ook niet garanderen.
                 </p>
                 <h3>
-                    Uw verantwoordelijkheden ten aanzien van gegevens die u ontvangt op goods4ukraine.eu
+                    Uw verantwoordelijkheden ten aanzien van gegevens die u ontvangt op Goods4Ukraine.eu
                 </h3>
                 <p>
                     Wanneer u in contact komt met een andere gebruiker en uw persoonsgegevens van de andere gebruiker
@@ -222,8 +222,8 @@
                     de toepasselijke wetgeving.
                 </p>
                 <p>
-                    U mag de persoonsgegevens waartoe u toegang hebt, alleen gebruiken voor goods4ukraine.eu-transacties
-                    of voor andere diensten die via goods4ukraine.eu worden aangeboden (zoals verzending, klachten over
+                    U mag de persoonsgegevens waartoe u toegang hebt, alleen gebruiken voor Goods4Ukraine.eu-transacties
+                    of voor andere diensten die via Goods4Ukraine.eu worden aangeboden (zoals verzending, klachten over
                     fraude en communicatie met andere leden), en voor doeleinden waarvoor de gebruiker op wie de
                     gegevens betrekking hebben, expliciet toestemming heeft gegeven. Persoonsgegevens van andere
                     gebruikers, waartoe u toegang hebt, voor enig ander doel gebruiken, houdt een schending van onze
@@ -234,7 +234,7 @@
                 </h3>
                 <p>
                     Wij tolereren geen misbruik van onze Website. U heeft geen toestemming om andere gebruikers van
-                    goods4ukraine.eu toe te voegen aan uw mailinglist (e-mail of post), zelfs niet wanneer een gebruiker
+                    Goods4Ukraine.eu toe te voegen aan uw mailinglist (e-mail of post), zelfs niet wanneer een gebruiker
                     iets van u heeft gekocht, tenzij de betreffende gebruiker daar uitdrukkelijk mee heeft ingestemd.
                     Mocht u merken dat iemand misbruik maakt van onze website (spam of spoof e-mails), dan verzoeken wij
                     u om een e-mail te sturen naar hello@goods4ukraine.eu.

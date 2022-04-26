@@ -120,7 +120,7 @@
                     en advertenties en om anonieme website statistieken en analyses op te stellen. Wij staan deze
                     dienstverleners niet toe dat zij op onze websites of via onze diensten, applicaties of hulpmiddelen
                     persoonlijke informatie verzamelen voor hun eigen doeleinden. Deze dienstverleners zijn gebonden aan
-                    een geheimhoudingsovereenkomst met goods4ukraine.eu en onderworpen aan andere juridische restricties met
+                    een geheimhoudingsovereenkomst met Goods4Ukraine.eu en onderworpen aan andere juridische restricties met
                     betrekking tot het gebruik en verzamelen van persoonlijke informatie.
 
                 </p>
