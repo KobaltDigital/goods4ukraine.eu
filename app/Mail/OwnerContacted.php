@@ -31,6 +31,7 @@ class OwnerContacted extends Mailable
     public function build()
     {
         return $this
+            ->replyTo($this->data->email)
             ->subject(__('Reaction on ad: :ad', ['ad' => $this->ad->title]))
             ->markdown('emails.owner-contacted');
     }
