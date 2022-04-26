@@ -1,6 +1,5 @@
 <x-layout>
     <x-auth-card>
-
         <h1 class="mb-4">{{ __("Forgot your password?") }}</h1>
 
         <div class="mb-4 text-sm text-black">
@@ -15,7 +14,6 @@
 
         <form method="POST" action="{{ route('password.email') }}">
             @csrf
-
 
             <!-- Email Address -->
             <div>

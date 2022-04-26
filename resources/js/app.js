@@ -4,7 +4,6 @@ import Alpine from 'alpinejs';
 
 require('./components/map');
 
-
 window.Alpine = Alpine;
 
 Alpine.start();

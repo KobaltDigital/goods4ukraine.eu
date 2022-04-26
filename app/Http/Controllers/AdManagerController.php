@@ -11,8 +11,6 @@ use App\Actions\Ads\UpdateAd;
 use App\Actions\Ads\DestroyAd;
 use App\Actions\Ads\GetOwnAds;
 use App\Actions\Ads\ReserveAd;
-use App\Actions\GetClientLocation;
-use App\Actions\Ads\GetFilteredAds;
 use App\Http\Requests\StoreAdRequest;
 
 class AdManagerController extends Controller

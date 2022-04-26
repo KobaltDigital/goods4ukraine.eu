@@ -1,6 +1,5 @@
 <x-layout>
     <x-auth-card>
-
         <h1 class="mb-4">{{ __("Login") }}</h1>
 
         <form method="POST" action="{{ route('login') }}">
@@ -9,7 +8,6 @@
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
             @csrf
 
             <!-- Email Address -->
@@ -24,9 +22,9 @@
                 <x-label for="password" required="required" :value="__('Password')" />
 
                 <x-input.text id="password" required="required" class="block w-full mt-1"
-                                type="password"
-                                name="password"
-                                autocomplete="current-password" />
+                    type="password"
+                    name="password"
+                    autocomplete="current-password" />
             </div>
 
             <!-- Remember Me -->
@@ -56,6 +54,6 @@
         <div class="my-3">
             {{ __('Create an account in a few seconds.')}}
         </div>
-        <x-button-secondary href="{{ route('register') }}">{{ __('Register') }}</x-button>
+        <x-button-secondary href="{{ route('register') }}">{{ __('Register') }}</x-button-secondary>
     </x-auth-card>
 </x-layout>
