@@ -6347,7 +6347,7 @@ function showPosition(position) {
   latitude.value = position.coords.latitude;
   longitude.value = position.coords.longitude; // using other key because this is an open key, not restricted.
 
-  var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyCxzPwEB7A9i6Fwvi41SrVbApygce3Sq9c";
+  var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyBR-4XYGeEEnH5A0L3qVMt1yjcY8Exd82k";
   console.log('Checking ' + url);
   fetch(url).then(function (response) {
     return response.json();
@@ -6411,7 +6411,7 @@ __webpack_require__.r(__webpack_exports__);
 if (document.getElementById('map_canvas')) {
   var map = new google.maps.Map(document.getElementById('map_canvas'), {
     zoom: 7,
-    maxZoom: 10
+    maxZoom: 14
   });
   var infoWindow = new google.maps.InfoWindow({
     content: '',
