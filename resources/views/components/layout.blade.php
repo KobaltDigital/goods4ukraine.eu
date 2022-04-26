@@ -8,7 +8,7 @@
     <meta property="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}" />
 
     @if (request()->routeIs('ads.show'))
-    @stack('tags')
+        @stack('tags')
     @else
     <title>{{ config('app.name', 'Laravel') }}</title>
     <meta property="og:site_name" content="Goods4Ukraine.eu">

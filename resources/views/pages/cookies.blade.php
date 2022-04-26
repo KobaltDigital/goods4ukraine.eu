@@ -2,7 +2,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="mb-10">
-                <x-nav-sub />
+                <x-nav-sub />          
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 prose max-w-none">
                 <h1>Cookiebeleid</h1>
@@ -54,7 +54,7 @@
                     blijft gebruiken nadat we u van uw van transparante informatie over het gebruik van deze
                     technologieën hebben voorzien via dit beleid, en door u de mogelijkheid te geven om een keuze te
                     maken om deze technologieën uit te schakelen zoals hierboven omschreven, verkrijgen we uw
-                    toestemming voor het gebruik van deze technologieën om informatie te verzamelen en op te slaan.
+                    toestemming voor het gebruik van deze technologieën om informatie te verzamelen en op te slaan. </p>
                 </p>
             </div>
             <div class="bg-white p-6 overflow-hidden shadow rounded-lg mb-10 lg:mb-20 prose max-w-none">

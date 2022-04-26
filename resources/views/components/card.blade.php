@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="mt-1 text-sm text-black">
-                    {{ Str::limit($ad->description_translated, 150) }}
+                    {{ \Illuminate\Support\Str::limit($ad->description_translated, 150) }}
                 </div>
                 <div class="flex justify-between">
                     <div class="flex items-center text-accent">

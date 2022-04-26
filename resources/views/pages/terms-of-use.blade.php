@@ -64,6 +64,7 @@
 
                     <p>Welkom bij www.Goods4Ukraine.eu.nl (de "<b>Website</b>") en hartelijk dank voor uw
                         bezoek.Deze
+
                         gebruiksvoorwaarden (de "<b>Gebruiksvoorwaarden</b>") zijn met ingang van 14 maart 2022 van
                         toepassing op ieder gebruik van de website Goods4Ukraine.eu.nl (de "<b>Website</b>")(zowel via
                         uw
@@ -92,7 +93,7 @@
                         daarvoor toestemming hebben gekregen van hun wettelijke vertegenwoordiger of het in het
                         maatschappelijk verkeer gebruikelijk is dat een bepaalde minderjarige van deze leeftijd de
                         betreffende handeling zelfstandig verricht.</p>
-
+                    
                     <p><strong>5. Niet toegestaan gebruik van de Website</strong></p>
                     <p>De inhoud van de Website mag door de Gebruiker niet worden gekopieerd, gereproduceerd en/of
                         openbaar gemaakt worden behoudens RSS feeds voor persoonlijk gebruik en/of nieuwsberichten tot
@@ -177,7 +178,7 @@
                         betaald
                         gedurende de 6 maanden voorafgaand aan de handeling waardoor de aansprakelijkheid is ontstaan,
                         of (b) &euro; 150, al naar gelang wat hoger is.</p>
-
+                    
                     <p><strong>9. Wijzigingen van de diensten en de Website</strong></p>
                     <p>Goods4Ukraine.eu kan de Website of delen daarvan te allen tijde wijzigen. Tevens kunnen wij te
                         allen
@@ -222,7 +223,7 @@
                         bevestigd.
                         Indien een of meerdere bepalingen van de Gebruiksvoorwaarden door een bevoegde rechter ongeldig
                         wordt verklaard, dan laat dit de overige bepalingen van de Gebruiksvoorwaarden onverlet.
-
+                        
                     </p>
                     <p>Kennisgevingen aan Goods4Ukraine.eu (anders dan inzake inbreukmakende of op andere wijze
                         onrechtmatige
@@ -361,7 +362,7 @@
                         uw inloggegevens aan derden te verstrekken. Het is niet toegestaan om inloggegevens van derden
                         te gebruiken voor het plaatsen van aanbiedings.</p>
 
-                    <p>3.2. Totstandkoming aanbiedingovereenkomst tussen Goods4Ukraine.eu en aanbiedera.
+                    <p>3.2. Totstandkoming aanbiedingovereenkomst tussen Goods4Ukraine.eu en aanbieders.
                         Nadat
                         de aanbieder heeft ingelogd, kan hij via de button 'Plaats aanbieding' een aanbieding
                         aanmaken. Tijdens het aanmaken van de aanbieding kan de aanbieder onder de knop &lsquo;Bekijk
@@ -394,7 +395,7 @@
                         laten 'opvallen', 'omhoog te plaatsen', etc. De regels hiervoor zijn beschreven op de
                         bijbehorende webpagina's.</p>
                     <p>
-
+                        
                         <a name="ontbindingsrecht"></a>
                     <p><strong>4. Ontbindingsrecht</strong><br>
                         <br>
@@ -439,7 +440,7 @@
                         gemeld. b. Misbruik van het Meld aan Goods4Ukraine.eu-systeem
                         wordt gezien als een handeling in strijd met de Gebruiksvoorwaarden en kan ertoe leiden dat wij
                         de onder hoofdstuk I, artikel 6 beschreven maatregelen jegens de betrokken melder treffen.
-
+                        
                         7.2. Meldingen ingeval van inbreuk op intellectuele eigendomsrechten
                         <a name="garanties"></a><strong>8. Wij geven geen garanties</strong> <strong>
                         </strong>8.1. Aanbieders en Gebruikers dienen zelf voldoende onderzoek te verrichten en zich
@@ -474,6 +475,7 @@
                         dergelijke wijziging aan te kondigen binnen redelijke termijn voordat deze worden doorgevoerd.
 
                         </strong>11.1. Goods4Ukraine.eu kan de aanbieding en de inhoud daarvan gebruiken voor eigen
+
                         publiciteitsdoeleinden. Dit houdt onder andere in dat een aanbieding of een gedeelte daarvan
                         door ons via andere distributiekanalen kan worden getoond, zoals op websites van andere
                         Groepsvennootschappen (de <a href="https://kobaltdigital.nl/"
@@ -487,7 +489,7 @@
                         promotie- en/of aanbiedingdoeleinden. Je garandeert dat je bevoegd bent deze licentie te
                         verstrekken.
 
-
+                        
                         11.3. Wij kunnen voor publiciteitsdoeleinden derde partijen toegang verschaffen tot een
                         aanbieding om het hun mogelijk te maken deze en andere aanbiedings te promoten op websites van
                         derden, via e-mail en door middel van andere kanalen. Deze promoties kunnen (delen van) de
@@ -501,6 +503,7 @@
                         van
                         deze websites. Op deze websites gelden de (privacy)regels van die betreffende
                         website.
+
                     </p>
                 </div>
             </div>
