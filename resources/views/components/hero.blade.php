@@ -1,4 +1,3 @@
-
 <div class="relative">
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8 md:my-10">
         <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
@@ -15,7 +14,6 @@
                 </h2>
                 <div class="max-w-4xl mx-auto mt-6 text-xl text-white ">
                     <form id="search" action="" method="GET" class="md:flex md:justify-center">
-
                         <input x-model="latitude" id="latitude" type="hidden" value="{{ request()->input('latitude') }}" name="latitude">
                         <input x-model="longitude" id="longitude" type="hidden" value="{{ request()->input('longitude') }}" name="longitude">
 
@@ -60,7 +58,7 @@
                             <x-label>&nbsp;</x-label>
                             <x-button-secondary class="px-5 text-base rounded-lg md:h-16 md:w-full shadow-3xl lg:rounded-none lg:rounded-r-lg bg-yellow text-blue hover:text-black">
                                 {{ __('Search') }}
-                            </x-button>
+                            </x-button-secondary>
                         </div>
                     </form>
                 </div>

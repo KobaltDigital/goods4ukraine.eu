@@ -7,9 +7,7 @@
         <h1>{{ __("Ads") }} </h1>
         <div class="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-4xl sm:rounded-lg">
 
-
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
 
             @if($editing)
                 <form
@@ -26,7 +24,6 @@
                 @method('POST')
             @endif
             @csrf
-
                 <div class="gap-6 lg:grid lg:grid-cols-2">
                     <div>
                         <h3>{{ __('Ad details') }}</h3>
@@ -82,20 +79,20 @@
                         </div>
                     </div>
                     <script>
-                    const fileUploader = document.getElementById('file-upload');
-                    const reader = new FileReader();
-                    const imageGrid = document.getElementById('image-grid');
+                        const fileUploader = document.getElementById('file-upload');
+                        const reader = new FileReader();
+                        const imageGrid = document.getElementById('image-grid');
 
-                    fileUploader.addEventListener('change', (event) => {
-                        const files = event.target.files;
-                        const file = files[0];
-                        
-                        const img = document.createElement('img');
-                        imageGrid.appendChild(img);
-                        img.src = URL.createObjectURL(file);
-                        img.alt = file.name;
-                        document.getElementById('image-uploader').style.display = 'none';
-                    });
+                        fileUploader.addEventListener('change', (event) => {
+                            const files = event.target.files;
+                            const file = files[0];
+
+                            const img = document.createElement('img');
+                            imageGrid.appendChild(img);
+                            img.src = URL.createObjectURL(file);
+                            img.alt = file.name;
+                            document.getElementById('image-uploader').style.display = 'none';
+                        });
 
                     </script>
 
@@ -135,7 +132,6 @@
                             {{ __('This information is used to make a good match with the searcher and is not shown online unless you want it to.') }}
                         </div>
                     </div>
-
                 </div>
 
                 <div class="pt-5">

@@ -10,11 +10,9 @@
             </div>
         @endif
 
-
         <div class="mt-4 flex items-center justify-between">
             <form method="POST" action="{{ route('verification.send') }}">
                 @csrf
-
                 <div>
                     <x-button>
                         {{ __('Resend Verification Email') }}
@@ -24,7 +22,6 @@
 
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-
                 <button type="submit" class="underline text-sm text-black hover:text-black">
                     {{ __('Log Out') }}
                 </button>
