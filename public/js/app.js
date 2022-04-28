@@ -6411,7 +6411,7 @@ __webpack_require__.r(__webpack_exports__);
 if (document.getElementById('map_canvas')) {
   var map = new google.maps.Map(document.getElementById('map_canvas'), {
     zoom: 7,
-    maxZoom: 14
+    maxZoom: 15
   });
   var infoWindow = new google.maps.InfoWindow({
     content: '',
