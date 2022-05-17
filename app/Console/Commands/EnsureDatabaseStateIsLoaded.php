@@ -40,7 +40,6 @@ class EnsureDatabaseStateIsLoaded extends Command
         collect([
             new \App\Database\State\EnsureCategoriesArePresent(),
             new \App\Database\State\EnsureLanguagesArePresent(),
-            new \App\Database\State\EnsureFrenchCategoriesArePresent(),
         ])->each->__invoke();
     }
 }
