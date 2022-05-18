@@ -14,38 +14,7 @@ class EnsureCategoriesArePresent
                 'nl' => 'Kleding',
                 'ua' => 'одяг',
                 'ru' => 'одежда',
-            ],
-        ],
-        [
-            'name' => [
-                'en' => 'Bicycles',
-                'nl' => 'Fietsen',
-                'ua' => 'велосипеди',
-                'ru' => 'велосипеды',
-            ],
-        ],
-        [
-            'name' => [
-                'en' => 'to Sleep',
-                'nl' => 'Slapen',
-                'ua' => 'спальний',
-                'ru' => 'спальный',
-            ],
-        ],
-        [
-            'name' => [
-                'en' => 'Furniture',
-                'nl' => 'Meubels',
-                'ua' => 'меблі',
-                'ru' => 'мебель',
-            ],
-        ],
-        [
-            'name' => [
-                'en' => 'Koken',
-                'nl' => 'Sleeping',
-                'ua' => 'приготування їжі',
-                'ru' => 'приготовление еды',
+                'fr' => 'Vêtements',
             ],
         ],
         [
@@ -54,6 +23,61 @@ class EnsureCategoriesArePresent
                 'nl' => 'Speelgoed',
                 'ua' => 'іграшки',
                 'ru' => 'игрушки',
+                'fr' => 'Jouets',
+            ],
+        ],
+        [
+            'name' => [
+                'en' => 'Bicycles',
+                'nl' => 'Fietsen',
+                'ua' => 'велосипеди',
+                'ru' => 'велосипеды',
+                'fr' => 'Vélos',
+            ],
+        ],
+        [
+            'name' => [
+                'en' => 'to Sleep',
+                'nl' => 'Slapen',
+                'ua' => 'спальний',
+                'ru' => 'спальный',
+                'fr' => 'Dormir',
+            ],
+        ],
+        [
+            'name' => [
+                'en' => 'Furniture',
+                'nl' => 'Meubels',
+                'ua' => 'меблі',
+                'ru' => 'мебель',
+                'fr' => 'Meubles',
+            ],
+        ],
+        [
+            'name' => [
+                'en' => 'Cook',
+                'nl' => 'Koken',
+                'ua' => 'приготування їжі',
+                'ru' => 'приготовление еды',
+                'fr' => 'Cuisine',
+            ],
+        ],
+        [
+            'name' => [
+                'en' => 'Baby items',
+                'nl' => 'Baby artikelen',
+                'ua' => 'дитячі речі',
+                'ru' => 'детские предметы',
+                'fr' => 'Articles pour bébés',
+            ],
+        ],
+        [
+            'name' => [
+                'en' => 'Electronics',
+                'nl' => 'Elektronica',
+                'ua' => 'Електроніка',
+                'ru' => 'Электроника',
+                'fr' => 'Électronique',
             ],
         ],
         [
@@ -62,8 +86,9 @@ class EnsureCategoriesArePresent
                 'nl' => 'Overig',
                 'ua' => 'інший',
                 'ru' => 'Другой',
+                'fr' => 'Autres',
             ],
-        ],
+        ]
     ];
 
     public function __invoke()
@@ -73,16 +98,32 @@ class EnsureCategoriesArePresent
         }
 
         foreach ($this->categories as $category) {
-            if ($this->isPresent($category['name']['en'])) {
-                continue;
-            }
 
-            Category::create($category);
+            // Get the category from the DB
+            $dbCategory = Category::where('name->en', $category['name']['en'])->first();
+
+            // Check if the category exists
+            if ($dbCategory) {
+
+                // Loop through all languages
+                foreach ($category['name'] as $language => $translation) {
+
+                    // Check if the language exists
+                    if (!$dbCategory->getTranslation('name', $language, false)) {
+
+                        // Create the language in the DB
+                        $dbCategory->setTranslation('name', $language, $translation);
+                        $dbCategory->save();
+                    }
+                }
+            } else {
+                Category::create($category);
+            }
         }
     }
 
-    private function isPresent($category)
+    private function isPresent($language, $category)
     {
-        return Category::where('name->en', $category)->exists();
+        return Category::where('name->' . $language, $category)->exists();
     }
 }
