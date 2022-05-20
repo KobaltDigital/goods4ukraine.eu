@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Facade\Ignition\Middleware\AddLogs;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
