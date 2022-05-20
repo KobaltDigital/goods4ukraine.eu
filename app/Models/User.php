@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Facade\Ignition\Middleware\AddLogs;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -61,5 +62,10 @@ class User extends Authenticatable implements Auditable, HasLocalePreference
     public function preferredLocale()
     {
         return $this->locale;
+    }
+
+    public function ads()
+    {
+        return $this->hasMany(Ad::class);
     }
 }
