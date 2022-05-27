@@ -51,7 +51,7 @@
                                 <option value="100000" {{ request()->input('distance') == 100000 ? 'selected' : '' }}>100{{ __('km') }}</option>
                                 <option value="500000" {{ request()->input('distance') == 500000 ? 'selected' : '' }}>500{{ __('km') }}</option>
                                 <option value="1000000" {{ request()->input('distance') == 1000000 ? 'selected' : '' }}>1000{{__('km') }}</option>
-                                <option value="-1" {{ (request()->input('distance') == "-1" || request()->input('distance') == "") ? 'selected' : '' }}>{{ __('Any distance') }}</option>
+                                <option value="20000000" {{ (request()->input('distance') == "20000000" || request()->input('distance') == "") ? 'selected' : '' }}>{{ __('Any distance') }}</option>
                             </select>
                         </div>
                         <div class="w-full lg:w-auto md:text-right">
