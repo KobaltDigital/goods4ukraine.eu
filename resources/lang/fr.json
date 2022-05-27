@@ -16,7 +16,7 @@
     "Name": "Nom",
     "Bringing people and goods together in times of need": "La main tendue aux gens en détresse",
     "Goods4Ukraine brings supply and demand together with the aim of helping refugees with missing necessities.": "Goods4Ukraine permet de mettre en relation des donateurs et des réfugiés en manque de matériel. La traduction se fait automatiquement.",
-    "Copyright": "Goods4ukraine.eu décline toute responsabilité pour les dégâts suite à l'emploi de ce site, ainsi dérivant des erreurs ou fonctionnalisées manquantes sur le site. Copyright © :year Goods4ukraine.eu, tous droits réservés.",
+    "Goods4Ukraine is not liable for (consequential) damage resulting from the use of this site, or from errors or missing functionalities on this site. Copyright © :year Goods4Ukraine.eu, all rights reserved.": "Goods4ukraine.eu décline toute responsabilité pour les dégâts suite à l'emploi de ce site, ainsi dérivant des erreurs ou fonctionnalisées manquantes sur le site. Copyright © :year Goods4ukraine.eu, tous droits réservés.",
     "Place offer": "Faire une offre",
     "Offered": "Proposé",
     "Wanted": "Recherché ",
@@ -106,5 +106,6 @@
     "Create Account": "Créer un compte",
     "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.": "Mot de passe oublié? Aucun problème. Indiquez-nous simplement votre adresse e-mail et nous vous enverrons par e-mail un lien de réinitialisation de mot de passe qui vous permettra d'en choisir un nouveau.",
     "Email": "Email",
-    "Email Password Reset Link": "Envoyer"
+    "Email Password Reset Link": "Envoyer",
+    "Are you sure": "Es-tu sûr?"
 }

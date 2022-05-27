@@ -71,7 +71,7 @@
             </div>
             <div class="mb-10 lg:mb-2 md:mr-10">
                 <p class="text-sm text-black">
-                    {{ __('Copyright', ['year' => date('Y')]) }}
+                    {{ __('Goods4Ukraine is not liable for (consequential) damage resulting from the use of this site, or from errors or missing functionalities on this site. Copyright © :year Goods4Ukraine.eu, all rights reserved.', ['year' => date('Y')]) }}
                 </p>
             </div>
             <div class="flex">

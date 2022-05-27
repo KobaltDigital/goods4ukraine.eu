@@ -97,12 +97,17 @@
                 </div>
 
                 <div class="pt-8 space-y-6 divide-y divide-gray-200 sm:pt-10 sm:space-y-5">
-                    <div class="flex items-center justify-end mt-4">
+                    <div class="flex items-center justify-between mt-4">
+                        <x-delete-account-button form="delete-account-form"/>
                         <x-button class="ml-3">
                             {{ __('Edit') }}
                         </x-button>
                     </div>
                 </div>
+            </form>
+            <form method="POST" id="delete-account-form" action="{{ route('admin.profile.delete') }}">
+                @csrf
+                @method('DELETE')
             </form>
         </div>
     </div>

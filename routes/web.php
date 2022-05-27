@@ -37,6 +37,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/admin/profile', [AccountController::class, 'edit'])->name('admin.profile.edit');
     Route::put('/admin/profile', [AccountController::class, 'update'])->name('admin.profile.update');
+    Route::delete('/admin/profile', [AccountController::class, 'delete'])->name('admin.profile.delete');
 
     Route::get('/admin', [AdManagerController::class, 'index'])->name('admin.ads.index');
     Route::get('/admin/ads/reserved', [AdManagerController::class, 'reserved'])->name('admin.ads.reserved');
@@ -47,7 +48,7 @@ Route::middleware('auth')->group(function () {
 
     Route::put('/admin/ads/{id}/activate', [AdManagerController::class, 'activate'])->name('admin.ads.activate');
 
-    // moved 2 get because otherwise e-mail links doenst work //
+    // moved 2 get because otherwise e-mail links doesn't work //
     Route::get('/admin/ads/{ad}/reserve', [AdManagerController::class, 'reserve'])->name('admin.ads.reserve');
     Route::get('/admin/ads/{ad}', [AdManagerController::class, 'destroy'])->name('admin.ads.destroy');
 });
