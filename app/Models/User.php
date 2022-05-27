@@ -62,4 +62,9 @@ class User extends Authenticatable implements Auditable, HasLocalePreference
     {
         return $this->locale;
     }
+
+    public function ads()
+    {
+        return $this->hasMany(Ad::class);
+    }
 }
