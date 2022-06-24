@@ -7,6 +7,7 @@
 /public/js/*
 /vendor
 .env
+.scribe
 .env.backup
 .phpunit.result.cache
 docker-compose.override.yml
@@ -18,6 +19,7 @@ yarn-error.log
 /.vscode
 /push.sh
 public/.DS_Store
+public/docs
 public/img/.DS_Store
 .DS_Store
 _ide_helper_models.php
