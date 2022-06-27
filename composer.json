@@ -29,6 +29,7 @@
         "barryvdh/laravel-ide-helper": "^2.12",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
+        "knuckleswtf/scribe": "^3.31",
         "laravel/breeze": "^1.8",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",

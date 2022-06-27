@@ -7,7 +7,7 @@ git push
 echo "git pull on acc?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) ssh -A kobalt@goods4ukraine.eu 'cd /var/www/acc.goods4ukraine.eu/ && git pull && php artisan down && composer update --no-scripts && php artisan migrate:fresh && php artisan db:seed && composer dump-autoload -o && php artisan up'; break;;
+        Yes ) ssh -A kobalt@goods4ukraine.eu 'cd /var/www/acc.goods4ukraine.eu/ && git pull && php artisan down && composer update --no-scripts && php artisan migrate:fresh && php artisan db:seed && composer dump-autoload -o && php artisan up && php artisan scribe:generate'; break;;
         No ) break;;
     esac
 done
@@ -15,7 +15,7 @@ done
 echo "git pull on live?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) ssh -A kobalt@goods4ukraine.eu 'cd /var/www/goods4ukraine.eu/ && git pull && php artisan down && composer install && composer dump-autoload -o && php artisan migrate && php artisan up && sudo php artisan optimize:clear'; break;;
+        Yes ) ssh -A kobalt@goods4ukraine.eu 'cd /var/www/goods4ukraine.eu/ && git pull && php artisan down && composer install && composer dump-autoload -o && php artisan migrate && php artisan up && sudo php artisan optimize:clear && php artisan scribe:generate'; break;;
         No ) break;;
     esac
 done
