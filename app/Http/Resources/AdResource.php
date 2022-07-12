@@ -17,10 +17,22 @@ class AdResource extends JsonResource
      */
     public function toArray($request)
     {
+        if(empty($this->getTranslations('translated_title'))) {
+            $title = $this->title;
+        } else {
+            $title = $this->getTranslations('translated_title');
+        }
+
+        if(empty($this->getTranslations('translated_description'))) {
+            $description = $this->description;
+        } else {
+            $description = $this->getTranslations('translated_description');
+        }
+
         return [
             'id' => $this->id,
-            'title' => $this->getTranslations('translated_title'),
-            'description' => $this->getTranslations('translated_description'),
+            'title' => $title,
+            'description' => $description,
             'url' => config('app.url') . '/' . $this->slug,
             'type' => $this->type,
             'city' => $this->city,
@@ -33,3 +45,5 @@ class AdResource extends JsonResource
         ];
     }
 }
+
+
