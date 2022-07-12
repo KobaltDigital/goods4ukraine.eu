@@ -29,7 +29,6 @@ class AdResource extends JsonResource
             $description = $this->getTranslations('translated_description');
         }
 
-
         return [
             'id' => $this->id,
             'title' => $title,
@@ -46,3 +45,5 @@ class AdResource extends JsonResource
         ];
     }
 }
+
+
