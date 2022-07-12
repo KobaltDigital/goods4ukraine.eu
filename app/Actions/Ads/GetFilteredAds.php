@@ -24,9 +24,13 @@ class GetFilteredAds
         }
 
         if (isset($data['search'])) {
-            $query = $query->where('title', 'like', '%' . $data['search'] . '%')
-                ->orWhere('city', 'like', '%' . $data['search'] . '%')
-                ->orWhere('description', 'like', '%' . $data['search'] . '%');
+            $query = $query->where(function($q)use ($data) {
+               $q->where('title', 'like', '%' . $data['search'] . '%')
+               ->orWhere('city', 'like', '%' . $data['search'] . '%')
+               ->orWhere('translated_title', 'like', '%' . $data['search'] . '%')
+               ->orWhere('translated_description', 'like', '%' . $data['search'] . '%')
+               ->orWhere('description', 'like', '%' . $data['search'] . '%');
+          });
         }
 
         if (isset($data['distance']) && $data['distance'] > 10 && $locationGeometry) {
@@ -34,7 +38,9 @@ class GetFilteredAds
         }
 
         if (isset($data['type'])) {
-            $query = $query->where('type', $data['type']);
+            $query = $query->where(function($q)use ($data) {
+                $q->where('type', $data['type']);
+            });
         }
 
         if (isset($data['category'])) {
@@ -42,7 +48,7 @@ class GetFilteredAds
                 return $query->where('id', $data['category']);
             });
         }
-
+        
         return $query->paginate($paginate);
     }
 }
